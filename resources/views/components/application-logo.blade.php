@@ -1,0 +1,1 @@
+<a class="navbar-brand" href="/"><img src="/img/logo_no_padding.png" alt="Logo" class="img-responsive main-logo" style="height: 50px;"></a>
