@@ -55,6 +55,7 @@ class SettingsController extends Controller
 
         $css_update = Themes::where('active', '=', '1')->first();
         $css_update->theme_css = $request->input('css');
+        $css_update->save();
 
         $theme = Themes::where('active', '=', '1')->first();
         $theme->active = 0;
