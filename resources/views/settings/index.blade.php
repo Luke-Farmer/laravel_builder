@@ -350,3 +350,12 @@ use App\Models\Themes;
 
     /* End of prism.js syntax highlighting*/
 </style>
+<script>
+    let editor = CodeMirror.fromTextArea
+    (document.getElementById('editor'), {
+        mode: "xml",
+        theme: "dracula",
+        lineNumbers: "true",
+        lineWrapping: "true"
+    });
+</script>
