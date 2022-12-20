@@ -57,8 +57,7 @@ class SettingsController extends Controller
         $theme->active = 0;
         $theme->save();
         $newTheme = $request->input('theme');
-        dd($newTheme);
-        $updateTheme = Themes::where('theme_name', '=', $newTheme);
+        $updateTheme = Themes::where('theme_name', '=', '$newTheme');
         $updateTheme->active = 1;
 
 
