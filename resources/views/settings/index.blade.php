@@ -83,7 +83,7 @@ use App\Models\Themes;
                             <label>Active Theme: {{ Themes::where('active', '=', '1')->first()->theme_name }}</label>
                             <select name="theme" class="edit-page-input p-1">
                                 <option value="{{ $theme->theme_name }}">{{ $theme->theme_name }}</option>
-                            @foreach(Themes::where('active', '=', '0') as $themeName)
+                            @foreach(Themes::where('active', '=', '0')->get() as $themeName)
                                     <option value="{{ $themeName->theme_name }}">{{ $themeName->theme_name }}</option>
                             @endforeach
                             </select>
