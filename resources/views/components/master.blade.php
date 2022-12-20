@@ -1,5 +1,7 @@
 <?php
 use App\Models\Settings;
+use App\Models\Themes;
+$theme = Themes::where('active', '=', '1')->first()->theme_css;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +34,9 @@ use App\Models\Settings;
 
         gtag('config', 'G-67LKNECFX4');
     </script>
+    <style>
+        {{ Themes::where('active', '=', '1')->first()->theme_css }}
+    </style>
     <body>
         <header class="navbar-fixed-top">
             <div class="container">
