@@ -71,7 +71,7 @@ use App\Models\Themes;
                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                         </button>
-                        <div class="navbar-wrapper mt-1 d-flex align-items-center">
+                        <div class="navbar-wrapper d-flex align-items-center">
                             <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive visible-mobile w-50"></a>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
