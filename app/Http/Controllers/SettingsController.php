@@ -53,13 +53,12 @@ class SettingsController extends Controller
         $business_number->value = $request->input('business_number');
         $business_number->save();
 
-        $theme = Themes::where('active', '=', '1')->first();
-        $theme->active = 0;
-        $theme->save();
-        $updateTheme = Themes::where('theme_name', '=', $request->input('theme'));
-        dd($updateTheme);
-        $updateTheme->active = 1;
-        $updateTheme->save();
+//        $theme = Themes::where('active', '=', '1')->first();
+//        $theme->active = 0;
+//        $theme->save();
+
+        $theme = Themes::where('theme_name', '=', $request->input('theme'));
+        dd($theme);
 
         return redirect()->route('settings.index');
     }
