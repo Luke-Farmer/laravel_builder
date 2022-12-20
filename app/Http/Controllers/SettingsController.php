@@ -53,6 +53,9 @@ class SettingsController extends Controller
         $business_number->value = $request->input('business_number');
         $business_number->save();
 
+        $css_update = Themes::where('active', '=', '1')->first();
+        $css_update->theme_css = $request->input('css');
+
         $theme = Themes::where('active', '=', '1')->first();
         $theme->active = 0;
         $theme->save();
