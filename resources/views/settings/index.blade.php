@@ -351,11 +351,11 @@ use App\Models\Themes;
     /* End of prism.js syntax highlighting*/
 </style>
 <script>
-    let editor = CodeMirror.fromTextArea
-    (document.getElementById('css'), {
-        mode: "css",
-        theme: "dracula",
-        lineNumbers: "true",
-        lineWrapping: "true"
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        mode: 'css',
+        selectionPointer: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        theme: 'gruvbox-dark'
     });
 </script>
