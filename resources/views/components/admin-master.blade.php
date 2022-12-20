@@ -1,3 +1,6 @@
+<?php
+use App\Models\Themes;
+?>
 <html>
     <head>
         <meta charset="utf-8">
