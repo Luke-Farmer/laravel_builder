@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use App\Models\Settings;
+use App\Models\Themes;
 use Illuminate\Http\Request;
 use Session;
 use Analytics;
@@ -20,12 +21,15 @@ class SettingsController extends Controller
         $company_name = Settings::where('setting', '=', 'company_name')->first();
         $business_number = Settings::where('setting', '=', 'business_number')->first();
 
+        $theme = Themes::where('active', '=', '1')->first();
+
         return view('settings.index')
             ->withEnabled($dev_mode->value)
             ->withEmail($site_email->value)
             ->withName($site_name->value)
             ->withCompany($company_name->value)
-            ->withBusinessNumber($business_number->value);
+            ->withBusinessNumber($business_number->value)
+            ->withTheme($theme);
     }
 
     public function update(Request $request) {

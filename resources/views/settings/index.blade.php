@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pt-3">
                 <div class="col-12">
                     <div class="row g-0">
                         <div class="col-12 d-flex bg-dark-blue p-3">
@@ -99,7 +99,7 @@
                     <div class="row g-0">
                         <div class="col-12 p-3 bg-white">
                             <div class="position-relative" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
-                                <textarea class="w-100" id="editor" style="min-height:800px;" label="body" type="text" name="body" spellcheck="false" ></textarea>
+                                <textarea class="w-100" id="editor" style="min-height:800px;" label="body" type="text" name="body" spellcheck="false" >{{ $theme->theme_css }}</textarea>
                             </div>
                         </div>
                     </div>
