@@ -1,4 +1,4 @@
-<div class="w-100 bg-dark-blue h-100 d-flex flex-column">
+<div class="w-100 bg-accent h-100 d-flex flex-column">
     <div class="" style="height: 100px;">
         <img src="/img/logo.svg" class="w-100 p-4" style="height: 100px;object-fit: contain;">
     </div>
