@@ -56,11 +56,10 @@ class SettingsController extends Controller
         $theme = Themes::where('active', '=', '1')->first();
         $theme->active = 0;
         $theme->save();
-        $newTheme = $request->input('theme');
-        $updateTheme = Themes::where('theme_name', '=', $newTheme);
+        $updateTheme = Themes::where('theme_name', '=', $request->input('theme'));
         $updateTheme->active = 1;
-
-
+        $updateTheme->save();
+        
         return redirect()->route('settings.index');
     }
 }
