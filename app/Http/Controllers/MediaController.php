@@ -6,11 +6,7 @@ use Illuminate\Http\Request;
 use Analytics;
 use Illuminate\Support\Facades\Redirect;
 use Spatie\Analytics\Period;
-use App\Models\Page;
-use App\Models\Settings;
-use App\Models\User;
 use App\Models\Images;
-use App\Models\Todo;
 use Image;
 use Session;
 
