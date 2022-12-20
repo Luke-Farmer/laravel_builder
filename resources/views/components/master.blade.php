@@ -14,9 +14,9 @@ use App\Models\Settings;
         <link rel="stylesheet" href="/css/main.css">
         <link rel="icon" type="image/png" href="/img/favicon.svg"/>
         @if(url()->current() == env('APP_URL'))
-        <link rel="canonical" href="https://www.leinordesign.com" />
+        <link rel="canonical" href="https://lukefarmer.uk" />
         @else
-        <link rel="canonical" href="https://www.leinordesign.com/@yield('slug')" />
+        <link rel="canonical" href="https://lukefarmer.uk/@yield('slug')" />
         @endif
         {!! htmlScriptTagJsApi() !!}
     </head>
@@ -68,7 +68,7 @@ use App\Models\Settings;
                             <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                         </button>
                         <div class="navbar-wrapper mt-1 d-flex align-items-center">
-                            <a class="navbar-brand" href="/"><img src="/img/Leinor_logo_hvit_komprimert.png" alt="Logo" class="img-responsive visible-mobile w-50"></a>
+                            <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive visible-mobile w-50"></a>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a href="/about" class="link-hover">About</a>
