@@ -77,7 +77,12 @@
                     </div>
                     <div class="row g-0">
                         <div class="col-12 p-3 bg-white">
-
+                            <label>Theme:</label>
+                            <select name="theme" class="edit-page-input p-1">
+                            @foreach(Themes::all() as $theme)
+                                <option value="{{ $theme->theme_name }}">
+                            @endforeach
+                            </select>
                         </div>
                     </div>
                 </div>

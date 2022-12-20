@@ -1,7 +1,6 @@
 <?php
 use App\Models\Settings;
 use App\Models\Themes;
-$theme = Themes::where('active', '=', '1')->first()->theme_css;
 ?>
 <!DOCTYPE html>
 <html lang="en">
