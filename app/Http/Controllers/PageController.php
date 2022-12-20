@@ -36,7 +36,7 @@ class PageController extends Controller
 
     public function getPage($slug)
     {
-        $page = Page::where('slug', '=', $slug)->first();
+        $page = Page::where('slug', '=', $slug)->firstOrFail();
         if(!isset($page)) {
             $page = Portfolio::where('slug', '=', $slug)->first();
         }
