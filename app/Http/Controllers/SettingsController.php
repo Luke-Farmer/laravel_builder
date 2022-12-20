@@ -57,7 +57,7 @@ class SettingsController extends Controller
 //        $theme->active = 0;
 //        $theme->save();
 
-        $theme = Themes::where('theme_name', '=', $request->input('theme'));
+        $theme = Themes::where('theme_name', '=', $request->input('theme'))->first();
         dd($theme->active);
 
         return redirect()->route('settings.index');
