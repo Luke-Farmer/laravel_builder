@@ -80,7 +80,7 @@ use App\Models\Themes;
                     </div>
                     <div class="row g-0">
                         <div class="col-12 p-3 bg-white">
-                            <label>Theme:</label>
+                            <label>Theme: ({{ Themes::where('active', '=', '1')->first()->theme_name }})</label>
                             <select name="theme" class="edit-page-input p-1">
                             @foreach(Themes::all() as $theme)
                                     <option value="{{ $theme->theme_name }}">{{ $theme->theme_name }}</option>
