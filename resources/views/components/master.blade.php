@@ -36,7 +36,7 @@ use App\Models\Settings;
         <header class="navbar-fixed-top">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light mw-100 px-1">
-                    <a class="navbar-brand m-0" href="/"><img src="/img/logo_no_padding.png" alt="Logo" class="img-responsive main-logo m-0" style="padding-top: 10px;padding-bottom: 10px;"></a>
+                    <a class="navbar-brand m-0" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive main-logo m-0" style="padding-top: 10px;padding-bottom: 10px;"></a>
                     <ul class="social-icons visible-mobile d-none">
                         <li>
                             <a href="#">
@@ -122,7 +122,7 @@ use App\Models\Settings;
                 <div class="row py-5 align-items-center">
                     <div class="col-12 col-lg-4 mb-4 mb-lg-0">
                         <div class="img-wrap d-flex justify-content-center">
-                            <img src="/img/logo_no_padding.png" class="" style="height:75px;">
+                            <img src="/img/logo.svg" class="" style="height:75px;">
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
