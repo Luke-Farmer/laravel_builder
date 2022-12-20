@@ -21,8 +21,8 @@ class MailController extends Controller
 //            'phone' => $request->get('phone'),
             'subject' => $request->get('subject')],
             function ($message) {
-                $message->from('kristin@leinordesign.com', 'Leinor Design');
-                $message->to('kristin@leinordesign.com', 'Name here')
+                $message->from('env("MAIL_FROM_ADDRESS"', 'Company Name');
+                $message->to('lukefarmermaster@outlook.com', 'Name here')
                     ->subject('New Website Enquiry!');
             });
 

@@ -15,7 +15,7 @@
             <li class="p-2 mb-2 main-button position-relative"><a class="text-white stretched-link" href="/admin/media">Media</a></li>
             <li class="p-2 mb-2 main-button position-relative"><a class="text-white stretched-link" href="#">Blog - Not Working</a></li>
             <li class="p-2 mb-2 main-button position-relative"><a class="text-white stretched-link" href="{{ route('portfolio.index') }}">Portfolio</a></li>
-            <li class="p-2 mb-2 main-button position-relative"><a class="text-white stretched-link" href="/admin/analytics">Google Analytics</a></li>
+            <li class="p-2 mb-2 main-button position-relative"><a class="text-white stretched-link" href="/admin/analytics">Google Analytics - Not Working</a></li>
             <li class="p-2 mb-2 main-button position-relative"><a class="text-white stretched-link" href="#">Instagram - Not Working</a></li>
             <li class="p-2 mb-2 main-button position-relative"><a class="text-white stretched-link" href="{{ route('users.index') }}">Users</a></li>
             <li class="p-2 mb-2 mt-auto main-button position-relative"><a class="text-white stretched-link" href="/admin/settings">Site Settings</a></li>
