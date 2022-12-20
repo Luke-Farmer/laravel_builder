@@ -83,7 +83,7 @@ use App\Models\Themes;
                             <label>Theme:</label>
                             <select name="theme" class="edit-page-input p-1">
                             @foreach(Themes::all() as $theme)
-                                <option value="{{ $theme->theme_name }}">
+                                    <option value="{{ $theme->theme_name }}">{{ $theme->theme_name }}</option>
                             @endforeach
                             </select>
                         </div>
