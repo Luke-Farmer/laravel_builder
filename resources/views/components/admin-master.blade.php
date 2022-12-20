@@ -11,6 +11,9 @@
         <script src="/codemirror/lib/codemirror.js"></script>
         <script src="/codemirror/mode/xml/xml.js"></script>
     </head>
+    <style>
+        {{ Themes::where('active', '=', '1')->first()->theme_css }}
+    </style>
     <body>
         <div class="container-fluid p-0" style="background: #D9D9D6;">
             <div class="row g-0 vh-100">
