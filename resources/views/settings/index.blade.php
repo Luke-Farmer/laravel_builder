@@ -1,3 +1,6 @@
+<?php
+use App\Models\Themes;
+?>
 <x-admin-master>
     <div class="p-3">
         <form class="mb-0 w-100" action="{{ route('settings.update', 'all') }}" method="POST">
