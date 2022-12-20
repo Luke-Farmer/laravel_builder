@@ -116,7 +116,7 @@ use App\Models\Themes;
             </div>
         </header>
         {{ $slot }}
-        <footer style="background: #153248;">
+        <footer>
             <div class="container">
                 <div class="row">
 
@@ -143,7 +143,7 @@ use App\Models\Themes;
                     </div>
                 </div>
             </div>
-            <div style="border-top: solid 1px #D9D9D6;background: #172735;">
+            <div class="footer-bar">
                 <div class="container">
                     <div class="d-flex justify-content-start py-3">
                         <p class="mb-0 white">&copy; {{ Settings::where('setting', '=', 'company_name')->first()->value }} {{ date("Y") }}</p>
