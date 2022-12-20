@@ -28,7 +28,6 @@ class MediaController extends Controller
             $file = $request->file('image');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $location = public_path('/img/' . $filename);
-            $test = Image::make($file)->encode('webp', 90)->save($location);
 
             $image->image = $filename;
 
