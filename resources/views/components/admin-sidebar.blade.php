@@ -1,6 +1,6 @@
 <div class="w-100 bg-dark-blue h-100 d-flex flex-column">
     <div class="" style="height: 100px;">
-        <img src="/img/logo_no_padding.png" class="w-100 p-4" style="height: 100px;object-fit: contain;">
+        <img src="/img/logo.svg" class="w-100 p-4" style="height: 100px;object-fit: contain;">
     </div>
     <div class="mx-3" style="height:150px;border-bottom: 2px solid #CBA052;">
         <img src="/img/avatar.png" class="w-100" style="height:100px;object-fit:contain;">

@@ -128,7 +128,7 @@ use App\Models\Settings;
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <div class="">
                             <p class="white mb-0 text-center">{{ Settings::where('setting', '=', 'site_email')->first()->value }}</p>
-                            <p class="white mb-0 text-center">Instagram @leinordesign</p>
+                            <p class="white mb-0 text-center">Instagram @instagram</p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
