@@ -356,6 +356,6 @@ use App\Models\Themes;
         selectionPointer: true,
         lineNumbers: true,
         lineWrapping: true,
-        theme: 'gruvbox-dark'
+        theme: 'dracula'
     });
 </script>
