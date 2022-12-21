@@ -352,7 +352,7 @@ use App\Models\Themes;
 </style>
 <script>
     var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
-        mode: 'text/css',
+        mode: 'css',
         selectionPointer: true,
         lineNumbers: true,
         lineWrapping: true,
