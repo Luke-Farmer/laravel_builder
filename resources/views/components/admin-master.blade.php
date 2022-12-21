@@ -13,6 +13,8 @@ use App\Models\Themes;
         <link rel="icon" type="image/png" href="/img/favicon.svg"/>
         <script src="/codemirror/lib/codemirror.js"></script>
         <script src="/codemirror/mode/xml/xml.js"></script>
+        <script type="text/javascript" src="/codemirror/mode/css/css.js"></script>
+
     </head>
     <style>
         {{ Themes::where('active', '=', '1')->first()->theme_css }}
