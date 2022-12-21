@@ -11,15 +11,16 @@ use App\Models\Themes;
         <link rel="stylesheet" href="/codemirror/theme/dracula.css">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="icon" type="image/png" href="/img/favicon.svg"/>
-        <script type="text/javascript" src=""></script>
-        <script type="text/javascript" src="/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-        <script type="text/javascript" src="/codemirror/mode/css/css.js"></script>
-        <script type="text/javascript" src="/codemirror/mode/htmlembedded/htmlembedded.js"></script>
-        <script type="text/javascript" src="/codemirror/mode/xml/xml.js"></script>
-        <script type="text/javascript" src="/codemirror/addon/search/search.js"></script>
-        <script type="text/javascript" src="/codemirror/addon/search/searchcursor.js"></script>
-        <script type="text/javascript" src="/codemirror/addon/search/jump-to-line.js"></script>
-        <script type="text/javascript" src="/codemirror/addon/dialog/dialog.js"></script>
+        <script src="/codemirror/lib/codemirror.js"></script>
+        <script src="/codemirror/mode/xml/xml.js"></script>
+        <script src="/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="/codemirror/mode/css/css.js"></script>
+        <script src="/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+        <script src="/codemirror/mode/xml/xml.js"></script>
+        <script src="/codemirror/addon/search/search.js"></script>
+        <script src="/codemirror/addon/search/searchcursor.js"></script>
+        <script src="/codemirror/addon/search/jump-to-line.js"></script>
+        <script src="/codemirror/addon/dialog/dialog.js"></script>
 
     </head>
     <style>
