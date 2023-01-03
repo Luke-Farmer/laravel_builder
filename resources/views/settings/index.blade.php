@@ -95,6 +95,12 @@ use App\Models\Settings;
                             <label>Portfolio Module</label>
                             <p>{{ $portfolio->value }}</p>
                             <select name="portfolio_active" class="edit-page-input p-1">
+                                <option value="{{ $portfolio->value }}">{{ $portfolio->value }}</option>
+                                @if($portfolio->value == 0)
+                                    <option>Enabled</option>
+                                @else
+                                    <option>Disabled</option>
+                                @endif
                             </select>
                         </div>
                     </div>
