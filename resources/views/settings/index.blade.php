@@ -1,5 +1,6 @@
 <?php
 use App\Models\Themes;
+use App\Models\Settings;
 ?>
 <x-admin-master>
     <div class="p-3">
