@@ -92,23 +92,13 @@ use App\Models\Settings;
                     </div>
                     <div class="row g-0">
                         <div class="col-12 p-3 bg-white">
-                            <label>Portfolio Module: (
-                                @if($portfolio->value == 1)
-                                    Enabled
-                                @else
-                                    Disabled
-                                @endif
-                            </label>
+                            <label>Portfolio Module:</label>
                             <select name="portfolio_active" class="edit-page-input p-1">
                                 @if($portfolio->value == 0)
                                     <option value="{{ $portfolio->value }}">Disabled</option>
-                                @else
                                     <option value="1">Enabled</option>
-                                @endif
-
-                                @if($portfolio->value == 1)
-                                    <option value="{{ $portfolio->value }}">Enabled</option>
                                 @else
+                                    <option value="{{ $portfolio->value }}">Enabled</option>
                                     <option value="0">Disabled</option>
                                 @endif
                             </select>
