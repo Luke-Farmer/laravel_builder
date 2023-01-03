@@ -93,10 +93,11 @@ use App\Models\Themes;
                         <div class="col-12 p-3 bg-white">
                             <label>Portfolio Module</label>
                             <select name="portfolio_active" class="edit-page-input p-1">
-                                @foreach(Settings::where('portfolio_active', '=', '1') as $portfolio_setting)
-                                {{ Settings::where('portfolio_active', '=', $portfolio_setting))->get(); }}
-                                <option value=""></option>
-                                @endforeach
+                                @if(Settings::where('setting', '=', 'potfolio_active')->first()->value == 1)
+                                    <p>active</p>
+                                @else
+                                    <p>inactive</p>
+                                @endif
                             </select>
                         </div>
                     </div>
