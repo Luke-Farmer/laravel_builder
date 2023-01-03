@@ -13,6 +13,7 @@ use App\Models\Images;
 use App\Models\Todo;
 use Image;
 use Session;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -44,6 +45,11 @@ class AdminController extends Controller
         return view('users.index')->withUsers($users);
     }
 
+    public function userProfile() {
+        Session::forget('message');
+        $user = User::where('id', '=', Auth::id())->firstOrFail();
+        return view('users.profile')->withUser($user);
+    }
     
     public function createToDo(Request $request) {
         Session::forget('message');

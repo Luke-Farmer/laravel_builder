@@ -89,6 +89,17 @@ use App\Models\Themes;
                             </select>
                         </div>
                     </div>
+                    <div class="row g-0">
+                        <div class="col-12 p-3 bg-white">
+                            <label>Portfolio Module</label>
+                            <select name="portfolio_active" class="edit-page-input p-1">
+                                @foreach(Settings::where('portfolio_active', '=', '1') as $portfolio_setting)
+                                {{ Settings::where('portfolio_active', '=', $portfolio_setting))->get(); }}
+                                <option value=""></option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-3">
                     <div class="p-3 save-box bg-dark-blue">

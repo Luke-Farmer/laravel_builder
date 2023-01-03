@@ -63,6 +63,7 @@ Route::get('/admin/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users.index');
+Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
 Route::get('/{slug}', [PageController::class, 'getPage']);
 

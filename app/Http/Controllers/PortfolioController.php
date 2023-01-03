@@ -57,6 +57,7 @@ class PortfolioController extends Controller
         $item->excerpt = $request->input('excerpt');
         $item->enabled = $request->input('enabled');
         $item->image = $request->input('image');
+        $item->is_featured = $request->input('featured');
         $item->save();
         return redirect()->route('portfolio.edit', $item->id)->with('message', 'Portfolio Item Created Successfully!');
     }

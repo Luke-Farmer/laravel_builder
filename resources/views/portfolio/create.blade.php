@@ -25,6 +25,16 @@
                         </select>
                     </div>
                     <div class="col-12 pb-3">
+                        <select name="featured" class="edit-page-input- p-1">
+                            <option value="0">
+                                Not Featured
+                            </option>
+                            <option value="1">
+                                Is Featured
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-12 pb-3">
                         <label class="mb-2">Portfolio Item Name:</label>
                         <input class="edit-page-input p-1" type="text" label="title" name="title" value="">
                     </div>
