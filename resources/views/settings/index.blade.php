@@ -93,12 +93,8 @@ use App\Models\Settings;
                     <div class="row g-0">
                         <div class="col-12 p-3 bg-white">
                             <label>Portfolio Module</label>
+                            <p>{{ $portfolio->value }}</p>
                             <select name="portfolio_active" class="edit-page-input p-1">
-                                @if(Settings::where('setting', '=', 'potfolio_active')->firstOrFail()->value == 1)
-                                    <p>active</p>
-                                @else
-                                    <p>inactive</p>
-                                @endif
                             </select>
                         </div>
                     </div>

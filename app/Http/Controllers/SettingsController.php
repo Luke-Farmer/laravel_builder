@@ -20,6 +20,7 @@ class SettingsController extends Controller
         $site_name = Settings::where('setting', '=', 'site_name')->first();
         $company_name = Settings::where('setting', '=', 'company_name')->first();
         $business_number = Settings::where('setting', '=', 'business_number')->first();
+        $portfolio_active = Settings::where('setting', '=', 'portfolio_active')->first();
 
         $theme = Themes::where('active', '=', '1')->first();
 
@@ -29,7 +30,8 @@ class SettingsController extends Controller
             ->withName($site_name->value)
             ->withCompany($company_name->value)
             ->withBusinessNumber($business_number->value)
-            ->withTheme($theme);
+            ->withTheme($theme)
+            ->withPortfolio($portfolio_active);
     }
 
     public function update(Request $request) {
