@@ -24,24 +24,6 @@
                             </option>
                         </select>
                     </div>
-
-                    <div class="col-12 pb-3">
-                        <select name="page_template">
-                            @foreach(\App\Models\Page::all() as $page)
-
-                                @if($page->use_template != 0)
-                                    <option>
-                                        {{ $page->template->page_title }}
-                                    </option>
-                                @else
-                                    <option>
-                                        {{ $page->template->page_title }}
-                                    </option>
-                                @endif
-
-                            @endforeach
-                        </select>
-                    </div>
                     <div class="col-12 pb-3">
                         <label class="mb-2">Page Name:</label>
                         <input class="edit-page-input p-1" type="text" label="title" name="title" value="">
