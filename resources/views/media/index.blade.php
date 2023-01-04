@@ -1,7 +1,7 @@
 <x-admin-master>
     <div class="p-3">
         <div class="row g-0">
-            <div class="col-12 d-flex bg-dark-blue p-3 w-100">
+            <div class="col-12 d-flex bg-accent-light p-3 w-100">
                 <p class="white mb-0">Images</p>
             </div>
         </div>

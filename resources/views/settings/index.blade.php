@@ -10,7 +10,7 @@ use App\Models\Settings;
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row g-0">
-                        <div class="col-12 d-flex bg-dark-blue p-3">
+                        <div class="col-12 d-flex bg-accent-light p-3">
                             <p class="white mb-0">Admin Settings</p>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ use App\Models\Settings;
                 </div>
                 <div class="col-12 col-lg-3">
                     <div class="row g-0">
-                        <div class="col-12 d-flex bg-dark-blue p-3">
+                        <div class="col-12 d-flex bg-accent-light p-3">
                             <p class="white mb-0">Site Settings</p>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ use App\Models\Settings;
                 </div>
                 <div class="col-12 col-lg-3">
                     <div class="row g-0">
-                        <div class="col-12 d-flex bg-dark-blue p-3">
+                        <div class="col-12 d-flex bg-accent-light p-3">
                             <p class="white mb-0">Misc Settings</p>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ use App\Models\Settings;
                     </div>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <div class="p-3 save-box bg-dark-blue">
+                    <div class="p-3 save-box bg-accent-light">
                         <div class="d-flex">
                             <input href="{{ route('settings.update', 'all') }}" class="white main-button px-3 py-0 w-100" value="Save" type="submit">
                         </div>
@@ -116,7 +116,7 @@ use App\Models\Settings;
             <div class="row pt-3">
                 <div class="col-12">
                     <div class="row g-0">
-                        <div class="col-12 d-flex bg-dark-blue p-3">
+                        <div class="col-12 d-flex bg-accent-light p-3">
                             <p class="white mb-0">Theme CSS</p>
                         </div>
                     </div>

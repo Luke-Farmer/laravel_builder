@@ -6,7 +6,7 @@
             <div class="col-12 col-lg-10">
                 <div class="row g-0">
                     <div class="col-12">
-                        <p class="white mb-0 bg-dark-blue w-100 p-2">Portfolio Item Settings</p>
+                        <p class="white mb-0 bg-accent-light w-100 p-2">Portfolio Item Settings</p>
                     </div>
                 </div>
                 <div class="row g-0 bg-white p-3">
@@ -63,7 +63,7 @@
 
             </div>
             <div class="col-12 col-lg-2">
-                <div class="p-3 save-box bg-dark-blue">
+                <div class="p-3 save-box bg-accent-light">
                     <div class="d-flex">
                         <input href="{{ route('portfolio.store') }}" class="white main-button w-100 p-0 me-3" value="Create" type="submit">
                         <a href="{{ route('portfolio.index') }}" class="white main-button w-100 p-0 ms-3 text-center">Cancel</a>

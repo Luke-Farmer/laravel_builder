@@ -10,7 +10,7 @@
                 @method('PUT')
                 @csrf
                 <div class="row g-0">
-                    <div class="col-12 d-flex bg-dark-blue w-100 p-2">
+                    <div class="col-12 d-flex bg-accent-light w-100 p-2">
                         <p class="white mb-0">Page Settings</p>
                         <input href="{{ route('pages.update', $page->id) }}" class="white main-button px-3 py-0 ms-auto" value="Save" type="submit">
                     </div>
@@ -62,7 +62,7 @@
             </form>
         </div>
         <div class="col-12 col-lg-2 pt-3 pe-3">
-            <div class="p-3 save-box bg-dark-blue">
+            <div class="p-3 save-box bg-accent-light">
                 <p class="mb-0 text-start me-3 fw-bold text-white">URL:<span class="float-end fw-normal">{{ $page->slug }}</span></p>
                 <p class="mb-0 text-start me-3 fw-bold text-white">Updated:<span class="float-end fw-normal">{{ date('j M Y',strtotime($page->updated_at)) }}</span></p>
                 <div class="d-flex">
@@ -73,7 +73,7 @@
                     </form>
                 </div>
             </div>
-            <div class="p-3 save-box bg-dark-blue mt-3">
+            <div class="p-3 save-box bg-accent-light mt-3">
                 <p class="fw-bold text-white">Shortcodes</p>
                 <p class="mb-0 text-white">[contact_form]</p>
                 <p class="mb-0 text-white">[latest_portfolios]</p>

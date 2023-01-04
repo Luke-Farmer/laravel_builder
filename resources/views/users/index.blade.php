@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="row g-0">
-                    <div class="col-12 d-flex bg-dark-blue p-3">
+                    <div class="col-12 d-flex bg-accent-light p-3">
                         <p class="white mb-0">Admin Users</p>
                     </div>
                 </div>
