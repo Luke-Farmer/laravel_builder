@@ -36,7 +36,7 @@ class PageController extends Controller
         return view('pages.template')
             ->withPage(Page::where('slug', '=', '/')
             ->firstOrFail())
-            ->withItems($items);
+            ->with('items', $items);
     }
 
     public function getPage($slug)
@@ -50,13 +50,11 @@ class PageController extends Controller
             abort(404);
         }
 
-        $menu = new \App\Models\Menu;
-        $menuList = $menu->tree();
-
+        $items = Menu::tree();
 
         return view('pages.template')
             ->withPage($page)
-            ->with('menulist', $menuList);
+            ->with('items', $items);
     }
 
     public function show($id)
