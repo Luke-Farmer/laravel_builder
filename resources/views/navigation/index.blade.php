@@ -7,12 +7,6 @@
         </div>
         <div class="row g-0 bg-white">
             <div class="col-12 p-3">
-                <form method="POST" action="/admin/media" id="contact-form" enctype="multipart/form-data">
-                    @csrf
-                    <label class="mt-3">Featured Image</label>
-                    <input type="file" id="myFile" name="image" required />
-                    <button type="submit" class="button-main align-self-start">Add</button>
-                </form>
                 <div class="row">
                     <ul>
                         @foreach($categories as $category)
@@ -20,7 +14,7 @@
                             <ul>
                                 @foreach($nav as $nav_item)
                                     @if($nav_item->category_id == $category->id)
-                                        <li>{{ $nav_item->name }}</li>
+                                        <li>{{ $nav_item->name }} - {{ $nav_item->url }}</li>
                                     @endif
                                 @endforeach
                             </ul>
