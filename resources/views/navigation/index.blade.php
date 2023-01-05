@@ -15,10 +15,15 @@
                 </form>
                 <div class="row">
                     <ul>
-                        @foreach($nav as $nav_item)
-                            @if($nav_item->parent == null)
-                            <li>{{ $nav_item->name }} - {{ $nav_item->url }}</li>
-                            @endif
+                        @foreach($categories as $category)
+                            <li>{{ $category->name }}</li>
+                            <ul>
+                                @foreach($nav as $nav_item)
+                                    @if($nav_item->category_id == $category->id)
+                                        <li>{{ $nav_item->name }}</li>
+                                    @endif
+                                @endforeach
+                            </ul>
                         @endforeach
                     </ul>
                 </div>
