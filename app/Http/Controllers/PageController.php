@@ -33,8 +33,6 @@ class PageController extends Controller
         $menu = new \App\Models\Menu;
         $menuList = $menu->tree();
 
-        dd($menuList);
-
         return view('pages.template')
             ->withPage(Page::where('slug', '=', '/'))
             ->firstOrFail()
