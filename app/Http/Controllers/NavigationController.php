@@ -20,7 +20,7 @@ class NavigationController extends Controller
     {
         Session::forget('message');
         return view('navigation.index')
-            ->withNavItems(Nav::all());
+            ->withNav(Nav::all());
     }
 
     public function create()

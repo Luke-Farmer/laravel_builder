@@ -15,7 +15,7 @@
                 </form>
                 <div class="row">
                     <ul>
-                        @foreach($NavItems as $nav_item)
+                        @foreach($nav as $nav_item)
                             <li>{{ $nav_item->name }} - {{ $nav_item->url }}</li>
                         @endforeach
                     </ul>
