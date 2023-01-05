@@ -1,6 +1,7 @@
 <?php
 use App\Models\Settings;
 use App\Models\Themes;
+use App\Models\Nav;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,6 +75,11 @@ use App\Models\Themes;
                         <div class="navbar-wrapper d-flex align-items-center">
                             <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive visible-mobile w-50"></a>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                @foreach(Nav::all() as $nav)
+                                    <li class="nav-item">
+                                        <a href="{{ $nav->url }}" class="link-hover">{{ $nav->name }}</a>
+                                    </li>
+                                @endforeach
                                 <li class="nav-item">
                                     <a href="/about" class="link-hover">About</a>
                                 </li>
