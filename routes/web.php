@@ -8,6 +8,7 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\NavigationController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMessage;
 use App\Models\Page;
@@ -51,6 +52,8 @@ Route::get('/admin', function () {
 
 Route::get('/admin/media', [MediaController::class, 'index']);
 Route::post('/admin/media', [MediaController::class, 'uploadImage']);
+
+Route::resource('/admin/navigation', NavigationController::class);
 
 Route::resource('/admin/portfolio', PortfolioController::class);
 
