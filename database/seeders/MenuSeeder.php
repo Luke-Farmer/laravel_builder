@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 use App\Models\Menu;
 
-class CustomersSeeder extends Seeder
+class MenuSeeder extends Seeder
 {
     /**
      * Run the database seeds.
