@@ -30,13 +30,12 @@ class PageController extends Controller
             abort(404);
         }
 
-        $menu = new \App\Models\Menu;
-        $menuList = $menu->tree();
+        $items = Menu::tree();
 
         return view('pages.template')
             ->withPage(Page::where('slug', '=', '/')
             ->firstOrFail())
-            ->with('menulist', $menuList);
+            ->withItems($items);
     }
 
     public function getPage($slug)

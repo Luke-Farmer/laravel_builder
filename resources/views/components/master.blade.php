@@ -121,12 +121,15 @@ use App\Models\Nav;
                 </nav>
             </div>
         </header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand">Laravel 7</a>
-            <ul class="navbar-nav mr-auto">
-                @each('submenu', $menulist, 'menu', 'empty')
-            </ul>
-        </nav>
+        <ul>
+            @foreach($items as $item)
+                <li>{{ $item->title }}
+                    @foreach($item['children'] as $child)
+                        <li>{{ $child->title }}</li>
+                    @endforeach
+                </li>
+            @endforeach
+        </ul>
         {{ $slot }}
         <footer>
             <div class="container">
