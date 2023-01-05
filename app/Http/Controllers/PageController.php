@@ -34,8 +34,7 @@ class PageController extends Controller
         $menuList = $menu->tree();
 
         return view('pages.template')
-            ->withPage(Page::where('slug', '=', '/'))
-            ->first()
+            ->withPage(Page::where('slug', '=', '/')->first())
             ->with('menulist', $menuList);
     }
 
