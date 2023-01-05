@@ -35,7 +35,7 @@ class PageController extends Controller
 
         return view('pages.template')
             ->withPage(Page::where('slug', '=', '/'))
-            ->firstOrFail()
+            ->first()
             ->with('menulist', $menuList);
     }
 
