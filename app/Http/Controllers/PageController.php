@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use App\Models\Page;
 use App\Models\Settings;
 use App\Models\Portfolio;
