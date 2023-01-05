@@ -124,7 +124,7 @@ use App\Models\Nav;
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand">Laravel 7</a>
             <ul class="navbar-nav mr-auto">
-                {{$menulist}}
+                @each('submenu', $menulist, 'menu', 'empty')
             </ul>
         </nav>
         {{ $slot }}
