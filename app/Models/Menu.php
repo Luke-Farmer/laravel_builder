@@ -22,6 +22,6 @@ class Menu extends Model
 
     public static function tree()
     {
-        return static::with(implode('.', array_fill(0, 100, 'children')))->where('parent_id', '=', '0')->orderBy('sort_order')->get();
+        return static::with(implode('.', array_fill(0, 4, 'children')))->where('parent_id', '=', NULL)->get();
     }
 }
