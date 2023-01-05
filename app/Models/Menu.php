@@ -9,16 +9,15 @@ class Menu extends Model
 {
     use HasFactory;
 
-    public function parent()
-    {
-        return $this->hasOne('App\Models\Menu', 'id', 'parent_id')->orderBy('sort_order');
+    public function parent() {
+
+        return $this->hasOne('menus', 'id', 'parent_id');
+
     }
 
-    public function children()
-    {
+    public function children() {
 
-        return $this->hasMany('App\Models\Menu', 'parent_id', 'id')->orderBy('sort_order');
-    }
+        return $this->hasMany('menus', 'parent_id', 'id');
 
     public static function tree()
     {
