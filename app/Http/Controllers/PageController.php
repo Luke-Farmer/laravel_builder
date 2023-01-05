@@ -29,9 +29,16 @@ class PageController extends Controller
         if(!empty($page) && $page->enabled == 0 && Auth::guest()) {
             abort(404);
         }
+
+        $menu = new \App\Models\Menu;
+        $menuList = $menu->tree();
+
+        dd($menuList);
+
         return view('pages.template')
-            ->withPage(Page::where('slug', '=', '/')
-            ->firstOrFail());
+            ->withPage(Page::where('slug', '=', '/'))
+            ->firstOrFail()
+            ->with('menulist', $menuList);
     }
 
     public function getPage($slug)
@@ -45,8 +52,13 @@ class PageController extends Controller
             abort(404);
         }
 
+        $menu = new \App\Models\Menu;
+        $menuList = $menu->tree();
+
+
         return view('pages.template')
-            ->withPage($page);
+            ->withPage($page)
+            ->with('menulist', $menuList);
     }
 
     public function show($id)
