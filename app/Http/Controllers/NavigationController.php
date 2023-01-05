@@ -9,7 +9,7 @@ use Session;
 use App\Models\Nav;
 use Image;
 
-class PortfolioController extends Controller
+class NavigationController extends Controller
 {
     /**
      * Display a listing of the resource.
