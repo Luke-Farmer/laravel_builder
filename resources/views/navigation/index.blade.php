@@ -18,13 +18,6 @@
                         @foreach($nav as $nav_item)
                             @if($nav_item->parent == null)
                             <li>{{ $nav_item->name }} - {{ $nav_item->url }}</li>
-                            <ul>
-                                @foreach($nav as $nav_item_check)
-                                    @if($nav_item_check->parent == $nav_item->id)
-                                        <li>{{ $nav_item_check->name }} - {{ $nav_item_check->url }}</li>
-                                    @endif
-                                @endforeach
-                            </ul>
                             @endif
                         @endforeach
                     </ul>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -20,7 +21,8 @@ class NavigationController extends Controller
     {
         Session::forget('message');
         return view('navigation.index')
-            ->withNav(Nav::all());
+            ->withNav(Nav::all())
+            ->withCategories(Categories::all());
     }
 
     public function create()
