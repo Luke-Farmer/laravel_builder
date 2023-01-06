@@ -125,12 +125,12 @@ use App\Services\NavigationService;
             <ul>
                 @foreach($navigation as $link)
                     <li>
-                        <a href="{{ $link['url'] }}">{{ $link['text'] }}</a>
+                        <a href="{{ $link['slug'] }}">{{ $link['menu_title'] }}</a>
                         @if(!empty($link['children']))
                             <ul>
                                 @foreach($link['children'] as $child)
                                     <li>
-                                        <a href="{{ $child['url'] }}">{{ $child['text'] }}</a>
+                                        <a href="{{ $child['slug'] }}">{{ $child['menu_title'] }}</a>
                                         @if(!empty($child['children']))
                                             @include('partials.navigation', ['navigation' => $child['children']])
                                         @endif
