@@ -2,6 +2,10 @@
 use App\Models\Settings;
 use App\Models\Themes;
 use App\Services\NavigationService;
+
+$navigationService = new NavigationService();
+$navigation = $navigationService->getNavigation();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,19 +79,38 @@ use App\Services\NavigationService;
                         <div class="navbar-wrapper d-flex align-items-center">
                             <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive visible-mobile w-50"></a>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a href="/about" class="link-hover">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/services" class="link-hover">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/portfolio" class="link-hover">Portfolio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/contact" class="link-hover">Contact</a>
-                                </li>
+                                @foreach($navigation as $link)
+                                    <li class="nav-item">
+                                        <a href="{{ $link['url'] }}" class="link-hover">{{ $link['text'] }}</a>
+                                        @if(!empty($link['children']))
+                                            <ul>
+                                                @foreach($link['children'] as $child)
+                                                    <li class="nav-item">
+                                                        <a href="{{ $child['url'] }}">{{ $child['text'] }}</a>
+                                                        @if(!empty($child['children']))
+                                                            @include('partials.navigation', ['navigation' => $child['children']])
+                                                        @endif
+                                                    </li class="nav-item">
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </li>
+                                @endforeach
                             </ul>
+{{--                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="/about" class="link-hover">About</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="/services" class="link-hover">Services</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="/portfolio" class="link-hover">Portfolio</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="/contact" class="link-hover">Contact</a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
                             <ul class="social-icons d-none d-lg-flex">
                                 <li>
                                     <a href="#" target="_blank" class="link-hover">
@@ -116,33 +139,7 @@ use App\Services\NavigationService;
                 </nav>
             </div>
         </header>
-        <?php
-        $navigationService = new NavigationService();
-        $navigation = $navigationService->getNavigation();
-
-        ?>
-        <nav>
-            <ul>
-                @foreach($navigation as $link)
-                    <li>
-                        <a href="{{ $link['url'] }}">{{ $link['text'] }}</a>
-                        @if(!empty($link['children']))
-                            <ul>
-                                @foreach($link['children'] as $child)
-                                    <li>
-                                        <a href="{{ $child['url'] }}">{{ $child['text'] }}</a>
-                                        @if(!empty($child['children']))
-                                            @include('partials.navigation', ['navigation' => $child['children']])
-                                        @endif
-                                    </li>
-                                @endforeach
-                            </ul>
-                        @endif
-                    </li>
-                @endforeach
-            </ul>
-        </nav>
-                    {{ $slot }}
+        {{ $slot }}
         <footer>
             <div class="container">
                 <div class="row">
