@@ -12,8 +12,8 @@ class NavigationService
         $navigation = [];
         foreach ($links as $link) {
             $navigation[] = [
-                'text' => $link->link_text,
-                'url' => $link->url,
+                'text' => $link->menu_title,
+                'url' => $link->slug,
                 'children' => $this->getChildLinks($link->children)
             ];
         }
@@ -26,8 +26,8 @@ class NavigationService
         $childLinks = [];
         foreach ($children as $child) {
             $childLinks[] = [
-                'text' => $child->link_text,
-                'url' => $child->url,
+                'text' => $child->menu_title,
+                'url' => $child->slug,
                 'children' => $this->getChildLinks($child->children)
             ];
         }

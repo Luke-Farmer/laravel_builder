@@ -1,7 +1,7 @@
 <ul>
     @foreach($navigation as $link)
         <li>
-            <a href="{{ $link['slug'] }}">{{ $link['menu_title'] }}</a>
+            <a href="{{ $link['url'] }}">{{ $link['text'] }}</a>
             @if(!empty($link['children']))
                 @include('partials.navigation', ['navigation' => $link['children']])
             @endif
