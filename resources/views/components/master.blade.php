@@ -84,6 +84,7 @@ $navigation = $navigationService->getNavigation();
                                     .navbar .nav-item:hover .nav-link{   }
                                     .navbar .nav-item:hover .dropdown-menu{ display: block; }
                                     .navbar .nav-item .dropdown-menu{ margin-top:0; }
+                                    .navbar .nav-item { position: relative; }
                                 }
                             </style>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
