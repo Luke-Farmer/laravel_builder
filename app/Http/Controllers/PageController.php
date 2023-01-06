@@ -47,8 +47,6 @@ class PageController extends Controller
             abort(404);
         }
 
-        $items = Menu::tree();
-
         return view('pages.template')
             ->withPage($page)
             ->with('items', $items);
