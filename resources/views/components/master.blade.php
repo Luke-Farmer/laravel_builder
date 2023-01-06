@@ -119,6 +119,7 @@ use App\Services\NavigationService;
         <?php
         $navigationService = new NavigationService();
         $navigation = $navigationService->getNavigation();
+        dd($navigation);
         ?>
         <nav>
             <ul>
