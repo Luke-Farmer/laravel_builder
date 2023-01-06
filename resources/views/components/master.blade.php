@@ -78,6 +78,19 @@ $navigation = $navigationService->getNavigation();
                         </button>
                         <div class="navbar-wrapper d-flex align-items-center">
                             <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive visible-mobile w-50"></a>
+                            <ul class="navbar-nav">
+                                <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
+                                <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Hover me  </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                                        <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                                        <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
