@@ -102,7 +102,7 @@ $navigation = $navigationService->getNavigation();
                                                         @if(!empty($child['children']))
                                                             @include('partials.navigation', ['navigation' => $child['children']])
                                                         @endif
-                                                    </li class="nav-item">
+                                                    </li>
                                                 @endforeach
                                             </ul>
                                         @endif
