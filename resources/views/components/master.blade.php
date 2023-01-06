@@ -115,7 +115,28 @@ use App\Models\Themes;
                 </nav>
             </div>
         </header>
-        {{ $slot }}
+        <nav>
+            <ul>
+                @foreach($navigation as $link)
+                    <li>
+                        <a href="{{ $link['url'] }}">{{ $link['text'] }}</a>
+                        @if(!empty($link['children']))
+                            <ul>
+                                @foreach($link['children'] as $child)
+                                    <li>
+                                        <a href="{{ $child['url'] }}">{{ $child['text'] }}</a>
+                                        @if(!empty($child['children']))
+                                            @include('partials.navigation', ['navigation' => $child['children']])
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </li>
+                @endforeach
+            </ul>
+        </nav>
+                    {{ $slot }}
         <footer>
             <div class="container">
                 <div class="row">

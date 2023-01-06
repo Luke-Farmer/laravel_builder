@@ -7,25 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    use HasFactory;
-
-    public function parent() {
-
-        return $this->hasOne('menus', 'id', 'parent_id');
-
-    }
-
     public function children()
     {
-
-        return $this->hasMany('menus', 'parent_id', 'id');
-
+        return $this->hasMany(self::class, 'parent_id');
     }
 
-    public static function tree()
+    public function parent()
     {
-
-        return static::with(implode('.', array_fill(0, 4, 'children')))->where('parent_id', '=', NULL)->get();
-
+        return $this->belongsTo(self::class, 'parent_id');
     }
 }
