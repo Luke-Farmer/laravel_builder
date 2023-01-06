@@ -9,7 +9,7 @@ class NavigationService
     public function getNavigation()
     {
         $links = Menu::with('children')->whereNull('parent_id')->get();
-
+        dd($links);
         $navigation = [];
         foreach ($links as $link) {
             $navigation[] = [
