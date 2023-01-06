@@ -1,6 +1,7 @@
 <?php
 use App\Models\Settings;
 use App\Models\Themes;
+use App\Models\Nav;
 use App\Models\Menu;
 ?>
 <!DOCTYPE html>
