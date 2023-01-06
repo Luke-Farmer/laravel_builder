@@ -31,14 +31,9 @@ class PageController extends Controller
             abort(404);
         }
 
-        $items = Navigation::tree();
-
-
-
         return view::make('pages.template')
             ->withPage(Page::where('slug', '=', '/')
-            ->firstOrFail())
-            ->withItems($items);
+            ->firstOrFail());
     }
 
     public function getPage($slug)

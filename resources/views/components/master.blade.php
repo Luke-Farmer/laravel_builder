@@ -122,7 +122,6 @@ use App\Models\Menu;
                 </nav>
             </div>
         </header>
-
         {{ $slot }}
         <footer>
             <div class="container">
