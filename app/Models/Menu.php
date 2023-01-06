@@ -15,12 +15,17 @@ class Menu extends Model
 
     }
 
-    public function children() {
+    public function children()
+    {
 
         return $this->hasMany('menus', 'parent_id', 'id');
 
+    }
+
     public static function tree()
     {
+
         return static::with(implode('.', array_fill(0, 4, 'children')))->where('parent_id', '=', NULL)->get();
+
     }
 }
