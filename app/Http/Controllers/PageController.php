@@ -35,8 +35,7 @@ class PageController extends Controller
 
         return view('pages.template')
             ->withPage(Page::where('slug', '=', '/')
-            ->firstOrFail())
-            ->with('items', $items);
+            ->firstOrFail());
     }
 
     public function getPage($slug)

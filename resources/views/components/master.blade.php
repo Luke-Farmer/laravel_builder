@@ -1,7 +1,7 @@
 <?php
 use App\Models\Settings;
 use App\Models\Themes;
-use App\Models\Nav;
+use App\Models\Menu;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -122,7 +122,7 @@ use App\Models\Nav;
             </div>
         </header>
         <ul>
-            @foreach($items as $item)
+            @foreach(Menu::tree(); as $item)
                 <li>{{ $item->title }}
                     @foreach($item['children'] as $child)
                         <li>{{ $child->title }}</li>
