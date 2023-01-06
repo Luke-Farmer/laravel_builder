@@ -8,7 +8,18 @@
         <div class="row g-0 bg-white">
             <div class="col-12 p-3">
                 <div class="row">
-
+                    <ul>
+                        @foreach($categories as $category)
+                            <li>{{ $category->name }}</li>
+                            <ul>
+                                @foreach($nav as $nav_item)
+                                    @if($nav_item->category_id == $category->id)
+                                        <li>{{ $nav_item->name }} - {{ $nav_item->url }}</li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
