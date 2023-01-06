@@ -31,7 +31,7 @@ class PageController extends Controller
             abort(404);
         }
 
-        return view::make('pages.template')
+        return view('pages.template')
             ->withPage(Page::where('slug', '=', '/')
             ->firstOrFail());
     }
