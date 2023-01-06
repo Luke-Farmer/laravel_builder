@@ -123,7 +123,8 @@ use App\Models\Menu;
             </div>
         </header>
         <ul>
-            @foreach(Menu::tree() as $item)
+            <?php $items = Menu::tree(); dd($items); ?>
+            @foreach(items as $item)
                 <li>{{ $item->title }}
                     @foreach($item['children'] as $child)
                         <li>{{ $child->title }}</li>
