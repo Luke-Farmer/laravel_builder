@@ -124,6 +124,7 @@ use App\Services\NavigationService;
         <nav>
             <ul>
                 @foreach($navigation as $link)
+                    @dd($link)
                     <li>
                         <a href="{{ $link['slug'] }}">{{ $link['menu_title'] }}</a>
                         @if(!empty($link['children']))
