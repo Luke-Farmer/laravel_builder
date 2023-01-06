@@ -91,6 +91,14 @@ $navigation = $navigationService->getNavigation();
                                     </ul>
                                 </li>
                             </ul>
+                            <style>
+                                @media all and (min-width: 992px) {
+                                    .navbar .nav-item .dropdown-menu{ display: none; }
+                                    .navbar .nav-item:hover .nav-link{   }
+                                    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+                                    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+                                }
+                            </style>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
