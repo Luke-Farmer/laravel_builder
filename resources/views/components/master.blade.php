@@ -1,6 +1,7 @@
 <?php
 use App\Models\Settings;
 use App\Models\Themes;
+use App\Services\NavigationService;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,6 +116,10 @@ use App\Models\Themes;
                 </nav>
             </div>
         </header>
+        <?php
+        $navigationService = new NavigationService();
+        $navigation = $navigationService->getNavigation();
+        ?>
         <nav>
             <ul>
                 @foreach($navigation as $link)

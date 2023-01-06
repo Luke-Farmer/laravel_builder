@@ -48,12 +48,10 @@ class PageController extends Controller
             abort(404);
         }
 
-        $navigationService = new NavigationService();
-        $navigation = $navigationService->getNavigation();
+
 
         return view('pages.template')
-            ->withPage($page)
-            ->withNavigation($navigation);
+            ->withPage($page);
     }
 
     public function show($id)
