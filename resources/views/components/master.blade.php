@@ -89,7 +89,7 @@ $navigation = $navigationService->getNavigation();
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
-                                        @if(!empty($link['children']))
+                                        @if(empty($link['children']))
                                         <a href="{{ $link['url'] }}" class="nav-link">{{ $link['text'] }}</a>
                                         @else
                                         <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ $link['text'] }}</a>
