@@ -48,8 +48,7 @@ class PageController extends Controller
         }
 
         return view('pages.template')
-            ->withPage($page)
-            ->with('items', $items);
+            ->withPage($page);
     }
 
     public function show($id)
