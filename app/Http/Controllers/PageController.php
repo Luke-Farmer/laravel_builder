@@ -12,6 +12,7 @@ use Analytics;
 use Spatie\Analytics\Period;
 use Redirect;
 use Auth;
+use App\Services\NavigationService;
 
 class PageController extends Controller
 {
@@ -47,8 +48,12 @@ class PageController extends Controller
             abort(404);
         }
 
+        $navigationService = new NavigationService();
+        $navigation = $navigationService->getNavigation();
+
         return view('pages.template')
-            ->withPage($page);
+            ->withPage($page)
+            ->withNavigation($navigation);
     }
 
     public function show($id)
