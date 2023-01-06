@@ -81,9 +81,12 @@ $navigation = $navigationService->getNavigation();
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
-                                        <a href="{{ $link['url'] }}" class="link-hover">{{ $link['text'] }}</a>
                                         @if(!empty($link['children']))
-                                            <ul>
+                                        <a href="{{ $link['url'] }}" class="link-hover">{{ $link['text'] }}</a>
+                                        @endif
+                                        @if(!empty($link['children']))
+                                            <a href="{{ $link['url'] }}" class="link-hover dropdown-toggle">{{ $link['text'] }}</a>
+                                            <ul class="">
                                                 @foreach($link['children'] as $child)
                                                     <li class="nav-item">
                                                         <a href="{{ $child['url'] }}">{{ $child['text'] }}</a>
