@@ -31,11 +31,14 @@ class PageController extends Controller
             abort(404);
         }
 
-        $items = Menu::tree();
+        $items = Navigation::tree();
 
-        return view('pages.template')
+
+
+        return view::make('pages.template')
             ->withPage(Page::where('slug', '=', '/')
-            ->firstOrFail());
+            ->firstOrFail())
+            ->withItems($items);
     }
 
     public function getPage($slug)
