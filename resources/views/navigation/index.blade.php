@@ -15,29 +15,34 @@ $navigation = $navigationService->getNavigation();
         <div class="row g-0 bg-white">
             <div class="col-12 p-3">
                 <div class="row">
-                    <ul>
-                        @foreach($navigation as $link)
-                            <li class="nav-item">
-                                @if(empty($link['children']))
-                                    {{ $link['text'] }}
-                                @else
-                                    {{ $link['text'] }}
-                                @endif
-                                @if(!empty($link['children']))
-                                    <ul class="">
-                                        @foreach($link['children'] as $child)
-                                            <li class="">
-                                                {{ $child['text'] }}
-                                                @if(!empty($child['children']))
-                                                    @include('partials.navigation', ['navigation' => $child['children']])
-                                                @endif
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                @endif
-                            </li>
-                        @endforeach
-                    </ul>
+                    <div class="col-12 col-lg-6">
+                        <ul class="list-style-none">
+                            @foreach($navigation as $link)
+                                <li class="nav-item">
+                                    @if(empty($link['children']))
+                                        {{ $link['text'] }}
+                                    @else
+                                        {{ $link['text'] }}
+                                    @endif
+                                    @if(!empty($link['children']))
+                                        <ul class="list-style-none">
+                                            @foreach($link['children'] as $child)
+                                                <li class="">
+                                                    {{ $child['text'] }}
+                                                    @if(!empty($child['children']))
+                                                        @include('partials.navigation', ['navigation' => $child['children']])
+                                                    @endif
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+
+                    </div>
                 </div>
             </div>
         </div>
