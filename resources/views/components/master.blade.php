@@ -98,7 +98,7 @@ $navigation = $navigationService->getNavigation();
                                         <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ $link['text'] }}</a>
                                         @endif
                                         @if(!empty($link['children']))
-                                            <ul class="dropdown-menu ms-0">
+                                            <ul class="dropdown-menu ms-0" aria-labelledby="dropdownMenuButton">
                                                 @foreach($link['children'] as $child)
                                                     <li class="nav-item">
                                                         <a href="{{ $child['url'] }}" class="dropdown-item">{{ $child['text'] }}</a>
