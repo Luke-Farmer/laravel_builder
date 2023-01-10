@@ -88,22 +88,6 @@ $navigation = $navigationService->getNavigation();
                                     .navbar .nav-item .dropdown-menu { margin-left: 100%; }
                                     .navbar .nav-item .dropdown-toggle { margin-left: 0!important; }
                                 }
-                                .dropdown-menu li {
-                                    position: relative;
-                                }
-                                .dropdown-menu .dropdown-submenu {
-                                    display: none;
-                                    position: absolute;
-                                    left: 100%;
-                                    top: -7px;
-                                }
-                                .dropdown-menu .dropdown-submenu-left {
-                                    right: 100%;
-                                    left: auto;
-                                }
-                                .dropdown-menu > li:hover > .dropdown-submenu {
-                                    display: block;
-                                }
                             </style>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                 @foreach($navigation as $link)
@@ -111,13 +95,13 @@ $navigation = $navigationService->getNavigation();
                                         @if(empty($link['children']))
                                         <a href="{{ $link['url'] }}" class="nav-link">{{ $link['text'] }}</a>
                                         @else
-                                        <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ $link['text'] }}</a>
+                                        <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
                                         @endif
                                         @if(!empty($link['children']))
-                                            <ul class="dropdown-menu ms-0" aria-labelledby="dropdownMenuButton">
+                                            <ul class="dropdown-menu ms-0" aria-labelledby="dropdown-{{ $link['text'] }}">
                                                 @foreach($link['children'] as $child)
                                                     <li class="nav-item">
-                                                        <a href="{{ $child['url'] }}" class="dropdown-item">{{ $child['text'] }}</a>
+                                                        <a href="{{ $child['url'] }}" class="dropdown-item" id="dropdown-{{ $link['text'] }}">{{ $child['text'] }}</a>
                                                         @if(!empty($child['children']))
                                                             @include('partials.navigation', ['navigation' => $child['children']])
                                                         @endif

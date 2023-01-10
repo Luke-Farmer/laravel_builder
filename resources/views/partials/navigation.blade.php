@@ -1,5 +1,5 @@
 <?php $count = $count ?? 1; ?>
-<ul class="dropdown-menu dropdown-submenu menu-level-{{ strval($count) }}">
+<ul class="dropdown-menu dropdown-submenu menu-level-{{ strval($count) }}" aria-labelledby="dropdown-{{ $link['text'] }}">
     @foreach($navigation as $link)
         <li class="nav-item">
             <a href="{{ $link['url'] }}" class="dropdown-item">{{ $link['text'] }}</a>
