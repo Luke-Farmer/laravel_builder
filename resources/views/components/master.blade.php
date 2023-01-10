@@ -80,9 +80,9 @@ $navigation = $navigationService->getNavigation();
                             <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive visible-mobile w-50"></a>
                             <style>
                                 @media all and (min-width: 992px) {
-                                    .navbar .nav-item .dropdown-menu{ display: none; }
+                                    .navbar .nav-item .menu-level-0{ display: none; }
                                     .navbar .nav-item:hover .nav-link{   }
-                                    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+                                    .navbar .nav-item:hover .menu-level-0{ display: block; }
                                     /*.navbar .nav-item .dropdown-menu{ margin-top:0; }*/
                                     /*.navbar .nav-item { position: relative; }*/
                                     /*.navbar .nav-item .dropdown-menu { margin-left: 100%; }*/
@@ -114,7 +114,7 @@ $navigation = $navigationService->getNavigation();
                                         <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
                                         @endif
                                         @if(!empty($link['children']))
-                                            <ul class="dropdown-menu ms-0" aria-labelledby="dropdown-{{ $link['text'] }}">
+                                            <ul class="dropdown-menu menu-level-0 ms-0" aria-labelledby="dropdown-{{ $link['text'] }}">
                                                 @foreach($link['children'] as $child)
                                                     <li class="nav-item">
                                                         <a href="{{ $child['url'] }}" class="dropdown-item" id="dropdown-{{ $link['text'] }}">{{ $child['text'] }}</a>
