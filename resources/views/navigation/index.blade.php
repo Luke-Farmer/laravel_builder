@@ -16,7 +16,7 @@ $navigation = $navigationService->getNavigation();
             <div class="col-12 p-3">
                 <div class="row">
                     <div class="col-12 col-lg-6">
-                        <ul class="list-style-none">
+                        <ul class="" style="list-style:none;">
                             @foreach($navigation as $link)
                                 <li class="nav-item">
                                     @if(empty($link['children']))
@@ -25,7 +25,7 @@ $navigation = $navigationService->getNavigation();
                                         {{ $link['text'] }}
                                     @endif
                                     @if(!empty($link['children']))
-                                        <ul class="list-style-none">
+                                        <ul class="" style="list-style:none;">
                                             @foreach($link['children'] as $child)
                                                 <li class="">
                                                     {{ $child['text'] }}
