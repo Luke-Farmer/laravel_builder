@@ -1,3 +1,10 @@
+<?php
+use App\Services\NavigationService;
+
+$navigationService = new NavigationService();
+$navigation = $navigationService->getNavigation();
+
+?>
 <x-admin-master>
     <div class="p-3">
         <div class="row g-0">
