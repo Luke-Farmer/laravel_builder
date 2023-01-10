@@ -79,15 +79,15 @@ $navigation = $navigationService->getNavigation();
                         <div class="navbar-wrapper d-flex align-items-center">
                             <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive visible-mobile w-50"></a>
                             <style>
-                                /*@media all and (min-width: 992px) {*/
-                                /*    .navbar .nav-item .dropdown-menu{ display: none; }*/
-                                /*    .navbar .nav-item:hover .nav-link{   }*/
-                                /*    .navbar .nav-item:hover .dropdown-menu{ display: block; }*/
-                                /*    .navbar .nav-item .dropdown-menu{ margin-top:0; }*/
-                                /*    .navbar .nav-item { position: relative; }*/
-                                /*    .navbar .nav-item .dropdown-menu { margin-left: 100%; }*/
-                                /*    .navbar .nav-item .dropdown-toggle { margin-left: 0!important; }*/
-                                /*}*/
+                                @media all and (min-width: 992px) {
+                                    .navbar .nav-item .dropdown-menu{ display: none; }
+                                    .navbar .nav-item:hover .nav-link{   }
+                                    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+                                    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+                                    .navbar .nav-item { position: relative; }
+                                    .navbar .nav-item .dropdown-menu { margin-left: 100%; }
+                                    .navbar .nav-item .dropdown-toggle { margin-left: 0!important; }
+                                }
                                 .dropdown-menu li {
                                     position: relative;
                                 }
