@@ -19,15 +19,15 @@ $navigation = $navigationService->getNavigation();
                         @foreach($navigation as $link)
                             <li class="nav-item">
                                 @if(empty($link['children']))
-                                    <a href="{{ $link['url'] }}" class="nav-link">{{ $link['text'] }}</a>
+                                    {{ $link['text'] }}
                                 @else
-                                    <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
+                                    {{ $link['text'] }}
                                 @endif
                                 @if(!empty($link['children']))
-                                    <ul class="dropdown-menu ms-0" aria-labelledby="dropdown-{{ $link['text'] }}">
+                                    <ul class="">
                                         @foreach($link['children'] as $child)
-                                            <li class="nav-item">
-                                                <a href="{{ $child['url'] }}" class="dropdown-item" id="dropdown-{{ $link['text'] }}">{{ $child['text'] }}</a>
+                                            <li class="">
+                                                {{ $child['text'] }}
                                                 @if(!empty($child['children']))
                                                     @include('partials.navigation', ['navigation' => $child['children']])
                                                 @endif
