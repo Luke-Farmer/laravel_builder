@@ -36,6 +36,7 @@ Route::get('/', [PageController::class, 'getIndex']);
 Route::resource('/admin/pages', PageController::class);
 
 Route::get('/admin/analytics', [AdminController::class, 'analytics']);
+
 Route::resource('/admin/settings', SettingsController::class);
 
 Route::get('/admin/page/create', function() {

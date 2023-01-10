@@ -21,8 +21,7 @@ class NavigationController extends Controller
     {
         Session::forget('message');
         return view('navigation.index')
-            ->withNav(Nav::all())
-            ->withCategories(Categories::all());
+            ->withMenu(Menu::all());
     }
 
     public function create()
