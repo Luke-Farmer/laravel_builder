@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Redirect;
 use Session;
 use App\Models\Nav;
 use Image;
+use App\Services\NavigationService;
+
 
 class NavigationController extends Controller
 {
@@ -20,8 +22,12 @@ class NavigationController extends Controller
     public function index()
     {
         Session::forget('message');
+
+        $navigationService = new NavigationService();
+        $navigation = $navigationService->getNavigation();
+
         return view('navigation.index')
-            ->withMenu(Menu::all());
+            ->withMenu($navigation);
     }
 
     public function create()
