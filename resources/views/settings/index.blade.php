@@ -160,9 +160,11 @@ use App\Models\Settings;
 <script>
     let editor_css = CodeMirror.fromTextArea
     (document.getElementById('editor_css'), {
-        mode: "xml",
+        mode: "css",
         theme: "dracula",
         lineNumbers: "true",
-        lineWrapping: "true"
+        lineWrapping: "true",
+        selectionPointer: "true"
+
     });
 </script>
