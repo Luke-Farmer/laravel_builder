@@ -8,7 +8,7 @@ class NavigationService
 {
     public function getNavigation()
     {
-        $links = Menu::with('children')->where('parent_id', '=', '0')->get();
+        $links = Menu::with('children')->where('parent_id', '=', '0')->order_by('sort_order')->get();
         $navigation = [];
         foreach ($links as $link) {
             $navigation[] = [
