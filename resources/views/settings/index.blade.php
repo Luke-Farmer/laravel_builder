@@ -158,7 +158,7 @@ use App\Models\Settings;
 <script src="/codemirror/addon/search/jump-to-line.js"></script>
 <script src="/codemirror/addon/dialog/dialog.js"></script>
 <script>
-    let editor = CodeMirror.fromTextArea
+    let editor_css = CodeMirror.fromTextArea
     (document.getElementById('editor_css'), {
         mode: "css",
         theme: "dracula",
