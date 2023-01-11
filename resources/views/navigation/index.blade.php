@@ -28,7 +28,7 @@ $navigation = $navigationService->getNavigation();
                                         <ul class="" style="list-style:none;">
                                             @foreach($link['children'] as $child)
                                                 <li class="">
-                                                    {{ $child['text'] }} - {{ $link['url'] }} - {{ $link['id'] }}
+                                                    {{ $child['text'] }} - {{ $child['url'] }} - {{ $child['id'] }}
                                                     @if(!empty($child['children']))
                                                         @include('partials.navigation', ['navigation' => $child['children']])
                                                     @endif
