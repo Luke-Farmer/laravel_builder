@@ -123,7 +123,7 @@ use App\Models\Settings;
                     <div class="row g-0">
                         <div class="col-12 p-3 bg-white">
                             <div class="position-relative" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
-                                <textarea class="w-100" id="editor" style="min-height:800px;" label="css" type="text" name="css" spellcheck="false" >{{ $theme->theme_css }}</textarea>
+                                <textarea class="w-100" id="editor_css" style="min-height:800px;" label="css" type="text" name="css" spellcheck="false" >{{ $theme->theme_css }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -366,7 +366,7 @@ use App\Models\Settings;
     /* End of prism.js syntax highlighting*/
 </style>
 <script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor_css"), {
         mode: 'text/css',
         selectionPointer: true,
         lineNumbers: true,
