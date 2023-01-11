@@ -160,7 +160,7 @@ use App\Models\Settings;
 <script>
     let editor_css = CodeMirror.fromTextArea
     (document.getElementById('editor_css'), {
-        mode: "text/css",
+        mode: "xml",
         theme: "dracula",
         lineNumbers: "true",
         lineWrapping: "true"
