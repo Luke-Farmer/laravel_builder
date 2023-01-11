@@ -39,7 +39,7 @@ $navigation = $navigationService->getNavigation();
         gtag('config', 'G-67LKNECFX4');
     </script>
     <style>
-        {{ Themes::where('active', '=', '1')->first()->theme_css }}
+        {!! Themes::where('active', '=', '1')->first()->theme_css !!}
     </style>
     <body>
         <header class="navbar-fixed-top">
