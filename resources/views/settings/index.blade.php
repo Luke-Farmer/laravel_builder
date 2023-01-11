@@ -366,7 +366,7 @@ use App\Models\Settings;
     /* End of prism.js syntax highlighting*/
 </style>
 <script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("editor_css"), {
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
         mode: 'text/css',
         selectionPointer: true,
         lineNumbers: true,
