@@ -7,20 +7,20 @@ use App\Models\Themes;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="/codemirror/lib/codemirror.css">
-        <link rel="stylesheet" href="/codemirror/theme/dracula.css">
+{{--        <link rel="stylesheet" href="/codemirror/lib/codemirror.css">--}}
+{{--        <link rel="stylesheet" href="/codemirror/theme/dracula.css">--}}
         <link rel="stylesheet" href="/css/main.css">
         <link rel="icon" type="image/png" href="/img/favicon.svg"/>
-        <script src="/codemirror/lib/codemirror.js"></script>
-        <script src="/codemirror/mode/xml/xml.js"></script>
-        <script src="/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-        <script src="/codemirror/mode/css/css.js"></script>
-        <script src="/codemirror/mode/htmlembedded/htmlembedded.js"></script>
-        <script src="/codemirror/mode/xml/xml.js"></script>
-        <script src="/codemirror/addon/search/search.js"></script>
-        <script src="/codemirror/addon/search/searchcursor.js"></script>
-        <script src="/codemirror/addon/search/jump-to-line.js"></script>
-        <script src="/codemirror/addon/dialog/dialog.js"></script>
+{{--        <script src="/codemirror/lib/codemirror.js"></script>--}}
+{{--        <script src="/codemirror/mode/xml/xml.js"></script>--}}
+{{--        <script src="/codemirror/mode/htmlmixed/htmlmixed.js"></script>--}}
+{{--        <script src="/codemirror/mode/css/css.js"></script>--}}
+{{--        <script src="/codemirror/mode/htmlembedded/htmlembedded.js"></script>--}}
+{{--        <script src="/codemirror/mode/xml/xml.js"></script>--}}
+{{--        <script src="/codemirror/addon/search/search.js"></script>--}}
+{{--        <script src="/codemirror/addon/search/searchcursor.js"></script>--}}
+{{--        <script src="/codemirror/addon/search/jump-to-line.js"></script>--}}
+{{--        <script src="/codemirror/addon/dialog/dialog.js"></script>--}}
 
     </head>
     <style>
