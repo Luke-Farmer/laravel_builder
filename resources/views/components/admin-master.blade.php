@@ -40,7 +40,7 @@ use App\Models\Themes;
         <script>
             let editor = CodeMirror.fromTextArea
             (document.getElementById('editor'), {
-                mode: "css",
+                mode: "xml",
                 theme: "dracula",
                 lineNumbers: "true",
                 lineWrapping: "true"

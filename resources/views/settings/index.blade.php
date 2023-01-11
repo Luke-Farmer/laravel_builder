@@ -123,7 +123,7 @@ use App\Models\Settings;
                     <div class="row g-0">
                         <div class="col-12 p-3 bg-white">
                             <div class="position-relative" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
-                                <textarea class="w-100 editor_css" id="editor" style="min-height:800px;" label="css" type="text" name="css" spellcheck="false" >{{ $theme->theme_css }}</textarea>
+                                <textarea class="w-100 editor_css" id="content-area" style="min-height:800px;" label="css" type="text" name="css" spellcheck="false" >{{ $theme->theme_css }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -374,17 +374,3 @@ use App\Models\Settings;
         theme: 'dracula'
     });
 </script>
-<link rel="stylesheet" href="/codemirror/lib/codemirror.css">
-<link rel="stylesheet" href="/codemirror/addon/dialog/dialog.css">
-<link rel="stylesheet" href="/codemirror/theme/darcula.css">
-<link rel="stylesheet" href="/codemirror/theme/gruvbox-dark.css">
-<link rel="stylesheet" href="/codemirror/theme/idea.css">
-<script type="text/javascript" src="/codemirror/lib/codemirror.js"></script>
-<script type="text/javascript" src="/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-<script type="text/javascript" src="/codemirror/mode/css/css.js"></script>
-<script type="text/javascript" src="/codemirror/mode/htmlembedded/htmlembedded.js"></script>
-<script type="text/javascript" src="/codemirror/mode/xml/xml.js"></script>
-<script type="text/javascript" src="/codemirror/addon/search/search.js"></script>
-<script type="text/javascript" src="/codemirror/addon/search/searchcursor.js"></script>
-<script type="text/javascript" src="/codemirror/addon/search/jump-to-line.js"></script>
-<script type="text/javascript" src="/codemirror/addon/dialog/dialog.js"></script>
