@@ -366,11 +366,25 @@ use App\Models\Settings;
     /* End of prism.js syntax highlighting*/
 </style>
 <script>
-    var editor = CodeMirror.fromTextArea(document.getElementsByClassName("editor_css"), {
-        mode: 'text/css',
+    var editor = CodeMirror.fromTextArea(document.getElementById("content-area"), {
+        mode: 'css',
         selectionPointer: true,
         lineNumbers: true,
         lineWrapping: true,
         theme: 'dracula'
     });
 </script>
+<link rel="stylesheet" href="/codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="/codemirror/addon/dialog/dialog.css">
+<link rel="stylesheet" href="/codemirror/theme/darcula.css">
+<link rel="stylesheet" href="/codemirror/theme/gruvbox-dark.css">
+<link rel="stylesheet" href="/codemirror/theme/idea.css">
+<script type="text/javascript" src="/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script type="text/javascript" src="/codemirror/mode/css/css.js"></script>
+<script type="text/javascript" src="/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script type="text/javascript" src="/codemirror/mode/xml/xml.js"></script>
+<script type="text/javascript" src="/codemirror/addon/search/search.js"></script>
+<script type="text/javascript" src="/codemirror/addon/search/searchcursor.js"></script>
+<script type="text/javascript" src="/codemirror/addon/search/jump-to-line.js"></script>
+<script type="text/javascript" src="/codemirror/addon/dialog/dialog.js"></script>
