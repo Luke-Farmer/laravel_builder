@@ -14,6 +14,7 @@ class NavigationService
             $navigation[] = [
                 'text' => $link->menu_title,
                 'url' => $link->slug,
+                'id' => $link->id,
                 'children' => $this->getChildLinks($link->children)
             ];
         }
@@ -28,6 +29,7 @@ class NavigationService
             $childLinks[] = [
                 'text' => $child->menu_title,
                 'url' => $child->slug,
+                'id' => $child->id,
                 'children' => $this->getChildLinks($child->children)
             ];
         }

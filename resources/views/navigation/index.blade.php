@@ -20,15 +20,15 @@ $navigation = $navigationService->getNavigation();
                             @foreach($navigation as $link)
                                 <li class="nav-item">
                                     @if(empty($link['children']))
-                                        {{ $link['text'] }}
+                                        {{ $link['text'] }} - {{ $link['url'] }} - {{ $link['id'] }}
                                     @else
-                                        {{ $link['text'] }}
+                                        {{ $link['text'] }} - {{ $link['url'] }} - {{ $link['id'] }}
                                     @endif
                                     @if(!empty($link['children']))
                                         <ul class="" style="list-style:none;">
                                             @foreach($link['children'] as $child)
                                                 <li class="">
-                                                    {{ $child['text'] }}
+                                                    {{ $child['text'] }} - {{ $link['url'] }} - {{ $link['id'] }}
                                                     @if(!empty($child['children']))
                                                         @include('partials.navigation', ['navigation' => $child['children']])
                                                     @endif
