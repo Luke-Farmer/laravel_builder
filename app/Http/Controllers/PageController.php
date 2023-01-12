@@ -48,8 +48,6 @@ class PageController extends Controller
             abort(404);
         }
 
-
-        dd($slug);
         return view('pages.template')
             ->withPage($page);
     }
