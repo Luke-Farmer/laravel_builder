@@ -31,8 +31,6 @@ Route::get('/', [PageController::class, 'getIndex']);
 
 Route::post('/contact', [MailController::class, 'contactPost'])->name('contactPost');
 
-Route::get('/', [PageController::class, 'getIndex']);
-
 Route::resource('/admin/pages', PageController::class);
 
 Route::get('/admin/analytics', [AdminController::class, 'analytics']);
@@ -70,6 +68,6 @@ Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users
 
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
-Route::get('/{slug}', [PageController::class, 'getPage'])->where('slug', '.*');
+Route::get('/{slug}', [PageController::class, 'getPage']);
 
 require __DIR__.'/auth.php';
