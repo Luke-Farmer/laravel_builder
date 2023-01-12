@@ -15,6 +15,7 @@ class NavigationService
                 'text' => $link->menu_title,
                 'url' => $link->slug,
                 'id' => $link->id,
+                'link' => $link->is_link,
                 'children' => $this->getChildLinks($link->children)
             ];
         }
@@ -30,6 +31,7 @@ class NavigationService
                 'text' => $child->menu_title,
                 'url' => $child->slug,
                 'id' => $child->id,
+                'link' => $child->is_link,
                 'children' => $this->getChildLinks($child->children)
             ];
         }
