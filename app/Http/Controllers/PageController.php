@@ -49,7 +49,7 @@ class PageController extends Controller
         }
 
 
-
+        return $slug;
         return view('pages.template')
             ->withPage($page);
     }
