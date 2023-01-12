@@ -115,7 +115,11 @@ $navigation = $navigationService->getNavigation();
                                                 <p class="nav-link">{{ $link['text'] }}</p>
                                             @endif
                                         @else
-                                        <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
+                                            @if($link['is_link'] == 1)
+                                                <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
+                                            @else
+                                                <p class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</p>
+                                            @endif
                                         @endif
                                         @if(!empty($link['children']))
                                             <ul class="dropdown-menu menu-level-0 ms-0" aria-labelledby="dropdown-{{ $link['text'] }}">
