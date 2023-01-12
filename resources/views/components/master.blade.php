@@ -109,13 +109,13 @@ $navigation = $navigationService->getNavigation();
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
                                         @if(empty($link['children']))
-                                            @if($link['is_link'] == 1)
+                                            @if($link['link'] == 1)
                                                 <a href="{{ $link['url'] }}" class="nav-link">{{ $link['text'] }}</a>
                                             @else
                                                 <p class="nav-link">{{ $link['text'] }}</p>
                                             @endif
                                         @else
-                                            @if($link['is_link'] == 1)
+                                            @if($link['link'] == 1)
                                                 <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
                                             @else
                                                 <p class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</p>
