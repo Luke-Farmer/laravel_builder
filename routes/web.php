@@ -68,6 +68,8 @@ Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users
 
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
+require __DIR__.'/auth.php';
+
 Route::get('/{slug}', [PageController::class, 'getPage']);
 
-require __DIR__.'/auth.php';
+
