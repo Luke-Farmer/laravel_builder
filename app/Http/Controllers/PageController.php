@@ -45,7 +45,11 @@ class PageController extends Controller
             $page = Portfolio::where('slug', '=', $slug)->first();
         }
 
-        if($page->enabled == 0 && Auth::guest() || empty($page)) {
+        if(empty($page)) {
+            abort(404);
+        }
+
+        if($page->enabled == 0 && Auth::guest()) {
             abort(404);
         }
 
