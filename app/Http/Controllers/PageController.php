@@ -41,7 +41,7 @@ class PageController extends Controller
     {
         $page = Page::where('slug', '=', $slug)->first();
 
-        if(Settings::where('setting', '=', 'portfolio_active')->first() == 1 && !isset($page)) {
+        if(Settings::where('setting', '=', 'portfolio_active')->first()->value == 1 && !isset($page)) {
             $page = Portfolio::where('slug', '=', $slug)->first();
         }
 
