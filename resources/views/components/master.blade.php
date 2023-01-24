@@ -112,13 +112,13 @@ $navigation = $navigationService->getNavigation();
                                             @if($link['link'] == 1)
                                                 <a href="{{ $link['url'] }}" class="nav-link">{{ $link['text'] }}</a>
                                             @else
-                                                <p class="nav-link">{{ $link['text'] }}</p>
+                                                <p class="nav-link mb-0">{{ $link['text'] }}</p>
                                             @endif
                                         @else
                                             @if($link['link'] == 1)
                                                 <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
                                             @else
-                                                <p class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</p>
+                                                <p class="nav-link dropdown-toggle mb-0"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</p>
                                             @endif
                                         @endif
                                         @if(!empty($link['children']))
