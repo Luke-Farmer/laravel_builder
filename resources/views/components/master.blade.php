@@ -77,7 +77,7 @@ $navigation = $navigationService->getNavigation();
                             <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                         </button>
                         <div class="navbar-wrapper d-flex align-items-center">
-                            <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive w-75"></a>
+                            <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive w-75 visible-mobile"></a>
                             <style>
                                 @media all and (min-width: 992px) {
                                     .navbar .nav-item .menu-level-0{ display: none; }
