@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use App\Models\Settings;
+use App\Models\Portfolio;
 use App\Models\Themes;
 use Illuminate\Http\Request;
 use Session;
@@ -54,6 +55,10 @@ class SettingsController extends Controller
         $business_number = Settings::where('setting', '=', 'business_number')->first();
         $business_number->value = $request->input('business_number');
         $business_number->save();
+
+        $portfolio_active = Settings::where('setting', '=', 'portfolio_active')->first();
+        $portfolio_active->value = $request->input('portfolio_active');
+        $portfolio_active->save();
 
         $css_update = Themes::where('active', '=', '1')->first();
         $css_update->theme_css = $request->input('css');
