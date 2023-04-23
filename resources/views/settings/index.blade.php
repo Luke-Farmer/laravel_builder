@@ -79,7 +79,7 @@ use App\Models\Settings;
                             <div class="row g-0">
                                 <div class="col-12 p-3 bg-white">
                                     <label>Instagram:</label>
-                                    <input class="edit-page-input p-1" name="instagram" value="{{ $instagram }}">
+                                    <input class="edit-page-input p-1" name="instagram" value="{{ $instagram->setting }}">
                                 </div>
                             </div>
                         </div>
