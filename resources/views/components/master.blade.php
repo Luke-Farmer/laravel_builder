@@ -195,13 +195,13 @@ $navigation = $navigationService->getNavigation();
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <div class="">
                             <a href="mailto:{{ Settings::where('setting', '=', 'site_email')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'site_email')->first()->value }}</a>
-                            <p class="white mb-0 text-center">Instagram <a href="https://www.instagram.com/{{ Settings::where('setting', '=', 'instagram')->first()->value }}">@{{ Settings::where('setting', '=', 'instagram')->first()->value }}</a></p>
+                            <p class="white mb-0 text-center">Instagram <a href="https://www.instagram.com/{{ Settings::where('setting', '=', 'instagram')->first()->value }}">@{!! Settings::where('setting', '=', 'instagram')->first()->value !!}</a></p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <div class="">
                             <p class="white mb-0 text-center">{{ Settings::where('setting', '=', 'company_name')->first()->value }}</p>
-                            <a href="tel:{{ Settings::where('setting', '=', 'business_number')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'business_number')->first()->value }}</a>
+                            <a href="tel:{{ Settings::where('setting', '=', 'business_number')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'business_numer')->first()->value }}</a>
                         </div>
                     </div>
                 </div>
