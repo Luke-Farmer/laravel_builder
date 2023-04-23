@@ -48,6 +48,12 @@ use App\Models\Settings;
                         <div class="col-12 p-3 bg-white">
                             <div class="row g-0">
                                 <div class="col-12 p-3 bg-white">
+                                    <label>Business Logo:</label>
+                                    <input class="edit-page-input p-1" name="company_logo" value="null">
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-12 p-3 bg-white">
                                     <label>Business Name:</label>
                                     <input class="edit-page-input p-1" name="company_name" value="{{ $company }}">
                                 </div>
@@ -68,6 +74,12 @@ use App\Models\Settings;
                                 <div class="col-12 p-3 bg-white">
                                     <label>Company Email:</label>
                                     <input class="edit-page-input p-1" name="site_email" value="{{ $email }}">
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-12 p-3 bg-white">
+                                    <label>Instagram:</label>
+                                    <input class="edit-page-input p-1" name="instagram" value="{{ $instagram }}">
                                 </div>
                             </div>
                         </div>

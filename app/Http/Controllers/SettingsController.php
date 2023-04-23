@@ -72,6 +72,10 @@ class SettingsController extends Controller
         $themeNew->active = 1;
         $themeNew->save();
 
+        $insta = Settings::where('setting', '=', 'instagram')->first();
+        $insta->value = $request->input('instagram');
+        $insta->save();
+
         return redirect()->route('settings.index');
     }
 }
