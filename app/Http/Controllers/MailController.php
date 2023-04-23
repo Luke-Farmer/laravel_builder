@@ -18,7 +18,7 @@ class MailController extends Controller
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'comment' => $request->get('comment'),
-//            'phone' => $request->get('phone'),
+            'phone' => $request->get('phone'),
             'subject' => $request->get('subject')],
             function ($message) {
                 $message->from('enquiry@lukefarmer.co.uk', 'Company Name');

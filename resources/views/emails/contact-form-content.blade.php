@@ -11,8 +11,6 @@
             <p style="margin:0 0 16px;">{{ $name }}</p>
             <p class="">Email:</p>
             <p style="margin:0 0 16px; color: #fff;">{{ $email }}</p>
-            <p class="">Number:</p>
-            <p style="margin:0 0 16px; color: #fff;">{{ $phone }}</p>
             <p class="">Subject:</p>
             <p style="margin:0 0 16px; color: #fff;">{{ $subject }}</p>
             <p class="">Message:</p>
