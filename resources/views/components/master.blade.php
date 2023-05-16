@@ -85,6 +85,9 @@ $navigation = $navigationService->getNavigation();
                                     .navbar .nav-item:hover .nav-link{   }
                                     .navbar .nav-item:hover .menu-level-0{ display: block; }
                                 }
+                                .nav-item {
+                                    margin-right: 1.5rem!important;
+                                }
                                 .dropdown-menu li {
                                     position: relative;
                                 }
