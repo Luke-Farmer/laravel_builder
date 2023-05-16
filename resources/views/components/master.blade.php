@@ -261,6 +261,14 @@ $navigation = $navigationService->getNavigation();
                 this.contentEditable = true;
             });
         </script>
+        <script>
+            $(function () {
+                $(document).scroll(function () {
+                    var $nav = $(".navbar-fixed-top");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                });
+            });
+        </script>
         <script src="https://kit.fontawesome.com/e44c6e790f.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     </body>
