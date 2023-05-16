@@ -86,7 +86,10 @@ $navigation = $navigationService->getNavigation();
                                     .navbar .nav-item:hover .menu-level-0{ display: block; }
                                 }
                                 .nav-item {
-                                    margin-right: 1.5rem!important;
+                                    margin-right: 1.5rem;
+                                }
+                                .navbar-nav li:last-child {
+                                    margin-right: 0px!important;
                                 }
                                 .dropdown-menu li {
                                     position: relative;
@@ -105,7 +108,7 @@ $navigation = $navigationService->getNavigation();
                                     display: block;
                                 }
                             </style>
-                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
                                         @if(empty($link['children']))
