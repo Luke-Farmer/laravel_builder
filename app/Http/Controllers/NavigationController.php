@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use App\Models\Portfolio;
+use App\Models\Settings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Session;
@@ -26,8 +27,11 @@ class NavigationController extends Controller
         $navigationService = new NavigationService();
         $navigation = $navigationService->getNavigation();
 
+        $code = Settings::where('setting', '=', 'navigation')->first();
+
         return view('navigation.index')
-            ->withMenu($navigation);
+            ->withMenu($navigation)
+            ->withCode($code);
     }
 
     public function create()

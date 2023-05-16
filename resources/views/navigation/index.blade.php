@@ -1,5 +1,6 @@
 <?php
 use App\Services\NavigationService;
+use App\Models\Settings;
 
 $navigationService = new NavigationService();
 $navigation = $navigationService->getNavigation();
@@ -43,6 +44,11 @@ $navigation = $navigationService->getNavigation();
                     <div class="col-12 col-lg-6">
 
                     </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="position-relative" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                    <textarea class="w-100" id="editor" style="min-height:800px;" label="body" type="text" name="body" spellcheck="false" >{{ $page->body }}</textarea>
                 </div>
             </div>
         </div>
