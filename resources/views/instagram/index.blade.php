@@ -22,26 +22,8 @@
                                             $currentTime = time();
                                             $postTime = date("U",strtotime($post->timestamp));
                                             $realTime = $currentTime - $postTime;
-                                            $strTimeAgo = timeago($realTime);
-                                            function timeago($date) {
-                                               $timestamp = strtotime($date);
-
-                                               $strTime = array("second", "minute", "hour", "day", "month", "year");
-                                               $length = array("60","60","24","30","12","10");
-
-                                               $currentTime = time();
-                                               if($currentTime >= $timestamp) {
-                                                    $diff     = time()- $timestamp;
-                                                    for($i = 0; $diff >= $length[$i] && $i < count($length)-1; $i++) {
-                                                    $diff = $diff / $length[$i];
-                                                    }
-
-                                                    $diff = round($diff);
-                                                    return $diff . " " . $strTime[$i] . "(s) ago ";
-                                               }
-                                            }
                                         @endphp
-                                        <h3>leinordesign<br /><span>{{ $strTimeAgo }}</span></h3>
+                                        <h3>leinordesign<br /><span>{{ $realTime }}</span></h3>
                                     </div>
                                     <div>
                                         <!-- Settings Dot -->
