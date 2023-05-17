@@ -69,6 +69,8 @@ Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users
 
 Route::get('/admin/instagram/', [AdminController::class, 'instagramIndex']);
 
+Route::get('/admin/instagram/callback/', [AdminController::class, 'instagramIndex']);
+
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
 require __DIR__.'/auth.php';
