@@ -1,5 +1,3 @@
-@if($was_successful)
-    <p>Yes, we can now use your instagram feed</p>
-@else
-    <p>Sorry, we failed to get permission to use your insagram feed.</p>
-@endif
+<x-admin-master>
+    <a href="{{ $authurl }}">Click to get Instgram permission</a>
+</x-admin-master>
