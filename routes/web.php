@@ -67,6 +67,8 @@ Route::get('/admin/dashboard', function () {
 
 Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users.index');
 
+Route::get('/admin/instagram/', [AdminController::class, 'instagramIndex']);
+
 Route::get('instagram-get-auth',[InstagramAuthController::class, 'show']);
 
 
