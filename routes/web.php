@@ -9,6 +9,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\InstagramAuthController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMessage;
 use App\Models\Page;
@@ -66,12 +67,16 @@ Route::get('/admin/dashboard', function () {
 
 Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users.index');
 
-Route::get('/admin/instagram/', [AdminController::class, 'instagramIndex'])->name('instagram.index');
+Route::get('/admin/instagram/', [InstagramAuthController::class, 'show'])->name('instagram.index');
 
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
 require __DIR__.'/auth.php';
 
 Route::get('/{slug}', [PageController::class, 'getPage']);
+
+
+
+
 
 
