@@ -1,10 +1,12 @@
 <?php
-require_once(__DIR__ . '/../../../resources/views/instagram/instagram_basic_display_api.php' );
+require_once( 'instagram_basic_display_api.php' );
 
 $accessToken = 'ACCESS-TOKEN';
 
 $params = array(
-    'get_code' => $_GET['code'] ?? ''
+    'get_code' => isset( $_GET['code'] ) ? $_GET['code'] : '',
+    'access_token' => $accessToken,
+    'user_id' => 'USER-ID'
 );
 $ig = new instagram_basic_display_api( $params );
 ?>
