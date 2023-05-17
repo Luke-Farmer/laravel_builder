@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class InstagramAuthController extends Controller
 {
-    public function complete() {
-        $was_successful = request('result') === 'success';
+    public function show() {
+        $profile = \Dymantic\InstagramFeed\Profile::where('username', 'luke')->first();
 
-        return view('instagram.status', ['was_successful' => $was_successful]);
+        return view('instagram-get-auth', ['instagram_auth_url' => $profile->getInstagramAuthUrl()]);
     }
 }

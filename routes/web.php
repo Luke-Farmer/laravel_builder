@@ -69,9 +69,7 @@ Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users
 
 Route::get('/admin/instagram/', [AdminController::class, 'instagramIndex']);
 
-Route::get('/admin/instagram/auth/', [AdminController::class, 'instagramAuth']);
-
-Route::get('/admin/instagram/response', [InstagramAuthController::class, 'complete']);
+Route::get('instagram-get-auth', [InstagramAuthController::class, 'show'])->middleware('auth');
 
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
