@@ -165,14 +165,14 @@ $navigation = $navigationService->getNavigation();
                         </div>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
-                        <ul class="">
-                            <li class="">
+                        <ul class="mb-0">
+                            <li class="mb-4">
                                 <a href="" class="">Menu Item</a>
                             </li>
-                            <li class="">
+                            <li class="mb-4">
                                 <a href="" class="">Menu Item</a>
                             </li>
-                            <li class="">
+                            <li class="mb-4">
                                 <a href="" class="">Menu Item</a>
                             </li>
                             <li class="">
@@ -181,14 +181,14 @@ $navigation = $navigationService->getNavigation();
                         </ul>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
-                        <ul class="">
-                            <li class="">
+                        <ul class="mb-0">
+                            <li class="mb-4">
                                 <a href="" class="">Menu Item</a>
                             </li>
-                            <li class="">
+                            <li class="mb-4">
                                 <a href="" class="">Menu Item</a>
                             </li>
-                            <li class="">
+                            <li class="mb-4">
                                 <a href="" class="">Menu Item</a>
                             </li>
                             <li class="">
