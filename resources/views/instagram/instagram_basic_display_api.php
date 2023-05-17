@@ -1,5 +1,5 @@
 <?php
-require_once( 'defines.php' );
+require_once(__DIR__ . '/../../../resources/views/instagram/defines.php' );
 
 Class instagram_basic_display_api {
     private $_appId = INSTAGRAM_APP_ID;
@@ -77,8 +77,7 @@ Class instagram_basic_display_api {
             )
         );
 
-        $response = $this->_makeApiCall( $params );
-        return $response;
+        return $this->_makeApiCall( $params );
     }
 
     private function _getLongLivedUserAccessToken() {
@@ -91,8 +90,7 @@ Class instagram_basic_display_api {
             )
         );
 
-        $response = $this->_makeApiCall( $params );
-        return $response;
+        return $this->_makeApiCall( $params );
     }
 
     public function getUser() {
@@ -104,8 +102,7 @@ Class instagram_basic_display_api {
             )
         );
 
-        $response = $this->_makeApiCall( $params );
-        return $response;
+        return $this->_makeApiCall( $params );
     }
 
     public function getUsersMedia() {
@@ -117,8 +114,7 @@ Class instagram_basic_display_api {
             )
         );
 
-        $response = $this->_makeApiCall( $params );
-        return $response;
+        return $this->_makeApiCall( $params );
     }
 
     public function getPaging( $pagingEndpoint ) {
@@ -130,8 +126,7 @@ Class instagram_basic_display_api {
             )
         );
 
-        $response = $this->_makeApiCall( $params );
-        return $response;
+        return $this->_makeApiCall( $params );
     }
 
     public function getMedia( $mediaId ) {
@@ -143,8 +138,7 @@ Class instagram_basic_display_api {
             )
         );
 
-        $response = $this->_makeApiCall( $params );
-        return $response;
+        return $this->_makeApiCall( $params );
     }
 
     public function getMediaChildren( $mediaId ) {
@@ -156,8 +150,7 @@ Class instagram_basic_display_api {
             )
         );
 
-        $response = $this->_makeApiCall( $params );
-        return $response;
+        return $this->_makeApiCall( $params );
     }
 
     private function _makeApiCall( $params ) {
