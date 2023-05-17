@@ -1,5 +1,3 @@
 <x-admin-master>
-    @foreach($instagram as $post)
-        <img src="{{ $post->url}}">
-    @endforeach
+    <a href="{{ $instagram_auth_url }}">Click to get Instgram permission</a>
 </x-admin-master>
