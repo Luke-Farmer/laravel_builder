@@ -7,15 +7,8 @@ use Illuminate\Http\Request;
 class InstagramAuthController extends Controller
 {
     public function show() {
-        $profile = \Dymantic\InstagramFeed\Profile::where('username', 'luke')->first();
-        $feed = \Dymantic\InstagramFeed\Profile::where('username', 'luke')->first()->feed();
+        $profile = \Dymantic\InstagramFeed\Profile::where('username', 'michael')->first();
 
-        return view('instagram.index', ['instagram_auth_url' => $profile->getInstagramAuthUrl()], ['instagram' => $feed]);
-    }
-
-    public function complete() {
-        $was_successful = request('result') === 'success';
-
-        return view('instagram.response', ['was_successful' => $was_successful]);
+        return view('instagram-auth-page', ['instagram_auth_url' => $profile->getInstagramAuthUrl()]);
     }
 }
