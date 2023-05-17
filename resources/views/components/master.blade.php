@@ -201,7 +201,7 @@ $navigation = $navigationService->getNavigation();
             <div class="footer-bar">
                 <div class="container">
                     <div class="d-flex justify-content-center py-3">
-                        <p class="mb-0 white terms-item">&copy; {{ Settings::where('setting', '=', 'company_name')->first()->value }} {{ date("Y") }}</p>
+                        <p class="mb-0 white">&copy; {{ Settings::where('setting', '=', 'company_name')->first()->value }} {{ date("Y") }}</p>
                         <a href="#" class="white ms-3 terms-item">Terms</a>
                         <a href="#" class="white ms-3 terms-item">Privacy</a>
                     </div>
