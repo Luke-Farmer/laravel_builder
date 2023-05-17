@@ -167,32 +167,26 @@ $navigation = $navigationService->getNavigation();
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <ul class="mb-0" style="list-style: none;padding-left: 0">
                             <li class="mb-4">
-                                <a href="" class="footer-item">Menu Item</a>
+                                <a href="/portfolio" class="footer-item">Portfolio</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="footer-item">Menu Item</a>
+                                <a href="/portfolio/web-development" class="footer-item">Web Development</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="footer-item">Menu Item</a>
+                                <a href="/portfolio/web-design" class="footer-item">Web Design</a>
                             </li>
                             <li class="">
-                                <a href="" class="footer-item">Menu Item</a>
+                                <a href="/portfolio/software" class="footer-item">Software</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <ul class="mb-0" style="list-style: none;padding-left: 0">
                             <li class="mb-4">
-                                <a href="" class="footer-item">Menu Item</a>
+                                <a href="/about" class="footer-item">About</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="footer-item">Menu Item</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="" class="footer-item">Menu Item</a>
-                            </li>
-                            <li class="">
-                                <a href="" class="footer-item">Menu Item</a>
+                                <a href="/contact" class="footer-item">Contact</a>
                             </li>
                         </ul>
                     </div>
