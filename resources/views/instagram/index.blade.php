@@ -15,7 +15,7 @@
                                 <div class="top">
                                     <div class="userDetails">
                                         <div class="profile_img">
-                                            <img src="https://zupimages.net/up/22/29/j5pm.jpg" class="cover" alt="">
+                                            <img src="https://www.leinordesign.com/img/1684360091.jpg" class="cover" alt="">
                                         </div>
                                         <!-- Main Title -->
                                         <h3>leinordesign<br /><span>{{ $post->timestamp }}</span></h3>
