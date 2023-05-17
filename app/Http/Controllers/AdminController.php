@@ -71,4 +71,9 @@ class AdminController extends Controller
         return abort(404);
     }
 
+    public function instagramIndex() {
+        Session::forget('message');
+        return view('instagram.index');
+    }
+
 }
