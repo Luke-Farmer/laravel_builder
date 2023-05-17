@@ -4,13 +4,13 @@ return [
     /*
      * The client_id from registering your app on Instagram
      */
-    'client_id'           => 'YOUR INSTAGRAM CLIENT ID',
+    'client_id'           => '146737561623616',
 
     /*
      * The client secret from registering your app on Instagram,
      * This is not the same as an access token.
      */
-    'client_secret'       => 'YOUR INSTAGRAM CLIENT SECRET',
+    'client_secret'       => '0492402701a2146175c96ebd1de80f2f',
 
     /*
      * The base url used to generate to auth callback route for instagram.
@@ -24,19 +24,19 @@ return [
      * a redirect_uri for your instagram app that is equal to combining the
      *  app url (from config) and this route
      */
-    'auth_callback_route' => 'instagram/auth/callback',
+    'auth_callback_route' => 'admin/instagram',
 
     /*
      * On success of the OAuth process you will be redirected to this route.
      * You may use query strings to carry messages
      */
-    'success_redirect_to' => 'instagram-auth-success',
+    'success_redirect_to' => 'admin/instagram',
 
     /*
      * If the OAuth process fails for some reason you will be redirected to this route.
      * You may use query strings to carry messages
      */
-    'failure_redirect_to' => 'instagram-auth-failure',
+    'failure_redirect_to' => 'admin/instagram',
 
     /*
      * You may filter out video media types by setting this to true. Carousel media
