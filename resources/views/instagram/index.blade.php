@@ -24,7 +24,7 @@
                                             $realTime = $currentTime - $postTime;
 
                                             $numDays = abs($realTime - $postTime)/60/60/24;
-                                            echo date('Y m d', strtotime($realTime));
+                                            echo $realTime / 86400;
                                         @endphp
                                         <h3>leinordesign<br /><span>{{ $realTime }}</span></h3>
                                     </div>
