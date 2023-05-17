@@ -11,7 +11,7 @@ $ig = new instagram_basic_display_api( $params );
 <meta charset="utf-8">
 <h1>Instagram Basic Display API</h1>
 <hr />
-<?php if (!isset( $ig->hasUserAccessToken )) : ?>
+<?php if ( $ig->hasUserAccessToken ) : ?>
 <h4>IG Info</h4>
 <hr />
 <?php $user = $ig->getUser(); ?>
