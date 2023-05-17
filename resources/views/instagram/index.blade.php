@@ -30,14 +30,14 @@
                                     <img src={{ $post->url }} class="cover">
                                 </div>
                                 <!-- Buttons -->
-                                <div class="buttons">
-                                    <!-- Like Button -->
-                                    <img class="icon" src="https://zupimages.net/up/22/29/d1bd.png">
-                                    <!-- Comment Button -->
-                                    <img class="icon" src="https://zupimages.net/up/22/29/h5ft.png">
-                                    <!-- Share Button -->
-                                    <img class="icon" src="https://zupimages.net/up/22/29/9y56.png">
-                                </div>
+{{--                                <div class="buttons">--}}
+{{--                                    <!-- Like Button -->--}}
+{{--                                    <img class="icon" src="https://zupimages.net/up/22/29/d1bd.png">--}}
+{{--                                    <!-- Comment Button -->--}}
+{{--                                    <img class="icon" src="https://zupimages.net/up/22/29/h5ft.png">--}}
+{{--                                    <!-- Share Button -->--}}
+{{--                                    <img class="icon" src="https://zupimages.net/up/22/29/9y56.png">--}}
+{{--                                </div>--}}
                                 <!-- Number Like -->
                                 <h4 class="likes">1, 038 likes</h4>
                                 <!-- Description -->
