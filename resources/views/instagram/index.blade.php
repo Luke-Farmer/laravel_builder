@@ -18,7 +18,7 @@
                                             <img src="https://zupimages.net/up/22/29/j5pm.jpg" class="cover" alt="">
                                         </div>
                                         <!-- Main Title -->
-                                        <h3>{{ $user->username }}<br /><span>Khao Lak, Thailande</span></h3>
+                                        <h3>leinordesign<br /><span>{{ $post->timestamp }}</span></h3>
                                     </div>
                                     <div>
                                         <!-- Settings Dot -->
