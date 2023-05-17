@@ -18,7 +18,6 @@ Class instagram_basic_display_api {
         $this->_getCode = $params['get_code'];
 
         // get an access token
-        $this->_setUserInstagramAccessToken( $params );
 
         // get authorization url
         $this->_setAuthorizationUrl();
