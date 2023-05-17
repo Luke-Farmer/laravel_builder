@@ -13,7 +13,7 @@ $ig = new instagram_basic_display_api( $params );
 <meta charset="utf-8">
 <h1>Instagram Basic Display API</h1>
 <hr />
-<?php if ( $ig->hasUserAccessToken ) : ?>
+
 <h4>IG Info</h4>
 <hr />
 <?php $user = $ig->getUser(); ?>
@@ -131,8 +131,7 @@ $ig = new instagram_basic_display_api( $params );
     </li>
     <?php endforeach; ?>
 </ul>
-<?php else : ?>
+
 <a href="<?php echo $ig->authorizationUrl; ?>">
     Authorize w/Instagram
 </a>
-<?php endif; ?>
