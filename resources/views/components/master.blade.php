@@ -159,9 +159,9 @@ $navigation = $navigationService->getNavigation();
                         </div>
                         <div class="d-flex flex-column pt-4">
                             <p class="white mb-0 text-center">{{ Settings::where('setting', '=', 'company_name')->first()->value }}</p>
-                            <a href="mailto:{{ Settings::where('setting', '=', 'site_email')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'site_email')->first()->value }}</a>
-                            <a href="tel:{{ Settings::where('setting', '=', 'business_number')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'business_number')->first()->value }}</a>
-                            <p class="white mb-0 text-center"><a target="_blank" href="https://instagram.com/{{ Settings::where('setting', '=', 'instagram')->first()->value }}">&#64;{{ Settings::where('setting', '=', 'instagram')->first()->value }}</a></p>
+                            <a href="mailto:{{ Settings::where('setting', '=', 'site_email')->first()->value }}" class="white mb-0 text-center footer-item">{{ Settings::where('setting', '=', 'site_email')->first()->value }}</a>
+                            <a href="tel:{{ Settings::where('setting', '=', 'business_number')->first()->value }}" class="white mb-0 text-center footer-item">{{ Settings::where('setting', '=', 'business_number')->first()->value }}</a>
+                            <p class="white mb-0 text-center"><a class="footer-item" target="_blank" href="https://instagram.com/{{ Settings::where('setting', '=', 'instagram')->first()->value }}">&#64;{{ Settings::where('setting', '=', 'instagram')->first()->value }}</a></p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
