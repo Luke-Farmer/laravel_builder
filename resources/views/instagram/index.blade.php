@@ -18,7 +18,7 @@
                                             <img src="https://www.leinordesign.com/img/1684360091.jpg" class="cover" alt="">
                                         </div>
                                         <!-- Main Title -->
-                                        <h3>leinordesign<br /><span>{{ dd($post->timestamp)); }}</span></h3>
+                                        <h3>leinordesign<br /><span>{{ dd($post->timestamp) }}</span></h3>
                                     </div>
                                     <div>
                                         <!-- Settings Dot -->
