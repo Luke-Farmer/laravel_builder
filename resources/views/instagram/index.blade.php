@@ -60,7 +60,7 @@
             margin-bottom: 1rem;
         }
 
-        .col-12 .card:last-child {
+        .row .card:last-child {
             margin-bottom: 0 !important;
         }
 
