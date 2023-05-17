@@ -158,7 +158,7 @@ $navigation = $navigationService->getNavigation();
                             <img src="/img/logo.svg" class="" style="height:75px;">
                         </div>
                         <div class="d-flex flex-column pt-4">
-                            <p class="white mb-0 text-center">{{ Settings::where('setting', '=', 'company_name')->first()->value }}</p>
+                            <p style="font-size: 20px;" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'company_name')->first()->value }}</p>
                             <a href="mailto:{{ Settings::where('setting', '=', 'site_email')->first()->value }}" class="white mb-0 text-center footer-item">{{ Settings::where('setting', '=', 'site_email')->first()->value }}</a>
                             <a href="tel:{{ Settings::where('setting', '=', 'business_number')->first()->value }}" class="white mb-0 text-center footer-item">{{ Settings::where('setting', '=', 'business_number')->first()->value }}</a>
                             <p class="white mb-0 text-center"><a class="footer-item" target="_blank" href="https://instagram.com/{{ Settings::where('setting', '=', 'instagram')->first()->value }}">&#64;{{ Settings::where('setting', '=', 'instagram')->first()->value }}</a></p>
@@ -201,9 +201,9 @@ $navigation = $navigationService->getNavigation();
             <div class="footer-bar">
                 <div class="container">
                     <div class="d-flex justify-content-center py-3">
-                        <p class="mb-0 white">&copy; {{ Settings::where('setting', '=', 'company_name')->first()->value }} {{ date("Y") }}</p>
-                        <a href="#" class="white ms-3">Terms</a>
-                        <a href="#" class="white ms-3">Privacy</a>
+                        <p class="mb-0 white terms-item">&copy; {{ Settings::where('setting', '=', 'company_name')->first()->value }} {{ date("Y") }}</p>
+                        <a href="#" class="white ms-3 terms-item">Terms</a>
+                        <a href="#" class="white ms-3 terms-item">Privacy</a>
                     </div>
                 </div>
             </div>
