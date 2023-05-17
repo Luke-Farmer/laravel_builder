@@ -157,7 +157,7 @@ $navigation = $navigationService->getNavigation();
                         <div class="img-wrap d-flex justify-content-center">
                             <img src="/img/logo.svg" class="" style="height:75px;">
                         </div>
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column pt-4">
                             <p class="white mb-0 text-center">{{ Settings::where('setting', '=', 'company_name')->first()->value }}</p>
                             <a href="mailto:{{ Settings::where('setting', '=', 'site_email')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'site_email')->first()->value }}</a>
                             <a href="tel:{{ Settings::where('setting', '=', 'business_number')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'business_number')->first()->value }}</a>
@@ -165,16 +165,42 @@ $navigation = $navigationService->getNavigation();
                         </div>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
-
+                        <ul class="">
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
-
+                        <ul class="">
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Menu Item</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bar">
                 <div class="container">
-                    <div class="d-flex justify-content-start py-3">
+                    <div class="d-flex justify-content-center py-3">
                         <p class="mb-0 white">&copy; {{ Settings::where('setting', '=', 'company_name')->first()->value }} {{ date("Y") }}</p>
                         <a href="#" class="white ms-3">Terms</a>
                         <a href="#" class="white ms-3">Privacy</a>
