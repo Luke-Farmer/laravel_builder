@@ -71,6 +71,8 @@ Route::get('/admin/instagram/', [AdminController::class, 'instagramIndex']);
 
 Route::get('/admin/instagram/auth/', [AdminController::class, 'instagramAuth']);
 
+Route::get('/admin/instagram/response', [InstagramAuthController::class, 'complete']);
+
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
 require __DIR__.'/auth.php';
