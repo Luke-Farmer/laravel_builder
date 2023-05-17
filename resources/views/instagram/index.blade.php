@@ -17,8 +17,22 @@
                                         <div class="profile_img">
                                             <img src="https://www.leinordesign.com/img/1684360091.jpg" class="cover" alt="">
                                         </div>
+
+
+                                        ISO 8601->timestamp
+
+
                                         <!-- Main Title -->
-                                        <h3>leinordesign<br /><span>{{ dd($post->timestamp) }}</span></h3>
+
+                                        @php
+
+                                        $currentTime = time();
+                                        $postTime = date("U",strtotime($post->timestamp));
+                                        $realTime = $currentTime - $postTime;
+
+                                        @endphp
+
+                                        <h3>leinordesign<br /><span>{{ $realTime }}</span></h3>
                                     </div>
                                     <div>
                                         <!-- Settings Dot -->
