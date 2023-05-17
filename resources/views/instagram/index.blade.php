@@ -39,7 +39,7 @@
 {{--                                    <img class="icon" src="https://zupimages.net/up/22/29/9y56.png">--}}
 {{--                                </div>--}}
                                 <!-- Number Like -->
-                                <h4 class="likes">1, 038 likes</h4>
+{{--                                <h4 class="likes">1, 038 likes</h4>--}}
                                 <!-- Description -->
                                 <h4 class="message">{{ $post->caption }}</h4>
                             </div>
@@ -57,6 +57,7 @@
             background: rgb(255, 255, 255);
             box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.01);
             padding: 20px;
+            height: 100%;
         }
 
         .instagram-gallery .col-12 {
