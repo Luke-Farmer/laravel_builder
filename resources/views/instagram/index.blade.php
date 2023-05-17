@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/instagram_basic_display_api.php' );
+require_once(__DIR__ . '/../../../resources/views/instagram/instagram_basic_display_api.php' );
 
 $accessToken = 'ACCESS-TOKEN';
 
