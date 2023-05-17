@@ -68,6 +68,8 @@ Route::get('/admin/dashboard', function () {
 Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users.index');
 
 Route::get('/admin/instagram/', [InstagramAuthController::class, 'show'])->name('instagram.index');
+Route::get('/admin/instagram/response/', 'InstagramAuthController@complete');
+
 
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 

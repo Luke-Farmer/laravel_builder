@@ -12,4 +12,10 @@ class InstagramAuthController extends Controller
 
         return view('instagram.index', ['instagram_auth_url' => $profile->getInstagramAuthUrl()], ['instagram' => $feed]);
     }
+
+    public function complete() {
+        $was_successful = request('result') === 'success';
+
+        return view('instagram.response', ['was_successful' => $was_successful]);
+    }
 }
