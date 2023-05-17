@@ -73,9 +73,8 @@ class AdminController extends Controller
 
     public function instagramIndex() {
         Session::forget('message');
-        $feed = \Dymantic\InstagramFeed\Profile::where('username', 'luke')->first()->feed();
-
-        return view('instagram.index')->withInstagram($feed);
+        $profile = \Dymantic\InstagramFeed\Profile::where('username', 'luke')->first();
+        return view('instagram-get-auth', ['instagram_auth_url' => $profile->getInstagramAuthUrl()]);
     }
 
 }
