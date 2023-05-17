@@ -8,7 +8,7 @@
         </div>
         <div class="row g-0 bg-white">
             <div class="col-12 p-3">
-                <div class="row instagram-gallery">
+                <div class="row instagram-gallery mt-0 mt-md-3">
                     @foreach($feed as $post)
                         <div class="col-12 col-md-3">
                             <div class="card">
