@@ -168,7 +168,7 @@ Class instagram_basic_display_api {
         if ( 'POST' == $params['type'] ) { // post request
             curl_setopt( $ch, CURLOPT_POSTFIELDS, http_build_query( $params['url_params'] ) );
             curl_setopt( $ch, CURLOPT_POST, 1 );
-        } elseif ( 'GET' == $params['type'] && !$params['url_params']['paging'] ) { // get request
+        } elseif ( 'GET' == $params['type'] && !$params['url_params'] ) { // get request
             $params['url_params']['access_token'] = $this->_userAccessToken;
 
             //add params to endpoint

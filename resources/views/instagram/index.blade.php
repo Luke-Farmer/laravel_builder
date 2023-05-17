@@ -4,7 +4,7 @@ require_once(__DIR__ . '/../../../resources/views/instagram/instagram_basic_disp
 $accessToken = 'ACCESS-TOKEN';
 
 $params = array(
-    'get_code' => isset( $_GET['code'] ) ? $_GET['code'] : '',
+    'get_code' => $_GET['code'] ?? '',
     'access_token' => $accessToken,
     'user_id' => 'USER-ID'
 );
