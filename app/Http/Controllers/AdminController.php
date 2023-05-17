@@ -80,4 +80,10 @@ class AdminController extends Controller
         ->withFeed($feed);
     }
 
+    public function instagramAuth() {
+        $profile = \Dymantic\InstagramFeed\Profile::where('username', 'luke')->first();
+
+        return view('instagram.response', ['instagram_auth_url' => $profile->getInstagramAuthUrl()]);
+    }
+
 }
