@@ -153,22 +153,24 @@ $navigation = $navigationService->getNavigation();
             </div>
             <div class="container py-5">
                 <div class="row py-5 align-items-center">
-                    <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <div class="col-12 col-md-4 mb-4 mb-lg-0">
                         <div class="img-wrap d-flex justify-content-center">
                             <img src="/img/logo.svg" class="" style="height:75px;">
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <div class="">
                             <a href="mailto:{{ Settings::where('setting', '=', 'site_email')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'site_email')->first()->value }}</a>
                             <p class="white mb-0 text-center"><a target="_blank" href="https://instagram.com/{{ Settings::where('setting', '=', 'instagram')->first()->value }}">&#64;{{ Settings::where('setting', '=', 'instagram')->first()->value }}</a></p>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <div class="">
                             <p class="white mb-0 text-center">{{ Settings::where('setting', '=', 'company_name')->first()->value }}</p>
                             <a href="tel:{{ Settings::where('setting', '=', 'business_number')->first()->value }}" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'business_number')->first()->value }}</a>
                         </div>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
+
+                    </div>
+                    <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
+
                     </div>
                 </div>
             </div>
