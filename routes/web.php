@@ -75,7 +75,7 @@ Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('us
 
 require __DIR__.'/auth.php';
 
-Route::get('/{slug}', [PageController::class, 'getPage']);
+Route::get('/{slug}', [PageController::class, 'getPage'])->where('search', '.*');
 
 
 
