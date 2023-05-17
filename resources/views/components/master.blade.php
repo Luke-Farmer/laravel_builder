@@ -167,32 +167,32 @@ $navigation = $navigationService->getNavigation();
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <ul class="mb-0">
                             <li class="mb-4">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                             <li class="">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-lg-0">
                         <ul class="mb-0">
                             <li class="mb-4">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                             <li class="mb-4">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                             <li class="">
-                                <a href="" class="">Menu Item</a>
+                                <a href="" class="footer-item">Menu Item</a>
                             </li>
                         </ul>
                     </div>
