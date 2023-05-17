@@ -26,6 +26,14 @@ Class instagram_basic_display_api {
         $this->_setAuthorizationUrl();
     }
 
+    public function getUserAccessToken() {
+        return $this->_userAccessToken;
+    }
+
+    public function getUserAccessTokenExpires() {
+        return $this->_userAccessTokenExpires;
+    }
+
     private function _setAuthorizationUrl() {
         $getVars = array(
             'app_id' => $this->_appId,
@@ -66,6 +74,85 @@ Class instagram_basic_display_api {
                 'grant_type' => 'authorization_code',
                 'redirect_uri' => $this->_redirectUrl,
                 'code' => $this->_getCode
+            )
+        );
+
+        $response = $this->_makeApiCall( $params );
+        return $response;
+    }
+
+    private function _getLongLivedUserAccessToken() {
+        $params = array(
+            'endpoint_url' => $this->_graphBaseUrl . 'access_token',
+            'type' => 'GET',
+            'url_params' => array(
+                'client_secret' => $this->_appSecret,
+                'grant_type' => 'ig_exchange_token',
+            )
+        );
+
+        $response = $this->_makeApiCall( $params );
+        return $response;
+    }
+
+    public function getUser() {
+        $params = array(
+            'endpoint_url' => $this->_graphBaseUrl . 'me',
+            'type' => 'GET',
+            'url_params' => array(
+                'fields' => 'id,username,media_count,account_type',
+            )
+        );
+
+        $response = $this->_makeApiCall( $params );
+        return $response;
+    }
+
+    public function getUsersMedia() {
+        $params = array(
+            'endpoint_url' => $this->_graphBaseUrl . $this->userId . '/media',
+            'type' => 'GET',
+            'url_params' => array(
+                'fields' => 'id,caption,media_type,media_url',
+            )
+        );
+
+        $response = $this->_makeApiCall( $params );
+        return $response;
+    }
+
+    public function getPaging( $pagingEndpoint ) {
+        $params = array(
+            'endpoint_url' => $pagingEndpoint,
+            'type' => 'GET',
+            'url_params' => array(
+                'paging' => true
+            )
+        );
+
+        $response = $this->_makeApiCall( $params );
+        return $response;
+    }
+
+    public function getMedia( $mediaId ) {
+        $params = array(
+            'endpoint_url' => $this->_graphBaseUrl . $mediaId,
+            'type' => 'GET',
+            'url_params' => array(
+                'fields' => 'id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username'
+            )
+        );
+
+        $response = $this->_makeApiCall( $params );
+        return $response;
+    }
+
+    public function getMediaChildren( $mediaId ) {
+        $params = array(
+            'endpoint_url' => $this->_graphBaseUrl . $mediaId . '/children',
+            'type' => 'GET',
+            'url_params' => array(
+                'fields' => 'id,media_type,media_url,permalink,thumbnail_url,timestamp,username'
             )
         );
 
