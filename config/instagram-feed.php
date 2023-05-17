@@ -30,13 +30,13 @@ return [
      * On success of the OAuth process you will be redirected to this route.
      * You may use query strings to carry messages
      */
-    'success_redirect_to' => 'admin/instagram/response?result=success',
+    'success_redirect_to' => 'admin/instagram/?result=success',
 
     /*
      * If the OAuth process fails for some reason you will be redirected to this route.
      * You may use query strings to carry messages
      */
-    'failure_redirect_to' => 'admin/instagram/response?result=failure',
+    'failure_redirect_to' => 'admin/instagram/?result=failure',
 
     /*
      * You may filter out video media types by setting this to true. Carousel media
