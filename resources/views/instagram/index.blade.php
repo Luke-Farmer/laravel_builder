@@ -15,7 +15,7 @@
                                 <div class="top">
                                     <div class="userDetails">
                                         <div class="profile_img">
-                                            <img src="https://instagram.fbhx1-2.fna.fbcdn.net/v/t51.2885-19/308918933_568757838357129_2129248798684658152_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fbhx1-2.fna.fbcdn.net&_nc_cat=109&_nc_ohc=7Y_vrHazjdcAX-k5c-G&edm=AJ9x6zYBAAAA&ccb=7-5&oh=00_AfCrnLknsuLyxO69yk8LxEjTtYJSyMX71IL3fzU56jQA8A&oe=64694699&_nc_sid=5f7460" class="cover" alt="">
+                                            <img src="https://zupimages.net/up/22/29/j5pm.jpg" class="cover" alt="">
                                         </div>
                                         <!-- Main Title -->
                                         <h3>leinordesign<br /><span>{{ $post->timestamp }}</span></h3>
@@ -41,7 +41,7 @@
                                 <!-- Number Like -->
                                 <h4 class="likes">1, 038 likes</h4>
                                 <!-- Description -->
-                                <h4 class="message"><b>loic_ts</b>Sunset in Khao Lak in Thailand 🌅#sunset</h4>
+                                <h4 class="message">{{ $post->caption }}</h4>
                             </div>
                         </div>
                     @endforeach
