@@ -53,11 +53,15 @@
     <style>
         .card {
             position: relative;
-            width: 360px;
             min-height: 400px;
             background: rgb(255, 255, 255);
             box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.01);
             padding: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .col-12 .card:last-child {
+            margin-bottom: 0 !important;
         }
 
         .card .top {
