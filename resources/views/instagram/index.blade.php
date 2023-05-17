@@ -28,9 +28,9 @@
                                             if($realTime < 1) {
                                                 $realTime = "Less Than A Day Ago";
                                             } elseif($realTime < 2) {
-                                                $realTime = round($realTime) . "Day Ago";
+                                                $realTime = round($realTime) . " Day Ago";
                                             } else {
-                                                $realTime = round($realTime) . "Days Ago";
+                                                $realTime = round($realTime) . " Days Ago";
                                             }
                                         @endphp
                                         <h3>leinordesign<br /><span>{{ $realTime }}</span></h3>
