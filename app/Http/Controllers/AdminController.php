@@ -76,7 +76,7 @@ class AdminController extends Controller
         $feed = \Dymantic\InstagramFeed\InstagramFeed::for('krissy');
         $profile = \Dymantic\InstagramFeed\Profile::where('username', 'krissy')->first();
         return view('instagram.index')
-        ->withFeed($feed);
+        ->withFeed($feed)
         ->withUser($profile);
     }
 
