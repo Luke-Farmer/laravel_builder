@@ -24,9 +24,7 @@
                                             $realTime = $currentTime - $postTime;
 
                                             $numDays = abs($realTime - $postTime)/60/60/24;
-                                            for ($i = 1; $i < $numDays; $i++) {
-                                                echo date('Y m d', strtotime("+{$i} day", $realTime)) . '<br />';
-                                            }
+                                            echo date('Y m d', strtotime($realTime));
                                         @endphp
                                         <h3>leinordesign<br /><span>{{ $realTime }}</span></h3>
                                     </div>
