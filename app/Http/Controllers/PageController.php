@@ -39,6 +39,7 @@ class PageController extends Controller
 
     public function getPage($slug)
     {
+        dd($slug);
         $page = Page::where('slug', '=', $slug)->first();
 
         if(Settings::where('setting', '=', 'portfolio_active')->first()->value == 1 && !isset($page)) {
