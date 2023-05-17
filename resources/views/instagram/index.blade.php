@@ -8,4 +8,4 @@ $params = array(
 );
 $ig = new instagram_basic_display_api( $params );
 ?>
-<a href="<?php $ig->authorizationUrl; ?>" class="button-new">linka ccount</a>
+<a href="<?php echo $ig->authorizationUrl; ?>" class="button-new">linka ccount</a>
