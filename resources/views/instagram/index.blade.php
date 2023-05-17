@@ -8,7 +8,7 @@
         </div>
         <div class="row g-0 bg-white">
             <div class="col-12 p-3">
-                <div class="row">
+                <div class="row instagram-gallery">
                     @foreach($feed as $post)
                         <div class="col-12 col-md-3">
                             <div class="card">
@@ -57,11 +57,14 @@
             background: rgb(255, 255, 255);
             box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.01);
             padding: 20px;
+        }
+
+        .instagram-gallery .col-12 {
             margin-bottom: 1rem;
         }
 
-        .row .card:last-child {
-            margin-bottom: 0 !important;
+        .instagram-gallery .col-12:last-child {
+            margin-bottom: 0!important;
         }
 
         .card .top {
