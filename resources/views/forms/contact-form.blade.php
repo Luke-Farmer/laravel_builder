@@ -4,7 +4,7 @@
     </div>
 @endif
 <div class="row contact-wrap">
-    <div class="col-12 col-lg-12 p-5 rounded" style="z-index: 1;background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+    <div class="col-12 col-lg-12 p-5 rounded d-flex flex-column justify-content-center" style="z-index: 1;background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
         <div class="row">
             <div class="col-12">
                 <p class="display-3 fw-bold white mb-4">Send us a message</p>
