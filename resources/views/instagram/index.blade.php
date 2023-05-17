@@ -24,7 +24,14 @@
                                             $realTime = $currentTime - $postTime;
 
                                             $numDays = abs($realTime - $postTime)/60/60/24;
-                                            echo $realTime / 86400;
+                                            $realTime = $realTime / 86400;
+                                            if($realTime < 1) {
+                                                $realTime = "Less Than A Day Ago";
+                                            } elseif($realTime < 2) {
+                                                $realTime = round($realTime) . "Day Ago";
+                                            } else {
+                                                $realTime = round($realTime) . "Days Ago";
+                                            }
                                         @endphp
                                         <h3>leinordesign<br /><span>{{ $realTime }}</span></h3>
                                     </div>
