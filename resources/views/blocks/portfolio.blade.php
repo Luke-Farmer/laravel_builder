@@ -4,12 +4,12 @@
         @foreach($items as $item)
             <div class="col-12 ">
                 <div class="portfolio-item-wrapper position-relative d-flex">
-                    <img src="{{ $item->image }}" class="rounded" style="width: 275px;height: 150px;object-fit:cover;"/>
+                    <img src="{{ $item->image }}" class="rounded" style="width: 275px;height: 155px;object-fit:cover;"/>
                     <div class="portfolio-item-content ps-4">
                         <div class="portfolio-item-content-wrap">
                             <p class="white fs-4">{{ $item->title }}</p>
                             <p class="white clamp">{{ $item->excerpt }}</p>
-                            <a href="{{ $item->slug }}" class="">{{ $item->title }}</a>
+                            <a href="{{ $item->slug }}" class="button-new">{{ $item->title }}</a>
                         </div>
                     </div>
                 </div>
