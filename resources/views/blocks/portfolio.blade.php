@@ -9,6 +9,7 @@
                         <div class="portfolio-item-content-wrap">
                             <p class="white fs-4">{{ $item->title }}</p>
                             <p class="white clamp">{{ $item->excerpt }}</p>
+                            <a href="{{ $item->slug }}" class="">{{ $item->title }}</a>
                         </div>
                     </div>
                 </div>
