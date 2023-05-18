@@ -58,6 +58,10 @@
                         <input class="edit-page-input p-1" type="text" label="excerpt" name="excerpt" value="{{ $portfolio->excerpt }}">
                     </div>
                     <div class="col-12 pb-3">
+                        <label class="mb-2">Category:</label>
+                        <input class="edit-page-input p-1" type="text" label="category" name="category" value="">
+                    </div>
+                    <div class="col-12 pb-3">
                         <label class="mt-3">Featured Image</label>
                         <input type="text" id="" class="edit-page-input p-1" name="image" required value="{{ $portfolio->image }}"/>
                     </div>
