@@ -27,7 +27,7 @@
         </div>
     </div>
 </div>
-<div class="p-5 rounded" style="background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+<div class="p-5 rounded mb-4" style="background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
     <div class="d-flex align-items-center mb-4">
         <img src="/img/1684416388.png" class="mb-2" style="width: 50px;height: 50px;" />
         <p class="fs-2 fw-bold white mb-0 ps-2" style="bottom:0;left:0;">Web Design</p>
