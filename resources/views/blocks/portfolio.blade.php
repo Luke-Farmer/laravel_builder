@@ -25,5 +25,9 @@
     }
     .portfolio-wrap .col-12:last-child .portfolio-item-wrapper {
         padding-bottom: 0!important;
+        border-bottom: 0!important;
+    }
+    .portfolio-wrap .col-12:first-child .portfolio-item-wrapper {
+        padding-top: 0!important;
     }
 </style>
