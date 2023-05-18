@@ -19,8 +19,8 @@
 </div>
 <style>
     .portfolio-wrap .col-12 .portfolio-item-wrapper {
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
         border-bottom: solid 1px #6b9fb4;
     }
     .portfolio-wrap .col-12:last-child .portfolio-item-wrapper {
