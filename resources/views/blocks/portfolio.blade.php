@@ -2,7 +2,7 @@
 <div class="col-12">
     <div class="row portfolio-wrap">
         @foreach($items as $item)
-            <div class="col-12 ">
+            <div class="col-12">
                 <div class="portfolio-item-wrapper position-relative d-flex">
                     <img src="{{ $item->image }}" class="rounded" style="width: 275px;height: 155px;object-fit:cover;"/>
                     <div class="portfolio-item-content ps-4">
@@ -20,9 +20,10 @@
 <style>
     .portfolio-wrap .col-12 .portfolio-item-wrapper {
         padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
         border-bottom: solid 1px #6b9fb4;
     }
-    .portfolio-wrap .col-1:last-child .portfolio-item-wrapper {
+    .portfolio-wrap .col-12:last-child .portfolio-item-wrapper {
         padding-bottom: 0!important;
     }
 </style>
