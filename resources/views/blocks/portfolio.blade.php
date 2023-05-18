@@ -1,4 +1,4 @@
-<?php $items = \App\Models\Portfolio::latest()->all()->get(); ?>
+<?php $items = \App\Models\Portfolio::latest()->get(); ?>
 <div class="col-12">
     <div class="row">
         @foreach($items as $item)
