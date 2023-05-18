@@ -19,9 +19,10 @@
 </div>
 <style>
     .portfolio-wrap .col-12 {
-        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: solid 1px #6b9fb4;
     }
     .portfolio-wrap .col-12:last-child {
-        margin-bottom: 0!important;
+        padding-bottom: 0!important;
     }
 </style>
