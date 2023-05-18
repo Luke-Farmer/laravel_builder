@@ -18,11 +18,11 @@
     </div>
 </div>
 <style>
-    .portfolio-wrap .portfolio-item-wrapper {
-        padding-bottom: 1.5rem;
+    .portfolio-wrap .col-12 .portfolio-item-wrapper {
+        padding-bottom: 0.5rem;
         border-bottom: solid 1px #6b9fb4;
     }
-    .portfolio-wrap .portfolio-item-wrapper:last-child {
+    .portfolio-wrap .col-1:last-child .portfolio-item-wrapper {
         padding-bottom: 0!important;
     }
 </style>
