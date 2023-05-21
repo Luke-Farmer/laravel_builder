@@ -5,7 +5,6 @@
 /public/img
 /storage/*.key
 /resources/views/overrides/**
-/vendor
 .env
 .env.backup
 .phpunit.result.cache
