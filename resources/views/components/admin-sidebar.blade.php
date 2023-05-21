@@ -3,7 +3,7 @@
         <img src="/img/logo.svg" class="w-100 p-4" style="height: 100px;object-fit: contain;">
     </div>
     <div class="mx-3" style="height:150px;border-bottom: 2px solid #CBA052;">
-        <img src="{{ Auth::user()->avatar }}" class="w-100" style="height:100px;object-fit:contain;">
+        <img src="/storage/users-avatar/{{ Auth::user()->avatar }}" class="w-100" style="height:100px;object-fit:contain;">
         <div class="d-flex align-items-center" style="height: 50px;">
             <p class="white mb-0 mx-auto">{{ Auth::user()->name }}</p>
         </div>
