@@ -23,7 +23,7 @@ class PageController extends Controller
         if($dev_mode->value == 1) {
             $this->middleware('auth');
         }
-    }/
+    }
 
     public function getIndex()
     {
