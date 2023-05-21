@@ -17,13 +17,13 @@ use App\Services\NavigationService;
 class PageController extends Controller
 {
 
-//    public function __construct()
-//    {
-//        $dev_mode = Settings::where('setting', '=', 'dev_mode')->first();
-//        if($dev_mode->value == 1) {
-//            $this->middleware('auth');
-//        }
-//    }/
+    public function __construct()
+    {
+        $dev_mode = Settings::where('setting', '=', 'dev_mode')->first();
+        if($dev_mode->value == 1) {
+            $this->middleware('auth');
+        }
+    }/
 
     public function getIndex()
     {
