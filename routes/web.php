@@ -73,6 +73,10 @@ Route::get('instagram-get-auth', [InstagramAuthController::class, 'show'])->midd
 
 Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
 
+Route::get('/admin/chat/', function () {
+    return view('vendor.Chatify.pages.app');
+});
+
 require __DIR__.'/auth.php';
 
 Route::get('/{slug}', [PageController::class, 'getPage'])->where('slug', '.*');
