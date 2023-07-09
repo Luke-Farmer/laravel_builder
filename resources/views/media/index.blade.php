@@ -18,9 +18,9 @@
                 <div class="row">
                     @foreach($images as $image)
                         <div class="col-12 col-lg-2">
-                            <div class="mb-4" style="">
-                                <img src="/img/{{ $image->image }}" class="w-100" style="box-shadow: 0px 0px 1px 1px #153248;height: 236px;object-fit: cover;" loading="lazy" />
-                                <p class="py-1 text-center white" style="box-shadow: 0px 0px 1px 1px #153248;background: #153248;">/img/{{ $image->image }}</p>
+                            <div class="mb-4" style="border: 3px solid black;border-radius: 10px;">
+                                <img src="/img/{{ $image->image }}" class="w-100" style="height: 236px;object-fit: cover;" loading="lazy" />
+                                <p class="py-1 text-center white" style=";background: #000;">/img/{{ $image->image }}</p>
                             </div>
                         </div>
                     @endforeach
