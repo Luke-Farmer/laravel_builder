@@ -46,7 +46,7 @@ $navigation = $navigationService->getNavigation();
         <header class="navbar-fixed-top">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light mw-100 px-1">
-                    <a class="navbar-brand m-0" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive main-logo m-0" style="padding-top: 10px;padding-bottom: 10px;"></a>
+                    <a class="navbar-brand m-0" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive main-logo m-0" style="padding-top: 10px;padding-bottom: 10px;"></a>
                     <ul class="social-icons visible-mobile d-none">
                         <li>
                             <a href="#">
@@ -78,7 +78,7 @@ $navigation = $navigationService->getNavigation();
                             <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                         </button>
                         <div class="navbar-wrapper d-flex align-items-center">
-                            <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Logo" class="img-responsive w-75 visible-mobile"></a>
+                            <a class="navbar-brand" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75 visible-mobile"></a>
                             <style>
                                 @media all and (min-width: 992px) {
                                     .navbar .nav-item .menu-level-0{ display: none; }
