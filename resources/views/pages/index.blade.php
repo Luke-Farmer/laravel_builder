@@ -1,5 +1,5 @@
 <x-admin-master>
-    <div class="p-3" style="background: #040D1B;">
+    <div class="p-3 ps-0" style="background: #040D1B;">
         <div class="row g-0">
             <div class="col-12 d-flex p-3 w-100 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius: 10px;">
                 <p class="white mb-0">All Pages</p>
