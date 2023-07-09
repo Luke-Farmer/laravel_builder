@@ -43,9 +43,9 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row pt-3">
             <div class="col-12 col-lg-9">
-                <div class="p-3" style="background: #D9D9D6;">
+                <div class="p-3" style="background: #D9D9D6;border-radius:10px;">
                     <canvas id="line-chart"></canvas>
                     <script
                             src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
