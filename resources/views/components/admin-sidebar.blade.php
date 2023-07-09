@@ -1,7 +1,7 @@
 <?php
 use App\Models\Settings;
 ?>
-<div class="w-100 bg-accent h-100 d-flex flex-column">
+<div class="w-100 h-100 d-flex flex-column" style="background: #040D1B;">
     <div class="" style="height: 100px;">
         <img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" class="w-100 p-4" style="height: 100px;object-fit: contain;">
     </div>

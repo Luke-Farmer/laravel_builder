@@ -1,4 +1,4 @@
-<div class="py-3 bg-accent d-flex" style="height: 100px;">
+<div class="py-3 d-flex" style="height: 100px; background: #040D1B;">
     <div class="d-flex align-items-center">
         @if(Session::has('message'))
         <p class="text-white mb-0 p-3" style="background: #CBA052;">{{ Session::get('message') }}</p>
