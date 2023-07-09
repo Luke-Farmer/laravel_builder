@@ -70,7 +70,7 @@
                     <form class="mb-0 w-100 mt-3" action="{{ route('pages.destroy', $page->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <input class="white plain-button p-0 me-3" value="Delete" type="submit" onclick="var result = confirm('Want to delete?');">
+                        <input class="white plain-button fs-6 p-0 me-3" value="Delete" type="submit" onclick="var result = confirm('Want to delete?');">
                     </form>
                 </div>
             </div>
