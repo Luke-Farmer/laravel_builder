@@ -29,9 +29,9 @@ class AdminController extends Controller
 
             if($url !== '/') {
                 $slashUrl = '/' . $url;
-                $analyticsData[] = Analytics::getPageStats(Period::days(14), $slashUrl);
+                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
             } else {
-                $analyticsData[] = Analytics::getPageStats(Period::days(14), $url);
+                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
             }
 
         }
