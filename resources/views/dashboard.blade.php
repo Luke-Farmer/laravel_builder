@@ -5,25 +5,29 @@
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5">Views</p>
-                    <p class="fs-3">6969</p>
+                    <p class="fs-3">12567</p>
+                    <i class="fas fa-arrow-up" style="color: #00660c;"></i>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5">Views</p>
-                    <p class="fs-3">6969</p>
+                    <p class="fs-5">Visitors</p>
+                    <p class="fs-3">6329</p>
+                    <i class="fas fa-arrow-down" style="color: #750000;"></i>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5">Views</p>
-                    <p class="fs-3">6969</p>
+                    <p class="fs-5">Sessions</p>
+                    <p class="fs-3">3467</p>
+                    <i class="fas fa-arrow-up" style="color: #00660c;"></i>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5">Views</p>
-                    <p class="fs-3">6969</p>
+                    <p class="fs-5">Bounce Rate</p>
+                    <p class="fs-3">25.28%</p>
+                    <i class="fas fa-arrow-down" style="color: #750000;"></i>
                 </div>
             </div>
         </div>
