@@ -63,18 +63,18 @@
             </form>
         </div>
         <div class="col-12 col-lg-2 pt-3 pe-3">
-            <div class="p-3 save-box bg-accent-light">
+            <div class="p-3 save-box" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius:10px;">
                 <p class="mb-0 text-start me-3 fw-bold text-white">URL:<span class="float-end fw-normal">{{ $page->slug }}</span></p>
                 <p class="mb-0 text-start me-3 fw-bold text-white">Updated:<span class="float-end fw-normal">{{ date('j M Y',strtotime($page->updated_at)) }}</span></p>
                 <div class="d-flex">
                     <form class="mb-0 w-100 mt-3" action="{{ route('pages.destroy', $page->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <input class="white main-button w-100 p-0 me-3" value="Delete" type="submit" onclick="var result = confirm('Want to delete?');">
+                        <input class="white plain-button p-0 me-3" value="Delete" type="submit" onclick="var result = confirm('Want to delete?');">
                     </form>
                 </div>
             </div>
-            <div class="p-3 save-box bg-accent-light mt-3">
+            <div class="p-3 save-box mt-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius:10px;">
                 <p class="fw-bold text-white">Shortcodes</p>
                 <p class="mb-0 text-white">[contact_form]</p>
                 <p class="mb-0 text-white">[latest_portfolios]</p>
