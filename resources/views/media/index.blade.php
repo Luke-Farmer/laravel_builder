@@ -8,10 +8,10 @@
         </div>
         <div class="row g-0 border-bottom-radius" style="background: #D9D9D6;">
             <div class="col-12 p-3">
-                <form method="POST" action="/admin/media" id="contact-form" enctype="multipart/form-data">
+                <form class="d-flex" method="POST" action="/admin/media" id="contact-form" enctype="multipart/form-data">
                     @csrf
                     <input type="file" id="myFile" name="image" required />
-                    <button type="submit" class="image-button align-self-start">Add</button>
+                    <button type="submit" class="image-button ms-auto">Add</button>
                 </form>
                 <?php $images = \App\Models\Images::orderBy('updated_at', 'desc')->paginate(12); ?>
                 <div class="row">
