@@ -11,6 +11,7 @@ use App\Models\Themes;
         <link rel="stylesheet" href="/codemirror/theme/dracula.css">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="icon" type="image/png" href="/img/favicon.svg"/>
+        <script src="https://kit.fontawesome.com/e44c6e790f.js" crossorigin="anonymous"></script>
     </head>
     <style>
         {{ Themes::where('active', '=', '1')->first()->theme_css }}
