@@ -58,7 +58,7 @@
                                 datasets : [
                                     {
                                         data : [ 1860, 2050, 9321, 7516, 11107,
-                                            15332, 9633, 6421, 4783, 5478 ],
+                                            15332, 9633, 6421, 4783, 5478, 1022, 15231 ],
                                         label : "Total Page Views",
                                         borderColor : "#3cba9f",
                                         fill : false
