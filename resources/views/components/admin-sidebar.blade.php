@@ -11,7 +11,7 @@ use App\Models\Settings;
             <p class="white mb-0 mx-auto">{{ Auth::user()->name }}</p>
         </div>
     </div>-->
-    <div class="m-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius: 10px;">
+    <div class="m-3 h-100" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius: 10px;">
         <ul class="p-0" style="list-style: none;">
             <li class="p-3 position-relative bg-transparent"><a class="text-white stretched-link" href="{{ route('dashboard') }}">Dashboard</a></li>
             <li class="p-3 position-relative bg-transparent"><a class="text-white stretched-link" href="{{ route('pages.index') }}">Pages</a></li>
