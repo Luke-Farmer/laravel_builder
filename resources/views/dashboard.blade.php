@@ -74,6 +74,26 @@
                     </script>
                 </div>
             </div>
+            <div class="col-12 col-lg-3">
+                <form method="POST" action="/admin/dashboard" id="contact-form" enctype="multipart/form-data">
+                    @csrf
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="mb-2">Task Name</label>
+                            <input type="text" class="edit-page-input p-1" name="name"/>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="mb-2">Task Description</label>
+                            <textarea name="body" class="edit-page-input p-1"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" name="create" class="white main-button-light-bg py-1">Add</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 <!--<div class="p-3">
