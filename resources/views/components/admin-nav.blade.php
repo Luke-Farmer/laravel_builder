@@ -5,6 +5,7 @@
         @endif
     </div>
     <div class="ms-auto d-flex">
+        <p>Hey, <strong>{{ Auth::user()->name }}</strong></p>
         <form class="mb-0 d-flex align-items-center" method="POST" action="{{ route('logout') }}">
             @csrf
             <input href="/" class="white main-button p-0 me-3 fs-5 px-4 py-1" value="Logout" type="submit">
