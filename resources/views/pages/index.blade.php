@@ -47,9 +47,9 @@
         </div>
     </div>
     <style>
-        tbody tr:nth-child(even) {
+        /*tbody tr:nth-child(even) {
             background-color: #f8f9fa;
-        }
+        }*/
 
         tbody tr:nth-child(odd) {
             background-color: #e9ecef;
