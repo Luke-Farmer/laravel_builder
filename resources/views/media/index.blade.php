@@ -26,7 +26,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="w-75 me-auto">
+            <div class="w-auto me-auto ps-3">
                 {{ $images->links() }}
             </div>
         </div>
