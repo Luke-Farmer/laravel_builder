@@ -7,8 +7,8 @@
                     <p class="fs-5">Views</p>
                     <p class="fs-3">12567</p>
                     <div class="d-flex">
-                        <i class="fas fa-arrow-up" style="color: #00660c;"></i>
-                        <p class="fs-6 white mb-0">3.45% Since last month</p>
+                        <i class="fas fa-arrow-up" style="color: #00660c;margin-top: 2px;"></i>
+                        <small class="white mb-0">3.45% Since last month</small>
                     </div>
                 </div>
             </div>
@@ -17,8 +17,8 @@
                     <p class="fs-5">Visitors</p>
                     <p class="fs-3">6329</p>
                     <div class="d-flex">
-                        <i class="fas fa-arrow-down" style="color: #750000;"></i>
-                        <p class="fs-6 white mb-0">1.55% Since last month</p>
+                        <i class="fas fa-arrow-down" style="color: #750000;margin-top: 2px;"></i>
+                        <small class="white mb-0">1.55% Since last month</small>
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@
                     <p class="fs-5">Sessions</p>
                     <p class="fs-3">3467</p>
                     <div class="d-flex">
-                        <i class="fas fa-arrow-up" style="color: #00660c;"></i>
-                        <p class="fs-6 white mb-0">8.12% Since last month</p>
+                        <i class="fas fa-arrow-up" style="color: #00660c;margin-top: 2px;"></i>
+                        <small class="white mb-0">8.12% Since last month</small>
                     </div>
                 </div>
             </div>
@@ -37,8 +37,8 @@
                     <p class="fs-5">Bounce Rate</p>
                     <p class="fs-3">25.28%</p>
                     <div class="d-flex">
-                        <i class="fas fa-arrow-down" style="color: #750000;"></i>
-                        <p class="fs-6 white mb-0">8.28% Since last month</p>
+                        <i class="fas fa-arrow-down" style="color: #750000;margin-top: 2px;"></i>
+                        <small class="white mb-0">8.28% Since last month</small>
                     </div>
                 </div>
             </div>
