@@ -82,6 +82,12 @@ use App\Models\Settings;
                                     <input class="edit-page-input p-1" name="instagram" value="{{ $instagram->value }}">
                                 </div>
                             </div>
+                            <div class="row g-0">
+                                <div class="col-12 p-3 bg-white">
+                                    <label>Logo:</label>
+                                    <input class="edit-page-input p-1" name="logo" value="{{ $logo->value }}">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -23,6 +23,7 @@ class SettingsController extends Controller
         $business_number = Settings::where('setting', '=', 'business_number')->first();
         $portfolio_active = Settings::where('setting', '=', 'portfolio_active')->first();
         $instagram = Settings::where('setting', '=', 'instagram')->first();
+        $logo = Settings::where('setting', '=', 'logo')->first();
         $theme = Themes::where('active', '=', '1')->first();
 
         return view('settings.index')
@@ -33,7 +34,8 @@ class SettingsController extends Controller
             ->withBusinessNumber($business_number->value)
             ->withTheme($theme)
             ->withPortfolio($portfolio_active)
-            ->withInstagram($instagram);
+            ->withInstagram($instagram)
+            ->withLogo($logo);
     }
 
     public function update(Request $request) {
@@ -76,6 +78,10 @@ class SettingsController extends Controller
         $insta = Settings::where('setting', '=', 'instagram')->first();
         $insta->value = $request->input('instagram');
         $insta->save();
+
+        $logo = Settings::where('setting', '=', 'logo')->first();
+        $logo->value = $request->input('logo');
+        $logo->save();
 
         return redirect()->route('settings.index');
     }
