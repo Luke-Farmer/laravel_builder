@@ -1,7 +1,7 @@
 @section('title', 'Dashboard')
 <x-admin-master>
     <div class="p-3 ps-0 mb-0">
-        <div class="row">
+        <div class="row g-3">
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">Views</p>
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="row pt-3">
+        <div class="row g-3 pt-3">
             <div class="col-12 col-lg-9">
                 <div class="p-3" style="background: #D9D9D6;border-radius:10px;">
                     <canvas id="line-chart"></canvas>
@@ -75,19 +75,24 @@
                 </div>
             </div>
             <div class="col-12 col-lg-3">
-                <?php $list = \App\Models\Todo::all() ?>
-                @foreach($list as $item)
-                    <li class="bg-white mb-5" style="list-style: none;">
-                        <strong>{{ $item->name }} - </strong>{{ $item->body }}
-                        <div class="d-flex">
-                            <form class="mb-0 w-100 mt-3" action="" method="POST">
-                                @csrf
-                                <input value="{{ $item->name }}" type="text" name="name" class="d-none"/>
-                                <input class="white main-button-light-bg py-1" value="Delete" name="delete" type="submit" onclick="var result = confirm('Want to delete?');">
-                            </form>
-                        </div>
-                    </li>
-                @endforeach
+                <div class="border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+                    <p class="white mb-0">All Pages</p>
+                </div>
+                <div class="" style="background: #D9D9D6;">
+                    <?php $list = \App\Models\Todo::all() ?>
+                    @foreach($list as $item)
+                        <li class="bg-white mb-5" style="list-style: none;">
+                            <strong>{{ $item->name }} - </strong>{{ $item->body }}
+                            <div class="d-flex">
+                                <form class="mb-0 w-100 mt-3" action="" method="POST">
+                                    @csrf
+                                    <input value="{{ $item->name }}" type="text" name="name" class="d-none"/>
+                                    <input class="white main-button-light-bg py-1" value="Delete" name="delete" type="submit" onclick="var result = confirm('Want to delete?');">
+                                </form>
+                            </div>
+                        </li>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
