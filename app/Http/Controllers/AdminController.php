@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Analytics;
-use Illuminate\Support\Facades\Redirect;
+use Spatie\Analytics\Facades\Analytics;
 use Spatie\Analytics\Period;
+use Illuminate\Support\Facades\Redirect;
 use App\Models\Page;
 use App\Models\Settings;
 use App\Models\User;
@@ -22,19 +22,20 @@ class AdminController extends Controller
         $pages = Page::all();
         $urls = array();
         $analyticsData = array();
-        foreach($pages as $page) {
-            $urls[] = $page->slug;
-        }
-        foreach($urls as $url) {
-
-            if($url !== '/') {
-                $slashUrl = '/' . $url;
-                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
-            } else {
-                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
-            }
-
-        }
+//        foreach($pages as $page) {
+//            $urls[] = $page->slug;
+//        }
+//        foreach($urls as $url) {
+//
+//            if($url !== '/') {
+//                $slashUrl = '/' . $url;
+//                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+//            } else {
+//                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+//            }
+//
+//        }
+        dd(Analytics::fetchVisitorsAndPageViews(Period::days(7)));
         return view('analytics.index')->withAnalytics($analyticsData);
     }
 
