@@ -6,10 +6,10 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <div class="row g-0 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
-                    <div class="col-12 p-3">
+                    <div class="col-12 p-3 d-flex">
                         <p class="white mb-0 w-100">Page Settings</p>
                         <div class="d-flex">
-                            <input href="{{ route('pages.store') }}" class="white fs-6 p-0 me-3" value="Create" type="submit">
+                            <input href="{{ route('pages.store') }}" class="white fs-6 p-0 me-3 plain-button" value="Create" type="submit">
                             <a href="{{ route('dashboard') }}" class="white fs-6 p-0 ms-3 text-center">Cancel</a>
                         </div>
                     </div>
