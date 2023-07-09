@@ -1,4 +1,5 @@
 <x-admin-master>
+    @dd($analyticsData)
     <div class="p-3" style="background: #D9D9D6;">
         <div class="row g-0">
             <div class="col-4 d-flex bg-dark-blue p-3">
