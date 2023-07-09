@@ -61,29 +61,31 @@
                                             15332, 17231 ],
                                         label : "Total Page Views",
                                         borderColor : "#3cba9f",
-                                        fill : false
+                                        fill : false,
+                                        tension: 0.25
                                     },
                                     {
                                         data : [ 5260, 5410, 5421, 7116, 14107,
                                             11332, 8556 ],
                                         label : "Total Visitors",
                                         borderColor : "#793900f",
-                                        fill : false
+                                        fill : false,
+                                        tension: 0.25
                                     },
                                     {
                                         data : [ 1860, 4050, 4521, 6516, 7107,
                                             9332, 12231 ],
                                         label : "Total Visitors",
                                         borderColor : "#460069",
-                                        fill : false
+                                        fill : false,
+                                        tension: 0.25
                                     }
                                 ]
                             },
                             options : {
                                 title : {
                                     display : true,
-                                    text : 'Chart JS Line Chart Example',
-                                    bezierCurve: true
+                                    text : 'Chart JS Line Chart Example'
                                 }
                             }
                         });
