@@ -1,7 +1,16 @@
 @section('title', 'Dashboard')
 <x-admin-master>
-<div class="p-3">
-    <div class="row g-0">
+    <div class="p-3 ps-0 mb-0">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="d-flex" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+                    poggers
+                </div>
+            </div>
+        </div>
+    </div>
+<!--<div class="p-3">
+   <div class="row g-0">
         <div class="col-12 d-flex bg-accent-light p-3 w-100">
             <p class="white mb-0">To Do List</p>
         </div>
@@ -43,7 +52,7 @@
             @endforeach
         </div>
     </div>
-</div>
+</div>-->
     <style>
         tbody tr:nth-child(even) {
             background-color: #f8f9fa;
