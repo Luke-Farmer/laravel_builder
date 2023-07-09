@@ -5,7 +5,7 @@ return [
     /*
      * The property id of which you want to display data.
      */
-    'property_id' => env('395112512'),
+    'property_id' => '395112512',
 
     /*
      * Path to the client secret json file. Take a look at the README of this package
