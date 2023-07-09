@@ -1,13 +1,13 @@
 <x-admin-master>
-    <div class="p-3">
+    <div class="p-3" style="background: #040D1B;">
         <div class="row g-0">
             <div class="col-12 d-flex bg-accent-light p-3 w-100 border-top-radius">
                 <p class="white mb-0">All Pages</p>
                 <p class="ms-auto mb-0"><a class="white main-button px-2 py-1" href="/admin/page/create">New Page</a></p>
             </div>
         </div>
-        <div class="row g-0 bg-white">
-            <div class="col-12 p-3 border-bottom-radius">
+        <div class="row g-0 bg-white border-bottom-radius">
+            <div class="col-12 p-3">
                 <table class="w-100">
                     <thead>
                     <tr>
