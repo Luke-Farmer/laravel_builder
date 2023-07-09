@@ -66,7 +66,7 @@
                                     },
                                     {
                                         data : [ 5260, 5410, 5421, 7116, 14107,
-                                            11332, 8556 ],
+                                            11332, 14556 ],
                                         label : "Total Visitors",
                                         borderColor : "#793900f",
                                         fill : false,
