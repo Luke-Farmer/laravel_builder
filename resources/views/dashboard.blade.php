@@ -53,12 +53,12 @@
                         new Chart(document.getElementById("line-chart"), {
                             type : 'line',
                             data : {
-                                labels : [ 'January', 'Febuary', 'March', 1750, 1800, 1850,
-                                    1900, 1950, 1999, 2050 ],
+                                labels : [ 'January', 'Febuary', 'March', 'April', 'May', 'June',
+                                    'July', 'August', 'September', 'October', 'November', 'December' ],
                                 datasets : [
                                     {
-                                        data : [ 186, 205, 1321, 1516, 2107,
-                                            2191, 3133, 3221, 4783, 5478 ],
+                                        data : [ 1860, 2050, 9321, 7516, 11107,
+                                            15332, 9633, 6421, 4783, 5478 ],
                                         label : "Total Page Views",
                                         borderColor : "#3cba9f",
                                         fill : false
