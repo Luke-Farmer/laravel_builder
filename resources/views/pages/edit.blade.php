@@ -16,7 +16,7 @@
                         <input href="{{ route('pages.update', $page->id) }}" class="white plain-button fs-6 px-3 py-0 ms-auto" value="Save" type="submit">
                     </div>
                 </div>
-                <div class="row g-0 p-3 border-radius-bottom" style="background: #040D1B;">
+                <div class="row g-0 p-3 border-radius-bottom" style="background: #D9D9D6;">
                     <div class="col-12 pb-3">
                         <label class="mb-2">URL:</label>
                         <input class="edit-page-input p-1" type="text" label="slug" name="slug" value="{{ $page->slug }}">
