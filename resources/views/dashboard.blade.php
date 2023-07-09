@@ -82,7 +82,8 @@
                             options : {
                                 title : {
                                     display : true,
-                                    text : 'Chart JS Line Chart Example'
+                                    text : 'Chart JS Line Chart Example',
+                                    bezierCurve: true
                                 }
                             }
                         });
