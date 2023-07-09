@@ -4,14 +4,14 @@
         <p class="text-white mb-0 p-3" style="background: #CBA052;">{{ Session::get('message') }}</p>
         @endif
     </div>
-    <div class="ms-auto d-flex">
-        <div class="d-flex flex-column">
-            <p class="mb-0">Hey, <strong>{{ Auth::user()->name }}</strong></p>
+    <div class="ms-auto d-flex px-3">
+        <div class="d-flex flex-column me-3 justify-content-center align-items-end">
+            <p class="mb-0 white"><strong>{{ Auth::user()->name }}</strong></p>
             <form class="mb-0" method="POST" action="{{ route('logout') }}">
                 @csrf
-                <input href="/" class="white" value="Logout" type="submit">
+                <input href="/" class="white" value="Logout" type="submit" style="background: none;border: none;font-size: 12px;padding: 0px;">
             </form>
         </div>
-        <img src="/storage/users-avatar/{{ Auth::user()->avatar }}" class="mx-auto" style="height:100px;width: 100px;object-fit:contain;border-radius:50%;background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+        <img src="/storage/users-avatar/{{ Auth::user()->avatar }}" class="m-auto" style="height:50px;width: 50px;object-fit:contain;border-radius:50%;background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
     </div>
 </div>
