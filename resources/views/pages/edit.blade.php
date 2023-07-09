@@ -7,7 +7,7 @@
     @endif
     <div class="row justify-content-center g-0">
         <div class="col-12 col-lg-10">
-            <form class="p-3 ps-0" action="{{ route('pages.update', $page->id) }}" method="POST"  onsubmit="return getContent()">
+            <form class="p-3 ps-0 mb-0" action="{{ route('pages.update', $page->id) }}" method="POST"  onsubmit="return getContent()">
                 @method('PUT')
                 @csrf
                 <div class="row g-0">
