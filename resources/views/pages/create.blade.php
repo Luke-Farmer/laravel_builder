@@ -1,16 +1,16 @@
 <x-admin-master>
     @section('title', 'New Page')
-    <form class="p-3" action="{{ route('pages.store') }}" method="POST">
+    <form class="p-3 ps-3" action="{{ route('pages.store') }}" method="POST">
         @method('POST')
         @csrf
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
+            <div class="col-12 col-lg-10 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                 <div class="row g-0">
                     <div class="col-12">
                         <p class="white mb-0 bg-accent-light w-100 p-2">Page Settings</p>
                     </div>
                 </div>
-                <div class="row g-0 bg-white p-3">
+                <div class="row g-0 p-3 border-bottom-radius" style="background: #D9D9D6;">
                     <div class="col-12 pb-3">
                         <label class="mb-2">URL:</label>
                         <input class="edit-page-input p-1" type="text" label="slug" name="slug" value="">
