@@ -67,7 +67,7 @@
                                     {
                                         data : [ 5260, 5410, 5421, 7116, 14107,
                                             11332, 14556 ],
-                                        label : "Total Visitors",
+                                        label : "Total Sessions",
                                         borderColor : "#793900f",
                                         fill : false,
                                         tension: 0.25
@@ -99,13 +99,13 @@
                 <div class="border-bottom-rounded" style="background: #D9D9D6;">
                     <?php $list = \App\Models\Todo::all() ?>
                     @foreach($list as $item)
-                        <li class="bg-white mb-5" style="list-style: none;">
+                        <li class="bg-white p-3" style="list-style: none;">
                             <strong>{{ $item->name }} - </strong>{{ $item->body }}
                             <div class="d-flex">
                                 <form class="mb-0 w-100 mt-3" action="" method="POST">
                                     @csrf
                                     <input value="{{ $item->name }}" type="text" name="name" class="d-none"/>
-                                    <input class="white main-button-light-bg py-1" value="Delete" name="delete" type="submit" onclick="var result = confirm('Want to delete?');">
+                                    <input class="image-button" value="Delete" name="delete" type="submit" onclick="var result = confirm('Want to delete?');">
                                 </form>
                             </div>
                         </li>
