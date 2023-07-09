@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5">Views</p>
-                    <p class="fs-3">12567</p>
+                    <p class="fs-5 fw-bold">Views</p>
+                    <p class="fs-3 fw-bold">12567</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">3.45% Since last month</small>
@@ -14,8 +14,8 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5">Visitors</p>
-                    <p class="fs-3">6329</p>
+                    <p class="fs-5 fw-bold">Visitors</p>
+                    <p class="fs-3 fw-bold">6329</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-down me-2" style="color: #750000;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">1.55% Since last month</small>
@@ -24,8 +24,8 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5">Sessions</p>
-                    <p class="fs-3">3467</p>
+                    <p class="fs-5 fw-bold">Sessions</p>
+                    <p class="fs-3 fw-bold">3467</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">8.12% Since last month</small>
@@ -34,8 +34,8 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5">Bounce Rate</p>
-                    <p class="fs-3">25.28%</p>
+                    <p class="fs-5 fw-bold">Bounce Rate</p>
+                    <p class="fs-3 fw-bold">25.28%</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-down me-2" style="color: #750000;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">8.28% Since last month</small>
