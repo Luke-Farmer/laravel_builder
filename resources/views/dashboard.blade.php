@@ -1,6 +1,4 @@
-<?php $title = "Dashboard";
-
-?>
+@section('title', 'Your page title')
 <x-admin-master>
 <div class="p-3">
     <div class="row g-0">
