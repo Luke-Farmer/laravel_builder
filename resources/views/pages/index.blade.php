@@ -6,7 +6,7 @@
                 <p class="ms-auto mb-0"><a class="white main-button px-2 py-1" href="/admin/page/create">New Page</a></p>
             </div>
         </div>
-        <div class="row g-0 bg-white border-bottom-radius">
+        <div class="row g-0 border-bottom-radius" style="background: #D9D9D6;">
             <div class="col-12 p-3">
                 <table class="w-100">
                     <thead>
