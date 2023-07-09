@@ -8,6 +8,10 @@
                 <div class="row g-0 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                     <div class="col-12 p-3">
                         <p class="white mb-0 w-100">Page Settings</p>
+                        <div class="d-flex">
+                            <input href="{{ route('pages.store') }}" class="white fs-6 p-0 me-3" value="Create" type="submit">
+                            <a href="{{ route('dashboard') }}" class="white fs-6 p-0 ms-3 text-center">Cancel</a>
+                        </div>
                     </div>
                 </div>
                 <div class="row g-0 p-3 border-bottom-radius" style="background: #D9D9D6;">
@@ -47,10 +51,7 @@
             </div>
             <div class="col-12 col-lg-2">
                 <div class="p-3 save-box bg-accent-light">
-                    <div class="d-flex">
-                        <input href="{{ route('pages.store') }}" class="white main-button w-100 p-0 me-3" value="Create" type="submit">
-                        <a href="{{ route('dashboard') }}" class="white main-button w-100 p-0 ms-3 text-center">Cancel</a>
-                    </div>
+
                 </div>
             </div>
         </div>
