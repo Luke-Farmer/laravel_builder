@@ -21,7 +21,7 @@ use App\Models\Themes;
                 <div class="col-12 col-lg-2">
                     <x-admin-sidebar></x-admin-sidebar>
                 </div>
-                <div class="col-12 col-lg-10" style="background: #D9D9D6;">
+                <div class="col-12 col-lg-10" style="background: #040D1B;">
                     <x-admin-nav></x-admin-nav>
                     {{ $slot }}
                 </div>
