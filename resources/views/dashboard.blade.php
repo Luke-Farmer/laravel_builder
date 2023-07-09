@@ -1,3 +1,6 @@
+<?php $title = "Dashboard";
+
+?>
 <x-admin-master>
 <div class="p-3">
     <div class="row g-0">
