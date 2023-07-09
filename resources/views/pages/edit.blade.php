@@ -7,16 +7,16 @@
     @endif
     <div class="row justify-content-center g-0">
         <div class="col-12 col-lg-10">
-            <form class="p-3" action="{{ route('pages.update', $page->id) }}" method="POST"  onsubmit="return getContent()">
+            <form class="p-3 ps-0" action="{{ route('pages.update', $page->id) }}" method="POST"  onsubmit="return getContent()">
                 @method('PUT')
                 @csrf
                 <div class="row g-0">
-                    <div class="col-12 d-flex bg-accent-light w-100 p-2">
+                    <div class="col-12 d-flex w-100 p-2 border-radius-top" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                         <p class="white mb-0">Page Settings</p>
-                        <input href="{{ route('pages.update', $page->id) }}" class="white main-button px-3 py-0 ms-auto" value="Save" type="submit">
+                        <input href="{{ route('pages.update', $page->id) }}" class="white plain-button fs-6 px-3 py-0 ms-auto" value="Save" type="submit">
                     </div>
                 </div>
-                <div class="row g-0 bg-white p-3">
+                <div class="row g-0 p-3 border-radius-bottom" style="background: #040D1B;">
                     <div class="col-12 pb-3">
                         <label class="mb-2">URL:</label>
                         <input class="edit-page-input p-1" type="text" label="slug" name="slug" value="{{ $page->slug }}">
