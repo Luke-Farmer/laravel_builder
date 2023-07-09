@@ -9,6 +9,7 @@
         "biscolab/laravel-recaptcha": "^5.4",
         "dymantic/laravel-instagram-feed": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
+        "hansschouten/laravel-pagebuilder": "^0.24.0",
         "intervention/image": "dev-master",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
