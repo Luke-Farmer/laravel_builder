@@ -71,7 +71,7 @@
                                         fill : false
                                     },
                                     {
-                                        data : [ 1860, 4050, 4521, 6516, 1107,
+                                        data : [ 1860, 4050, 4521, 6516, 7107,
                                             9332, 12231 ],
                                         label : "Total Visitors",
                                         borderColor : "#460069",
