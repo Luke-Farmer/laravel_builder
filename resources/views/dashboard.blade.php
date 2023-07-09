@@ -62,7 +62,15 @@
                                         label : "Total Page Views",
                                         borderColor : "#3cba9f",
                                         fill : false
-                                    }]
+                                    },
+                                    {
+                                        data : [ 1860, 2050, 9321, 7516, 11107,
+                                            15332, 17231 ],
+                                        label : "Total Visitors",
+                                        borderColor : "#793900f",
+                                        fill : false
+                                    }
+                                ]
                             },
                             options : {
                                 title : {
@@ -76,7 +84,7 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="border-top-radius p-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
-                    <p class="white fs-5 mb-0 fw-bold">Reminders</p>
+                    <p class="white fs-5 mb-0 fw-bold">Oldest Reminders</p>
                 </div>
                 <div class="border-bottom-rounded" style="background: #D9D9D6;">
                     <?php $list = \App\Models\Todo::all() ?>
