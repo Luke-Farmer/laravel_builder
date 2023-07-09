@@ -31,10 +31,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer('pages.edit', function ($view) {
             Session::forget('success');
         });
-    }
 
-    public function boot()
-    {
         Paginator::useBootstrap();
     }
+
 }
