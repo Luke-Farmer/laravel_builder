@@ -64,10 +64,17 @@
                                         fill : false
                                     },
                                     {
-                                        data : [ 1860, 2050, 9321, 7516, 11107,
-                                            15332, 17231 ],
+                                        data : [ 5260, 5410, 5421, 7116, 14107,
+                                            11332, 8556 ],
                                         label : "Total Visitors",
                                         borderColor : "#793900f",
+                                        fill : false
+                                    },
+                                    {
+                                        data : [ 1860, 4050, 9321, 6516, 1107,
+                                            15332, 12231 ],
+                                        label : "Total Visitors",
+                                        borderColor : "#460069",
                                         fill : false
                                     }
                                 ]
