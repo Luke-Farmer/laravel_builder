@@ -75,10 +75,10 @@
                 </div>
             </div>
             <div class="col-12 col-lg-3">
-                <div class="border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
-                    <p class="white mb-0">All Pages</p>
+                <div class="border-top-radius p-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+                    <p class="white mb-0 fw-bold">All Pages</p>
                 </div>
-                <div class="" style="background: #D9D9D6;">
+                <div class="border-bottom-rounded" style="background: #D9D9D6;">
                     <?php $list = \App\Models\Todo::all() ?>
                     @foreach($list as $item)
                         <li class="bg-white mb-5" style="list-style: none;">
