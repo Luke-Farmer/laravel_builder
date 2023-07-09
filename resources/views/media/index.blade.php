@@ -14,7 +14,7 @@
                     <input type="file" id="myFile" name="image" required />
                     <button type="submit" class="button-main align-self-start">Add</button>
                 </form>
-                <?php $images = \App\Models\Images::all() ?>
+                <?php $images = \App\Models\Images::orderBy('updated_at', 'desc')->paginate(20); ?>
                 <div class="row">
                     @foreach($images as $image)
                         <div class="col-12 col-lg-2">
