@@ -1,11 +1,11 @@
 <x-admin-master>
     @section('title', 'New Page')
-    <form class="p-3 ps-3" action="{{ route('pages.store') }}" method="POST">
+    <form class="p-3 ps-0 mb-0" action="{{ route('pages.store') }}" method="POST">
         @method('POST')
         @csrf
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-10 border-top-radius">
-                <div class="row g-0" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+            <div class="col-12 col-lg-10">
+                <div class="row g-0 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                     <div class="col-12 p-3">
                         <p class="white mb-0 w-100">Page Settings</p>
                     </div>
