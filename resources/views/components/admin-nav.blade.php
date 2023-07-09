@@ -4,7 +4,7 @@
         <p class="text-white mb-0 p-3" style="background: #CBA052;">{{ Session::get('message') }}</p>
         @endif
     </div>
-    <p>@yield('title')</p>
+    <p class="my-auto fs-3 white fw-bold ps-3">@yield('title')</p>
     <div class="ms-auto d-flex px-3">
         <div class="d-flex flex-column me-3 justify-content-center align-items-end">
             <p class="mb-0 white"><strong>{{ Auth::user()->name }}</strong></p>
