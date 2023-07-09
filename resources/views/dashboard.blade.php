@@ -7,6 +7,7 @@
                     <p class="fs-5">Views</p>
                     <p class="fs-3">12567</p>
                     <i class="fas fa-arrow-up" style="color: #00660c;"></i>
+                    <p class="fs-6 white">3.45% Since last month</p>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
@@ -14,6 +15,7 @@
                     <p class="fs-5">Visitors</p>
                     <p class="fs-3">6329</p>
                     <i class="fas fa-arrow-down" style="color: #750000;"></i>
+                    <p class="fs-6 white">1.55% Since last month</p>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
@@ -21,6 +23,7 @@
                     <p class="fs-5">Sessions</p>
                     <p class="fs-3">3467</p>
                     <i class="fas fa-arrow-up" style="color: #00660c;"></i>
+                    <p class="fs-6 white">8.12% Since last month</p>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
@@ -28,6 +31,7 @@
                     <p class="fs-5">Bounce Rate</p>
                     <p class="fs-3">25.28%</p>
                     <i class="fas fa-arrow-down" style="color: #750000;"></i>
+                    <p class="fs-6 white">8.28% Since last month</p>
                 </div>
             </div>
         </div>
