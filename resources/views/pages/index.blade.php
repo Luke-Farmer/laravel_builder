@@ -4,7 +4,7 @@
         <div class="row g-0">
             <div class="col-12 d-flex p-3 w-100 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                 <p class="white mb-0">All Pages</p>
-                <p class="ms-auto mb-0"><a class="white fs-5 px-2 py-1" href="/admin/page/create">New Page</a></p>
+                <p class="ms-auto mb-0"><a class="white fs-6 px-2 py-1" href="/admin/page/create">New Page</a></p>
             </div>
         </div>
         <div class="row g-0 border-bottom-radius" style="background: #D9D9D6;">

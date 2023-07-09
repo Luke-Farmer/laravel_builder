@@ -4,7 +4,7 @@
         @method('POST')
         @csrf
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-10 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
+            <div class="col-12 col-lg-10 border-top-radius p-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                 <div class="row g-0">
                     <div class="col-12">
                         <p class="white mb-0 w-100 p-2">Page Settings</p>
