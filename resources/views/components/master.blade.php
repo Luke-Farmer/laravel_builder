@@ -46,7 +46,7 @@ $navigation = $navigationService->getNavigation();
         <header class="navbar-fixed-top">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light mw-100 px-1">
-                    <a class="navbar-brand m-0" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive main-logo m-0" style="padding-top: 10px;padding-bottom: 10px;"></a>
+                    <a class="navbar-brand m-0" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive main-logo m-0" style="padding-top: 10px;padding-bottom: 10px; width:250px;"></a>
                     <ul class="social-icons visible-mobile d-none">
                         <li>
                             <a href="#">
@@ -155,7 +155,7 @@ $navigation = $navigationService->getNavigation();
                 <div class="row py-5 align-items-center">
                     <div class="col-12 col-md-4 mb-4 mb-lg-0">
                         <div class="img-wrap d-flex justify-content-center">
-                            <img src="/img/logo.svg" class="" style="height:75px;">
+                            <img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" class="" style="height:75px;">
                         </div>
                         <div class="d-flex flex-column pt-4">
                             <p style="font-size: 20px;" class="white mb-0 text-center">{{ Settings::where('setting', '=', 'company_name')->first()->value }}</p>

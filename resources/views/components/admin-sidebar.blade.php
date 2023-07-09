@@ -1,6 +1,9 @@
+<?php
+use App\Models\Settings;
+?>
 <div class="w-100 bg-accent h-100 d-flex flex-column">
     <div class="" style="height: 100px;">
-        <img src="/img/logo.svg" class="w-100 p-4" style="height: 100px;object-fit: contain;">
+        <img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" class="w-100 p-4" style="height: 100px;object-fit: contain;">
     </div>
     <div class="d-flex flex-column mx-3" style="height:150px;border-bottom: 2px solid #CBA052;">
         <img src="/storage/users-avatar/{{ Auth::user()->avatar }}" class="mx-auto" style="height:100px;width: 100px;object-fit:contain;border-radius:50%;background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
