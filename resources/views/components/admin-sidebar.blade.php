@@ -5,12 +5,12 @@ use App\Models\Settings;
     <div class="" style="height: 100px;">
         <img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" class="w-100 p-4" style="height: 100px;object-fit: contain;">
     </div>
-    <div class="d-flex flex-column mx-3" style="height:150px;border-bottom: 2px solid #CBA052;">
+    <!--<div class="d-flex flex-column mx-3" style="height:150px;border-bottom: 2px solid #CBA052;">
         <img src="/storage/users-avatar/{{ Auth::user()->avatar }}" class="mx-auto" style="height:100px;width: 100px;object-fit:contain;border-radius:50%;background:linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
         <div class="d-flex align-items-center" style="height: 50px;">
             <p class="white mb-0 mx-auto">{{ Auth::user()->name }}</p>
         </div>
-    </div>
+    </div>-->
     <div class="mx-3 mt-4" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius: 10px;">
         <ul class="p-0" style="list-style: none;">
             <li class="p-3 position-relative bg-transparent"><a class="text-white stretched-link" href="{{ route('dashboard') }}">Dashboard</a></li>
