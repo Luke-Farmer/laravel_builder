@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'New Portfolio Item')
     <form class="p-3" action="{{ route('portfolio.store') }}" method="POST" enctype="multipart/form-data">
         @method('POST')
         @csrf

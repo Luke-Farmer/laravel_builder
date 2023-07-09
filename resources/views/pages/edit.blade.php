@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'Edit Page')
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}

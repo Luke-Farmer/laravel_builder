@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'Media Library')
     <div class="p-3">
         <div class="row g-0">
             <div class="col-12 d-flex bg-accent-light p-3 w-100">

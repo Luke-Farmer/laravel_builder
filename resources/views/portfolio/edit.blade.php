@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'Edit Portfolio Item')
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}

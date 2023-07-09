@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'New Page')
     <form class="p-3" action="{{ route('pages.store') }}" method="POST">
         @method('POST')
         @csrf
