@@ -1,12 +1,12 @@
 <x-admin-master>
     @section('title', 'Media Library')
-    <div class="p-3">
+    <div class="p-3 ps-0">
         <div class="row g-0">
-            <div class="col-12 d-flex bg-accent-light p-3 w-100">
+            <div class="col-12 d-flex p-3 w-100 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                 <p class="white mb-0">Images</p>
             </div>
         </div>
-        <div class="row g-0 bg-white">
+        <div class="row g-0 border-bottom-radius" style="background: #D9D9D6;">
             <div class="col-12 p-3">
                 <form method="POST" action="/admin/media" id="contact-form" enctype="multipart/form-data">
                     @csrf
