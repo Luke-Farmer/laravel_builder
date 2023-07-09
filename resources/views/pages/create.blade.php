@@ -10,7 +10,7 @@
                         <p class="white mb-0 w-100">Page Settings</p>
                         <div class="d-flex">
                             <input href="{{ route('pages.store') }}" class="white fs-6 p-0 me-3 plain-button" value="Create" type="submit">
-                            <a href="{{ route('dashboard') }}" class="white fs-6 p-0 ms-3 text-center">Cancel</a>
+                            <a href="{{ route('dashboard') }}" class="white fs-6 p-0 ms-3 text-center plain-button">Cancel</a>
                         </div>
                     </div>
                 </div>
