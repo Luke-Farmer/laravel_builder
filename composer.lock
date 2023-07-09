@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5826f59f6900839798db159617cce2d6",
+    "content-hash": "3019512016d0c3df814530c23356b483",
     "packages": [
         {
             "name": "biscolab/laravel-recaptcha",
@@ -1261,109 +1261,6 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
-            "name": "hansschouten/laravel-pagebuilder",
-            "version": "v0.24.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HansSchouten/Laravel-Pagebuilder.git",
-                "reference": "2cd45400312daefb0c0b0223e258569c946deb03"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HansSchouten/Laravel-Pagebuilder/zipball/2cd45400312daefb0c0b0223e258569c946deb03",
-                "reference": "2cd45400312daefb0c0b0223e258569c946deb03",
-                "shasum": ""
-            },
-            "require": {
-                "hansschouten/phpagebuilder": "^0.24",
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "HansSchouten\\LaravelPageBuilder\\ServiceProvider"
-                    ],
-                    "aliases": {
-                        "PageBuilder": "HansSchouten\\LaravelPageBuilder\\Facade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "HansSchouten\\LaravelPageBuilder\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hans Schouten",
-                    "email": "hans@falcosolutions.nl"
-                }
-            ],
-            "description": "A drag and drop pagebuilder to manage pages in any Laravel project.",
-            "homepage": "https://github.com/HansSchouten/Laravel-Pagebuilder",
-            "keywords": [
-                "laravel",
-                "pagebuilder"
-            ],
-            "support": {
-                "issues": "https://github.com/HansSchouten/Laravel-Pagebuilder/issues",
-                "source": "https://github.com/HansSchouten/Laravel-Pagebuilder/tree/v0.24.0"
-            },
-            "time": "2023-02-05T10:39:52+00:00"
-        },
-        {
-            "name": "hansschouten/phpagebuilder",
-            "version": "v0.24.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HansSchouten/PHPageBuilder.git",
-                "reference": "10adddd4ce69af56b184b11f4122cd0d4c8c1cd6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HansSchouten/PHPageBuilder/zipball/10adddd4ce69af56b184b11f4122cd0d4c8c1cd6",
-                "reference": "10adddd4ce69af56b184b11f4122cd0d4c8c1cd6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/Core/helpers.php"
-                ],
-                "psr-4": {
-                    "PHPageBuilder\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hans Schouten",
-                    "email": "hans@falcosolutions.nl"
-                }
-            ],
-            "description": "A drag and drop pagebuilder to manage pages in any PHP project.",
-            "homepage": "https://github.com/HansSchouten/PHPagebuilder",
-            "keywords": [
-                "pagebuilder"
-            ],
-            "support": {
-                "issues": "https://github.com/HansSchouten/PHPageBuilder/issues",
-                "source": "https://github.com/HansSchouten/PHPageBuilder/tree/v0.24.0"
-            },
-            "time": "2023-02-05T10:34:06+00:00"
-        },
-        {
             "name": "intervention/image",
             "version": "dev-master",
             "source": {
@@ -1447,6 +1344,53 @@
                 }
             ],
             "time": "2022-07-05T13:51:54+00:00"
+        },
+        {
+            "name": "jd-dotlogics/laravel-grapesjs",
+            "version": "3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dl-u/laravel-grapesjs.git",
+                "reference": "2c4136621454b368c30464636701ef85a04d990f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dl-u/laravel-grapesjs/zipball/2c4136621454b368c30464636701ef85a04d990f",
+                "reference": "2c4136621454b368c30464636701ef85a04d990f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.6.0",
+                "php": "^7.4|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dotlogics\\Grapesjs\\GrapesjsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotlogics\\Grapesjs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dotlogics",
+                    "email": "hello@dotlogics.com"
+                }
+            ],
+            "description": "A package to easily integrate GrapesJS into your laravel proejct.",
+            "support": {
+                "source": "https://github.com/dl-u/laravel-grapesjs/tree/3.4.1"
+            },
+            "time": "2023-05-26T06:27:19+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3872,31 +3816,32 @@
         },
         {
             "name": "spatie/laravel-analytics",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-analytics.git",
-                "reference": "b28812b4aaaed08d596f1c5dd2a0e8b29f143d55"
+                "reference": "1299618d2065ed64002abca603af710eb63eaf52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-analytics/zipball/b28812b4aaaed08d596f1c5dd2a0e8b29f143d55",
-                "reference": "b28812b4aaaed08d596f1c5dd2a0e8b29f143d55",
+                "url": "https://api.github.com/repos/spatie/laravel-analytics/zipball/1299618d2065ed64002abca603af710eb63eaf52",
+                "reference": "1299618d2065ed64002abca603af710eb63eaf52",
                 "shasum": ""
             },
             "require": {
-                "google/apiclient": "^2.7",
-                "laravel/framework": "^9.0",
-                "nesbot/carbon": "^2.0",
+                "google/apiclient": "^2.12.6",
+                "laravel/framework": "^9.41|^10.0",
+                "nesbot/carbon": "^2.63",
                 "php": "^8.0",
-                "spatie/laravel-package-tools": "^1.9",
+                "spatie/laravel-package-tools": "^1.13.7",
                 "symfony/cache": "^6.0"
             },
             "require-dev": {
                 "league/flysystem": "^2.0|^3.0",
-                "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^7.0",
-                "phpunit/phpunit": "^9.4"
+                "mockery/mockery": "^1.5|^1.4.4",
+                "orchestra/testbench": "^7.0|^8.0",
+                "pestphp/pest": "^1.22.2|^1.22",
+                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
             "extra": {
@@ -3937,8 +3882,7 @@
                 "spatie"
             ],
             "support": {
-                "issues": "https://github.com/spatie/laravel-analytics/issues",
-                "source": "https://github.com/spatie/laravel-analytics/tree/4.1.0"
+                "source": "https://github.com/spatie/laravel-analytics/tree/4.1.1"
             },
             "funding": [
                 {
@@ -3946,7 +3890,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-01-12T17:46:04+00:00"
+            "time": "2023-02-01T08:53:25+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
