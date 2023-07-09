@@ -24,11 +24,10 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="w-75 me-auto">
-                        {{ $images->links() }}
-                    </div>
-
                 </div>
+            </div>
+            <div class="w-75 me-auto">
+                {{ $images->links() }}
             </div>
         </div>
     </div>
