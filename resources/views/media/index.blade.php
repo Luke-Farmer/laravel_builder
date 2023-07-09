@@ -11,7 +11,7 @@
                 <form method="POST" action="/admin/media" id="contact-form" enctype="multipart/form-data">
                     @csrf
                     <input type="file" id="myFile" name="image" required />
-                    <button type="submit" class="button-main align-self-start">Add</button>
+                    <button type="submit" class="image-button align-self-start">Add</button>
                 </form>
                 <?php $images = \App\Models\Images::orderBy('updated_at', 'desc')->paginate(12); ?>
                 <div class="row">
