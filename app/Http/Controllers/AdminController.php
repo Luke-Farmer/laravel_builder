@@ -35,6 +35,7 @@ class AdminController extends Controller
             }
 
         }
+        dd($analyticsData);
         return view('analytics.index')->withAnalytics($analyticsData);
     }
 
