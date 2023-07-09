@@ -39,6 +39,17 @@ $navigation = $navigationService->getNavigation();
 
         gtag('config', 'G-67LKNECFX4');
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYJ6BS2LLC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DYJ6BS2LLC');
+    </script>
+
     <style>
         {!! Themes::where('active', '=', '1')->first()->theme_css !!}
     </style>
