@@ -74,8 +74,8 @@
                     <p class="fs-3 fw-bold">{!! $usersTwoWeeks[0]['activeUsers'] !!}</p>
                     <div class="d-flex">
                         @php
-                            $previousWeeks = intval($usersTwoWeeks[0]['activeUsers']) - intval($usersFourWeeks[0]['activeUsers']);
-                            $change = $previousWeeks / $usersFourWeeks * 100;
+                            $previousWeeks = $usersTwoWeeks[0]['activeUsers'] - $usersFourWeeks[0]['activeUsers'];
+                            $change = $previousWeeks / $usersFourWeeks[0]['activeUsers'] * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
