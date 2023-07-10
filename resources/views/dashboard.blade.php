@@ -85,7 +85,7 @@
                     <div class="d-flex">
                         @php
                             $previousWeeks = ($usersTwoWeeks[1]['activeUsers'] ?? 0) - ($usersFourWeeks[1]['activeUsers'] ?? 0);
-                            $divideTest = $usersFourWeeks[1]['activeUsers'];
+                            $divideTest = $usersFourWeeks[1]['activeUsers'] ?? 0;
                             if($divideTest < 1){
                                 $change = 0;
                             } else {
