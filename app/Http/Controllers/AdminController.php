@@ -22,20 +22,19 @@ class AdminController extends Controller
         $pages = Page::all();
         $urls = array();
         $analyticsData = array();
-//        foreach($pages as $page) {
-//            $urls[] = $page->slug;
-//        }
-//        foreach($urls as $url) {
-//
-//            if($url !== '/') {
-//                $slashUrl = '/' . $url;
-//                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
-//            } else {
-//                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
-//            }
-//
-//        }
-        dd(Analytics::fetchVisitorsAndPageViews(Period::days(7)));
+        foreach($pages as $page) {
+            $urls[] = $page->slug;
+        }
+        foreach($urls as $url) {
+
+            if($url !== '/') {
+                $slashUrl = '/' . $url;
+                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+            } else {
+                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+            }
+
+        }
         return view('analytics.index')->withAnalytics($analyticsData);
     }
 
