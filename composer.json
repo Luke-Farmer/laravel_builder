@@ -9,6 +9,7 @@
         "google/analytics-data": "^0.9.4",
         "biscolab/laravel-recaptcha": "^6.0",
         "dymantic/laravel-instagram-feed": "^3.3",
+        "google/analytics-data": "*",
         "guzzlehttp/guzzle": "^7.2",
         "intervention/image": "dev-master",
         "jd-dotlogics/laravel-grapesjs": "^3.4",
