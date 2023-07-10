@@ -76,8 +76,8 @@
                         new Chart(document.getElementById("line-chart"), {
                             type : 'line',
                             data : {
-                                labels : [ '{{ $dates[0] }}', '{{ $dates[1] }}', '{{ $dates[2] }}', 'April', 'May', 'June',
-                                    'July', 'August', 'September', 'October', 'November', 'December' ],
+                                labels : [ '{{ $dates[13] }}', '{{ $dates[12] }}', '{{ $dates[11] }}', '{{ $dates[10] }}', '{{ $dates[9] }}', '{{ $dates[8] }}', '{{ $dates[7] }}',
+                                    '{{ $dates[6] }}', '{{ $dates[5] }}', '{{ $dates[4] }}', '{{ $dates[3] }}', '{{ $dates[2] }}', '{{ $dates[1] }}', '{{ $dates[0] }}' ],
                                 datasets : [
                                     {
                                         data : [ 1860, 2050, 9321, 7516, 11107,
