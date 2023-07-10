@@ -20,9 +20,11 @@ class AdminController extends Controller
 
 
     public function dashboard() {
-        $monthlyViewsVisitors = Analytics::fetchVisitorsAndPageViews(Period::days(30));
+        $twoWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(14));
+        $fourWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(28));
         return view('dashboard')
-            ->withStats($monthlyViewsVisitors);
+            ->withStats($twoWeeks)
+            ->withOldStats($fourWeeks);
     }
 
 

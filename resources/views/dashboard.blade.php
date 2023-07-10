@@ -7,14 +7,26 @@
                     <p class="fs-5 fw-bold">Views</p>
                     @php
                         $totalViews = 0;
-                        for($i = 0; $i < 28; $i++) {
+                        for($i = 0; $i < 12; $i++) {
                             $totalViews += $stats[$i]['screenPageViews'] ?? 0;
                         }
                     @endphp
                     <p class="fs-3 fw-bold">{{ $totalViews }}</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
-                        <small class="white mb-0 fw-bold">3.45% Since last month</small>
+                        @php
+                            $twoWeeks = 0;
+                            for($i = 0; $i < 12; $i++) {
+                                $twoWeeks += $stats[$i]['screenPageViews'] ?? 0;
+                            }
+                            $fourWeeks = 0;
+                            for($i = 0; $i < 22; $i++) {
+                                $fourWeeks += $oldStats[$i]['screenPageViews'] ?? 0;
+                            }
+                            $previousWeeks = $fourWeeks - $twoWeeks;
+                            $change = $previousWeeks / $twoWeeks * 100
+                        @endphp
+                        <small class="white mb-0 fw-bold">{{ $change }} In the last 2 weeks</small>
                     </div>
                 </div>
             </div>
@@ -24,7 +36,7 @@
                     <p class="fs-3 fw-bold">6329</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-down me-2" style="color: #750000;margin-top: 2px;"></i>
-                        <small class="white mb-0 fw-bold">1.55% Since last month</small>
+                        <small class="white mb-0 fw-bold">1.55% In the last 2 weeks</small>
                     </div>
                 </div>
             </div>
@@ -34,7 +46,7 @@
                     <p class="fs-3 fw-bold">3467</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
-                        <small class="white mb-0 fw-bold">8.12% Since last month</small>
+                        <small class="white mb-0 fw-bold">8.12% In the last 2 weeks</small>
                     </div>
                 </div>
             </div>
@@ -44,7 +56,7 @@
                     <p class="fs-3 fw-bold">25.28%</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-down me-2" style="color: #750000;margin-top: 2px;"></i>
-                        <small class="white mb-0 fw-bold">8.28% Since last month</small>
+                        <small class="white mb-0 fw-bold">8.28% In the last 2 weeks</small>
                     </div>
                 </div>
             </div>
