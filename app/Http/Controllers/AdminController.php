@@ -30,10 +30,15 @@ class AdminController extends Controller
             $dates[$i] =  Carbon::now()->subDay($i)->format('d M');
             $i++;
         }
+
+        $graphViews = Analytics::fetchVisitorsAndPageViewsByDate(Period::create($dates[0], $dates[13]));
+
+        dd($graphViews);
         return view('dashboard')
             ->withStats($twoWeeks)
             ->withOldStats($fourWeeks)
-            ->withDates($dates);
+            ->withDates($dates)
+            ->withGraph($graphViews);
     }
 
 
