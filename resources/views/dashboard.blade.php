@@ -76,7 +76,7 @@
                         new Chart(document.getElementById("line-chart"), {
                             type : 'line',
                             data : {
-                                labels : [ 'January', 'Febuary', 'March', 'April', 'May', 'June',
+                                labels : [ {{ $dates[0] }}, {{ $dates[1] }}, {{ $dates[2] }}, 'April', 'May', 'June',
                                     'July', 'August', 'September', 'October', 'November', 'December' ],
                                 datasets : [
                                     {
