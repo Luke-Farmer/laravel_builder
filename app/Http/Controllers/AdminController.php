@@ -26,7 +26,7 @@ class AdminController extends Controller
 
         $date = Carbon::now();
         $dates[] = array();
-        for($i = 0; $i < 13;) {
+        for($i = 0; $i < 14;) {
             $dates[$i] =  Carbon::now()->subDay($i)->format('d M');
             $i++;
         }
