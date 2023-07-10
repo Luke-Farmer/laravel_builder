@@ -62,11 +62,11 @@
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">New Users - Logic Checked</p>
-                    <p class="fs-3 fw-bold">{!! $usersTwoWeeks[0]['activeUsers'] !!}</p>
+                    <p class="fs-3 fw-bold">{!! $usersTwoWeeks[0]['activeUsers'] ?? 0 !!}</p>
                     <div class="d-flex">
                         @php
-                            $previousWeeks = $usersTwoWeeks[0]['activeUsers'] - $usersFourWeeks[0]['activeUsers'];
-                            $change = $previousWeeks / $usersFourWeeks[0]['activeUsers'] * 100;
+                            $previousWeeks = $usersTwoWeeks[0]['activeUsers'] ?? 0 - $usersFourWeeks[0]['activeUsers'] ?? 0;
+                            $change = $previousWeeks / $usersFourWeeks[0]['activeUsers'] ?? 0 * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-down me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
@@ -74,18 +74,18 @@
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
                         @endphp
-                        <small class="white mb-0 fw-bold">{{ $change }}% Small: {{ $usersTwoWeeks[0]['activeUsers'] }} Big: {{ $usersFourWeeks[0]['activeUsers'] }} Difference: {{ $previousWeeks }}</small>
+                        <small class="white mb-0 fw-bold">{{ $change }}% In the last 2 weeks</small>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">Returning Users</p>
-                    <p class="fs-3 fw-bold">{!! $usersTwoWeeks[1]['activeUsers'] !!}</p>
+                    <p class="fs-3 fw-bold">{!! $usersTwoWeeks[1]['activeUsers'] ?? 0 !!}</p>
                     <div class="d-flex">
                         @php
-                            $previousWeeks = $usersTwoWeeks[1]['activeUsers'] - $usersFourWeeks[1]['activeUsers'];
-                            $change = $previousWeeks / $usersFourWeeks[1]['activeUsers'] * 100;
+                            $previousWeeks = $usersTwoWeeks[1]['activeUsers'] ?? 0 - $usersFourWeeks[1]['activeUsers'] ?? 0;
+                            $change = $previousWeeks / $usersFourWeeks[1]['activeUsers'] ?? 0 * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-down me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
