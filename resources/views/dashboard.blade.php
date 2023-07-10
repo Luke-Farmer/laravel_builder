@@ -91,7 +91,7 @@
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
                         @endphp
-                        <small class="white mb-0 fw-bold">{{ $change }}% In the last 2 weeks</small>
+                        <small class="white mb-0 fw-bold">{{ $change }}% Small: {{ $two }} Big: {{ $total }} Difference: {{ $previousWeeks }}</small>
                     </div>
                 </div>
             </div>
