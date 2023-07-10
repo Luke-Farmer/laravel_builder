@@ -23,7 +23,7 @@
                                 $fourWeeks += $oldStats[$i]['screenPageViews'] ?? 0;
                             }
                             $previousWeeks = $fourWeeks - $twoWeeks;
-                            $change = $previousWeeks / $twoWeeks * 100
+                            $change = $previousWeeks / $twoWeeks * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
