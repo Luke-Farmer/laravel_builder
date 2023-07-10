@@ -83,7 +83,7 @@
                                 $fourWeeks += $usersFourWeeks[$i]['activeUsers'] ?? 0;
                             }
                             $previousWeeks = $twoWeeks - $fourWeeks;
-                            $change = $previousWeeks / $total * 100;
+                            $change = $previousWeeks / $fourWeeks * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
