@@ -80,26 +80,27 @@
                                     '{{ $dates[6] }}', '{{ $dates[5] }}', '{{ $dates[4] }}', '{{ $dates[3] }}', '{{ $dates[2] }}', '{{ $dates[1] }}', '{{ $dates[0] }}' ],
                                 datasets : [
                                     {
-                                        data : [ '{{ $graph[13]['screenPageViews'] ?? 0 }}', {{ $graph[11]['screenPageViews'] ?? 0 }}, {{ $graph[10]['screenPageViews'] ?? 0 }},
+                                        data : [ {{ $graph[13]['screenPageViews'] ?? 0 }}, {{ $graph[11]['screenPageViews'] ?? 0 }}, {{ $graph[10]['screenPageViews'] ?? 0 }},
                                             {{ $graph[9]['screenPageViews'] ?? 0 }}, {{ $graph[8]['screenPageViews'] ?? 0 }}, {{ $graph[7]['screenPageViews'] ?? 0 }}, {{ $graph[6]['screenPageViews'] ?? 0 }},
                                             {{ $graph[5]['screenPageViews'] ?? 0 }}, {{ $graph[4]['screenPageViews'] ?? 0 }}, {{ $graph[3]['screenPageViews'] ?? 0 }}, {{ $graph[2]['screenPageViews'] ?? 0 }},
-                                            {{ $graph[1]['screenPageViews'] ?? 0 }}, {{ $graph[0]['screenPageViews'] ?? 0 }}],
+                                            {{ $graph[1]['screenPageViews'] ?? 0 }}, {{ $graph[0]['screenPageViews'] ?? 0 }} ],
                                         label : "Total Page Views",
                                         borderColor : "#3cba9f",
                                         fill : false,
                                         tension: 0.25
                                     },
                                     {
-                                        data : [ 5, 5, 5, 5, 5,
-                                            5, 5 ],
+                                        data : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  ],
                                         label : "Total Sessions",
                                         borderColor : "#793900f",
                                         fill : false,
                                         tension: 0.25
                                     },
                                     {
-                                        data : [ 5, 5, 5, 5,5,
-                                            5, 5 ],
+                                        data : [ {{ $graph[13]['activeUsers'] ?? 0 }}, {{ $graph[11]['activeUsers'] ?? 0 }}, {{ $graph[10]['activeUsers'] ?? 0 }},
+                                            {{ $graph[9]['activeUsers'] ?? 0 }}, {{ $graph[8]['activeUsers'] ?? 0 }}, {{ $graph[7]['activeUsers'] ?? 0 }}, {{ $graph[6]['activeUsers'] ?? 0 }},
+                                            {{ $graph[5]['activeUsers'] ?? 0 }}, {{ $graph[4]['activeUsers'] ?? 0 }}, {{ $graph[3]['activeUsers'] ?? 0 }}, {{ $graph[2]['activeUsers'] ?? 0 }},
+                                            {{ $graph[1]['activeUsers'] ?? 0 }}, {{ $graph[0]['activeUsers'] ?? 0 }} ],
                                         label : "Total Visitors",
                                         borderColor : "#460069",
                                         fill : false,
