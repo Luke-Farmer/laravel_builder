@@ -31,7 +31,7 @@ class AdminController extends Controller
             $i++;
         }
 
-        $graphViews = Analytics::fetchVisitorsAndPageViewsByDate(Period::create($dates[0], $dates[13]));
+        $graphViews = Analytics::fetchVisitorsAndPageViewsByDate(Period::create($dates[13], $dates[0]));
 
         dd($graphViews);
         return view('dashboard')
