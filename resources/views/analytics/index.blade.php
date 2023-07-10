@@ -17,7 +17,7 @@
                     <tbody>
                         <tr>
                             @php
-                            dd($analytics)
+                            dd($analytics);
                                 $totalViews = 0;
                                 $totalVisitors = 0;
                                 for($i = 0; $i < 12; $i++) {
