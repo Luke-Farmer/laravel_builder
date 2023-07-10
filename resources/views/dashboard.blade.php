@@ -84,8 +84,8 @@
                     <p class="fs-3 fw-bold">{!! $usersTwoWeeks[1]['activeUsers'] ?? 0 !!}</p>
                     <div class="d-flex">
                         @php
-                            $previousWeeks = $usersTwoWeeks[1]['activeUsers'] ?? 0 - $usersFourWeeks[1]['activeUsers'] ?? 0;
-                            $change = $previousWeeks / $usersFourWeeks[1]['activeUsers'] ?? 0 * 100;
+                            $previousWeeks = ($usersTwoWeeks[1]['activeUsers'] ?? 0) - ($usersFourWeeks[1]['activeUsers'] ?? 0);
+                            $change = $previousWeeks / ($usersFourWeeks[1]['activeUsers'] ?? 0) * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-down me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
