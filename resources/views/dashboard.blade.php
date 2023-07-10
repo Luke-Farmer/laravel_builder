@@ -41,19 +41,13 @@
                     @php
                         $allVisitors = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
                     @endphp
-                    <p class="fs-3 fw-bold">{{ $allVisitors }}</p>ss
+                    <p class="fs-3 fw-bold">{{ $allVisitors }}</p>
                     <div class="d-flex">
                         @php
-                            $twoWeeks = 0;
-                            for($i = 0; $i < 12; $i++) {
-                                $twoWeeks += $stats[$i]['activeUsers'] ?? 0;
-                            }
-                            $fourWeeks = 0;
-                            for($i = 0; $i < 22; $i++) {
-                                $fourWeeks += $oldStats[$i]['activeUsers'] ?? 0;
-                            }
-                            $previousWeeks = $twoWeeks - $fourWeeks;
-                            $change = $previousWeeks / $fourWeeks * 100;
+                            $totalWeeksTwo = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
+                            $totalWeeksFour = $usersFourWeeks[0]['activeUsers'] + $usersfourWeeks[1]['activeUsers'];
+                            $previousWeeks = $totalWeeksTwo - $totalWeeksFour;
+                            $change = $previousWeeks / $totalWeeksFour * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
