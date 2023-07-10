@@ -60,10 +60,7 @@ Route::resource('/admin/portfolio', PortfolioController::class);
 
 Route::post('/admin/dashboard', [AdminController::class, 'createToDo']);
 
-Route::get('/admin/dashboard', function () {
-    Session::forget('message');
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users.index');
 

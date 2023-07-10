@@ -5,7 +5,13 @@
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">Views</p>
-                    <p class="fs-3 fw-bold">12567</p>
+                    @php
+                        $totalViews = 0;
+                        for($i = 0; $i < 28; $i++) {
+                            $totalViews += $stats[$i]['screenPageViews'] ?? 0;
+                        }
+                    @endphp
+                    <p class="fs-3 fw-bold">{{ $totalViews }}</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">3.45% Since last month</small>

@@ -17,6 +17,15 @@ use Auth;
 
 class AdminController extends Controller
 {
+
+
+    public function dashboard() {
+        $monthlyViewsVisitors = Analytics::fetchVisitorsAndPageViews(Period::days(30));
+        return view('dashboard')
+            ->withStats($monthlyViewsVisitors);
+    }
+
+
     public function analytics() {
         Session::forget('message');
         $pages = Page::all();
