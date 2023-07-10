@@ -74,16 +74,16 @@
                     <p class="fs-3 fw-bold">{{ $totalUsers[0]['activeUsers'] }}</p>
                     <div class="d-flex">
                         @php
-                            $twoWeeks = 0;
+                            $two = 0;
                             for($i = 0; $i < 12; $i++) {
-                                $twoWeeks += $users[$i]['activeUsers'] ?? 0;
+                                $two += $users[$i]['activeUsers'] ?? 0;
                             }
-                            $fourWeeks = 0;
+                            $total = 0;
                             for($i = 0; $i < 22; $i++) {
-                                $fourWeeks += $totalUsers[$i]['activeUsers'] ?? 0;
+                                $total += $totalUsers[$i]['activeUsers'] ?? 0;
                             }
-                            $previousWeeks = $totalUsers - $users;
-                            $change = $previousWeeks / $users * 100;
+                            $previousWeeks = $total - $two;
+                            $change = $previousWeeks / $two * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
