@@ -74,15 +74,15 @@
                     <p class="fs-3 fw-bold">{{ $totalUsers[0]['activeUsers'] }}</p>
                     <div class="d-flex">
                         @php
-                            $two = 0;
+                            $twoWeeks = 0;
                             for($i = 0; $i < 12; $i++) {
-                                $two += $users[$i]['activeUsers'] ?? 0;
+                                $twoWeeks += $usersTwoWeeks[$i]['activeUsers'] ?? 0;
                             }
-                            $total = 0;
+                            $fourWeeks = 0;
                             for($i = 0; $i < 22; $i++) {
-                                $total += $totalUsers[$i]['activeUsers'] ?? 0;
+                                $fourWeeks += $usersFourWeeks[$i]['activeUsers'] ?? 0;
                             }
-                            $previousWeeks = $two - $total;
+                            $previousWeeks = $twoWeeks - $fourWeeks;
                             $change = $previousWeeks / $total * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #750000;margin-top: 2px;'></i>";
@@ -91,7 +91,7 @@
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
                         @endphp
-                        <small class="white mb-0 fw-bold">{{ $change }}% Small: {{ $two }} Big: {{ $total }} Difference: {{ $previousWeeks }}</small>
+                        <small class="white mb-0 fw-bold">{{ $change }}% Small: {{ $usersTwoWeeks }} Big: {{ $usersFourWeeks }} Difference: {{ $previousWeeks }}</small>
                     </div>
                 </div>
             </div>

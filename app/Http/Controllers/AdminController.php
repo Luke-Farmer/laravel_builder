@@ -46,8 +46,8 @@ class AdminController extends Controller
             ->withOldStats($fourWeeks)
             ->withDates($dates)
             ->withGraph($graphViews)
-            ->withTotalUsers($totalUsers)
-            ->withUsers($usersFour);
+            ->withUsersTwoWeeks($totalUsers)
+            ->withUsersFourWeeks($usersFour);
     }
 
 
