@@ -13,7 +13,6 @@
                     @endphp
                     <p class="fs-3 fw-bold">{{ $totalViews }}</p>
                     <div class="d-flex">
-                        <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
                         @php
                             $twoWeeks = 0;
                             for($i = 0; $i < 12; $i++) {
@@ -25,8 +24,14 @@
                             }
                             $previousWeeks = $fourWeeks - $twoWeeks;
                             $change = $previousWeeks / $twoWeeks * 100
+                            if($change < 0) {
+                                echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
+                            }
+                            else {
+                                echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
+                            }
                         @endphp
-                        <small class="white mb-0 fw-bold">{{ $change }} In the last 2 weeks</small>
+                        <small class="white mb-0 fw-bold">{{ $change }}% In the last 2 weeks</small>
                     </div>
                 </div>
             </div>
