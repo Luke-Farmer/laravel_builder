@@ -2,12 +2,12 @@
     @section('title', 'Portfolio Items')
     <div class="p-3">
         <div class="row g-0">
-            <div class="col-12 d-flex bg-accent-light p-3 w-100">
+            <div class="col-12 d-flex border-top-radius p-3 w-100" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                 <p class="white mb-0">All Portfolio Items</p>
-                <p class="ms-auto mb-0"><a class="white main-button px-2 py-1" href="/admin/portfolio/create">New Portfolio Item</a></p>
+                <p class="ms-auto mb-0"><a class="white plain-button px-2 py-1" href="/admin/portfolio/create">New Portfolio Item</a></p>
             </div>
         </div>
-        <div class="row g-0 bg-white">
+        <div class="row g-0 border-bottom-radius" style="background: #D9D9D6;">
             <div class="col-12 p-3">
                 <table class="w-100">
                     <thead>
@@ -51,9 +51,9 @@
             background-color: #f8f9fa;
         }
 
-        tbody tr:nth-child(odd) {
-            background-color: #e9ecef;
-        }
+        /*tbody tr:nth-child(odd) {*/
+        /*    background-color: #e9ecef;*/
+        /*}*/
         td {
             padding: 5px;
         }
