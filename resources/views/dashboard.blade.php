@@ -80,8 +80,10 @@
                                     '{{ $dates[6] }}', '{{ $dates[5] }}', '{{ $dates[4] }}', '{{ $dates[3] }}', '{{ $dates[2] }}', '{{ $dates[1] }}', '{{ $dates[0] }}' ],
                                 datasets : [
                                     {
-                                        data : [ 1860, 2050, 9321, 7516, 11107,
-                                            15332, 17231 ],
+                                        data : [ '{{ $graph[13]['screenPageViews'] }}', {{ $graph[12]['screenPageViews'] }}, {{ $graph[11]['screenPageViews'] }},
+                                            {{ $graph[10]['screenPageViews'] }}, {{ $graph[9]['screenPageViews'] }}, {{ $graph[8]['screenPageViews'] }}, {{ $graph[7]['screenPageViews'] }},
+                                            {{ $graph[6]['screenPageViews'] }}, {{ $graph[5]['screenPageViews'] }}, {{ $graph[4]['screenPageViews'] }}, {{ $graph[3]['screenPageViews'] }},
+                                            {{ $graph[2]['screenPageViews'] }}, {{ $graph[1]['screenPageViews'] }}, {{ $graph[0]['screenPageViews'] }}],
                                         label : "Total Page Views",
                                         borderColor : "#3cba9f",
                                         fill : false,
