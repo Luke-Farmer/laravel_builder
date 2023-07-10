@@ -47,13 +47,13 @@
         </div>
     </div>
     <style>
-        tbody tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        /*tbody tr:nth-child(odd) {*/
-        /*    background-color: #e9ecef;*/
+        /*tbody tr:nth-child(even) {*/
+        /*    background-color: #f8f9fa;*/
         /*}*/
+
+        tbody tr:nth-child(odd) {
+            background-color: #e9ecef;
+        }
         td {
             padding: 5px;
         }
