@@ -45,7 +45,7 @@
                     <div class="d-flex">
                         @php
                             $totalWeeksTwo = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
-                            $totalWeeksFour = $usersFourWeeks[0]['activeUsers'] + $usersfourWeeks[1]['activeUsers'];
+                            $totalWeeksFour = $usersFourWeeks[0]['activeUsers'] + $usersFourWeeks[1]['activeUsers'];
                             $previousWeeks = $totalWeeksTwo - $totalWeeksFour;
                             $change = $previousWeeks / $totalWeeksFour * 100;
                             if($change < 0) {
