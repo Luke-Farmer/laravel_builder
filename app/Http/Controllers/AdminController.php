@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Spatie\Analytics\Facades\Analytics;
 use Spatie\Analytics\Period;
 use Illuminate\Support\Facades\Redirect;
+use Carbon\Carbon;
 use App\Models\Page;
 use App\Models\Settings;
 use App\Models\User;
@@ -22,9 +23,18 @@ class AdminController extends Controller
     public function dashboard() {
         $twoWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(14));
         $fourWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(28));
+
+        $date = Carbon::now();
+        $dates[] = array();
+        for($i = 0; $i < 12;) {
+            $dates[$i] = $date->SubDays($i);
+            $i++;
+        }
+        dd($dates);
         return view('dashboard')
             ->withStats($twoWeeks)
-            ->withOldStats($fourWeeks);
+            ->withOldStats($fourWeeks)
+            ->withDates($dates);
     }
 
 
