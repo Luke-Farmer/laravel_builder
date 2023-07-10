@@ -25,7 +25,7 @@
                             $previousWeeks = $twoWeeks - $fourWeeks;
                             $change = $previousWeeks / $fourWeeks * 100;
                             if($change < 0) {
-                                echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
+                                echo "<i class='fas fa-arrow-up me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
                             else {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
@@ -58,7 +58,7 @@
                             $previousWeeks = $twoWeeks - $fourWeeks;
                             $change = $previousWeeks / $fourWeeks * 100;
                             if($change < 0) {
-                                echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
+                                echo "<i class='fas fa-arrow-up me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
                             else {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
@@ -85,7 +85,7 @@
                             $previousWeeks = $two - $total;
                             $change = $previousWeeks / $total * 100;
                             if($change < 0) {
-                                echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
+                                echo "<i class='fas fa-arrow-up me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
                             else {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
