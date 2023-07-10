@@ -36,6 +36,7 @@ class AdminController extends Controller
 //
 //        }
         $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+        dd($analyticsData);
         return view('analytics.index')->withAnalytics($analyticsData);
     }
 
