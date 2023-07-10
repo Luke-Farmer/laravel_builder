@@ -38,7 +38,7 @@ class AdminController extends Controller
 
 
         $totalUsers = Analytics::fetchUserTypes(Period::create($startDate, $endDate));
-        dd($totalUsers);
+
 
         return view('dashboard')
             ->withStats($twoWeeks)
