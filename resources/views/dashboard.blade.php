@@ -44,8 +44,8 @@
                     <p class="fs-3 fw-bold">{{ $allVisitors }}</p>
                     <div class="d-flex">
                         @php
-                            $totalWeeksTwo = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
-                            $totalWeeksFour = $usersFourWeeks[0]['activeUsers'] + $usersFourWeeks[1]['activeUsers'];
+                            $totalWeeksTwo = $usersTwoWeeks[0]['activeUsers'] ?? 0 + $usersTwoWeeks[1]['activeUsers'] ?? 0;
+                            $totalWeeksFour = $usersFourWeeks[0]['activeUsers'] ?? 0 + $usersFourWeeks[1]['activeUsers'] ?? 0;
                             $previousWeeks = $totalWeeksTwo - $totalWeeksFour;
                             $change = $previousWeeks / $totalWeeksFour * 100;
                             if($change < 0) {
