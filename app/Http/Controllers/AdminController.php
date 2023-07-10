@@ -30,7 +30,6 @@ class AdminController extends Controller
             $dates[$i] =  Carbon::now()->subDay($i)->format('d M');
             $i++;
         }
-        dd($dates);
         return view('dashboard')
             ->withStats($twoWeeks)
             ->withOldStats($fourWeeks)
