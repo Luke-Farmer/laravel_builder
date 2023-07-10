@@ -54,7 +54,7 @@
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">New Users</p>
-                    <p class="fs-3 fw-bold">0</p>
+                    <p class="fs-3 fw-bold">{{ $totalUsers[0]['activeUsers'] }}</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">8.12% In the last 2 weeks</small>
@@ -64,7 +64,7 @@
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">Returning Users</p>
-                    <p class="fs-3 fw-bold">0</p>
+                    <p class="fs-3 fw-bold">{{ $totalUsers[1]['activeUsers'] }}</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-down me-2" style="color: #750000;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">8.28% In the last 2 weeks</small>
