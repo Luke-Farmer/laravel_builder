@@ -22,8 +22,8 @@
                             for($i = 0; $i < 22; $i++) {
                                 $fourWeeks += $oldStats[$i]['screenPageViews'] ?? 0;
                             }
-                            $previousWeeks = $fourWeeks - $twoWeeks;
-                            $change = $previousWeeks / $twoWeeks * 100;
+                            $previousWeeks = $twoWeeks - $fourWeeks;
+                            $change = $previousWeeks / $fourWeeks * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
@@ -55,8 +55,8 @@
                             for($i = 0; $i < 22; $i++) {
                                 $fourWeeks += $oldStats[$i]['activeUsers'] ?? 0;
                             }
-                            $previousWeeks = $fourWeeks - $twoWeeks;
-                            $change = $previousWeeks / $twoWeeks * 100;
+                            $previousWeeks = $twoWeeks - $fourWeeks;
+                            $change = $previousWeeks / $fourWeeks * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
