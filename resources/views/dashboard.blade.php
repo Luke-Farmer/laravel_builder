@@ -39,10 +39,7 @@
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">Total Visitors</p>
                     @php
-                        $totalVisitors = 0;
-                        for($i = 0; $i < 12; $i++) {
-                            $totalVisitors += $stats[$i]['activeUsers'] ?? 0;
-                        }
+                        $allVisitors = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
                     @endphp
                     <p class="fs-3 fw-bold">{{ $totalVisitors }}</p>
                     <div class="d-flex">
@@ -70,7 +67,7 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5 fw-bold">New Users</p>
+                    <p class="fs-5 fw-bold">New Users - Logic Checked</p>
                     <p class="fs-3 fw-bold">{!! $usersTwoWeeks[0]['activeUsers'] !!}</p>
                     <div class="d-flex">
                         @php
