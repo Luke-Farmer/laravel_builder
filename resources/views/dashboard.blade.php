@@ -85,7 +85,12 @@
                     <div class="d-flex">
                         @php
                             $previousWeeks = ($usersTwoWeeks[1]['activeUsers'] ?? 0) - ($usersFourWeeks[1]['activeUsers'] ?? 0);
-                            $change = $previousWeeks / ($usersFourWeeks[1]['activeUsers'] ?? 1) * 100;
+                            $divideTest = $usersFourWeeks[1]['activeUsers'];
+                            if($divideTest < 1){
+                                $change = 0;
+                            } else {
+                                $change = $previousWeeks / ($usersFourWeeks[1]['activeUsers']) * 100;
+                            }
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-down me-2' style='color: #750000;margin-top: 2px;'></i>";
                             }
