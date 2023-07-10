@@ -47,8 +47,8 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5 fw-bold">Sessions</p>
-                    <p class="fs-3 fw-bold">3467</p>
+                    <p class="fs-5 fw-bold">New Users</p>
+                    <p class="fs-3 fw-bold">0</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">8.12% In the last 2 weeks</small>
@@ -57,8 +57,8 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5 fw-bold">Bounce Rate</p>
-                    <p class="fs-3 fw-bold">25.28%</p>
+                    <p class="fs-5 fw-bold">Returning Users</p>
+                    <p class="fs-3 fw-bold">0</p>
                     <div class="d-flex">
                         <i class="fas fa-arrow-down me-2" style="color: #750000;margin-top: 2px;"></i>
                         <small class="white mb-0 fw-bold">8.28% In the last 2 weeks</small>
@@ -90,8 +90,15 @@
                                         tension: 0.25
                                     },
                                     {
-                                        data : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  ],
-                                        label : "Total Sessions",
+                                        data : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                                        label : "New Users",
+                                        borderColor : "#793900f",
+                                        fill : false,
+                                        tension: 0.25
+                                    },
+                                    {
+                                        data : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                                        label : "Returning Users",
                                         borderColor : "#793900f",
                                         fill : false,
                                         tension: 0.25
