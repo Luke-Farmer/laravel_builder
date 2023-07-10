@@ -6,7 +6,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "google/analytics-data": "^0.9.4",
         "biscolab/laravel-recaptcha": "^6.0",
         "dymantic/laravel-instagram-feed": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
