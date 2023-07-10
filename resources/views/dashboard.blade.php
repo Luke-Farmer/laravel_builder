@@ -82,8 +82,8 @@
                             for($i = 0; $i < 22; $i++) {
                                 $total += $totalUsers[$i]['activeUsers'] ?? 0;
                             }
-                            $previousWeeks = $total - $two;
-                            $change = $previousWeeks / $two * 100;
+                            $previousWeeks = $two - $total;
+                            $change = $previousWeeks / $total * 100;
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
                             }
