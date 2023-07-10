@@ -1,10 +1,10 @@
 <x-admin-master>
     @section('title', 'Portfolio Items')
-    <div class="p-3">
+    <div class="p-3 ps-0">
         <div class="row g-0">
             <div class="col-12 d-flex border-top-radius p-3 w-100" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                 <p class="white mb-0">All Portfolio Items</p>
-                <p class="ms-auto mb-0"><a class="white plain-button px-2 py-1" href="/admin/portfolio/create">New Portfolio Item</a></p>
+                <p class="ms-auto mb-0"><a class="white plain-button fs-6" href="/admin/portfolio/create">New Portfolio Item</a></p>
             </div>
         </div>
         <div class="row g-0 border-bottom-radius" style="background: #D9D9D6;">
