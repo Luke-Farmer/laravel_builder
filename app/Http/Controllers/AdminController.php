@@ -35,12 +35,12 @@ class AdminController extends Controller
         $startDate = Carbon::now()->subDay(14);
         $endDate = Carbon::now()->subDay(1);
         $graphViews = Analytics::fetchTotalVisitorsAndPageViews(Period::create($startDate, $endDate));
-        dd($totalUsers);
+
 
 
         $usersFour = Analytics::fetchTotalVisitorsAndPageViews(Period::days(28));;
         $totalUsers = Analytics::fetchUserTypes(Period::create($startDate, $endDate));
-
+        dd($totalUsers);
 
         return view('dashboard')
             ->withStats($twoWeeks)
