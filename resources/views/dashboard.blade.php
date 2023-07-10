@@ -73,8 +73,25 @@
                     <p class="fs-5 fw-bold">New Users</p>
                     <p class="fs-3 fw-bold">{{ $totalUsers[0]['activeUsers'] }}</p>
                     <div class="d-flex">
-                        <i class="fas fa-arrow-up me-2" style="color: #00660c;margin-top: 2px;"></i>
-                        <small class="white mb-0 fw-bold">8.12% In the last 2 weeks</small>
+                        @php
+                            $twoWeeks = 0;
+                            for($i = 0; $i < 12; $i++) {
+                                $twoWeeks += $users[$i]['activeUsers'] ?? 0;
+                            }
+                            $fourWeeks = 0;
+                            for($i = 0; $i < 22; $i++) {
+                                $fourWeeks += $totalUsers[$i]['activeUsers'] ?? 0;
+                            }
+                            $previousWeeks = $totalUsers - $users;
+                            $change = $previousWeeks / $users * 100;
+                            if($change < 0) {
+                                echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
+                            }
+                            else {
+                                echo "<i class='fas fa-arrow-up me-2' style='color: #00660c;margin-top: 2px;'></i>";
+                            }
+                        @endphp
+                        <small class="white mb-0 fw-bold">{{ $change }}% In the last 2 weeks</small>
                     </div>
                 </div>
             </div>
