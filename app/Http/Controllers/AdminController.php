@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Spatie\Analytics\Facades\Analytics;
-use Spatie\Analytics\Period;
+use Analytics;
+use Period;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Page;
 use App\Models\Settings;
