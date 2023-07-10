@@ -27,11 +27,14 @@ class AdminController extends Controller
         $date = Carbon::now();
         $dates[] = array();
         for($i = 0; $i < 14;) {
-            $dates[$i] =  Carbon::now()->subDay($i);
+            $dates[$i] =  Carbon::now()->subDay($i)->format('d M');
             $i++;
         }
 
-        $graphViews = Analytics::fetchTotalVisitorsAndPageViews(Period::create($dates[13], $dates[0]));
+
+        $startDate = Carbon::now()->subDay(14);
+        $endDate = Carbon::now()->subDay(1);
+        $graphViews = Analytics::fetchTotalVisitorsAndPageViews(Period::create($startDate, $endDate));
 
         return view('dashboard')
             ->withStats($twoWeeks)
