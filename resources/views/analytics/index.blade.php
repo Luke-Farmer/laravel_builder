@@ -21,8 +21,8 @@
                                 $totalViews = 0;
                                 $totalVisitors = 0;
                                 for($i = 0; $i < 12; $i++) {
-                                    $totalViews += $analytics[0][$i]['pageViews'] ?? 0;
-                                    $totalVisitors += $analytics[0][$i]['visitors'] ?? 0;
+                                    $totalViews += $analytics[$i]['screenPageViews'] ?? 0;
+                                    $totalVisitors += $analytics[$i]['activeUsers'] ?? 0;
                                 }
                             @endphp
                             <td>{{ $totalViews }}</td>
