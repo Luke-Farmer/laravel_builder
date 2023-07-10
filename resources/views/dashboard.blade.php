@@ -4,7 +4,7 @@
         <div class="row g-3">
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5 fw-bold">Total Page Views</p>
+                    <p class="fs-5 fw-bold">Total Page Views - Logic Checked</p>
                     @php
                         $totalViews = 0;
                         for($i = 0; $i < 12; $i++) {
@@ -37,7 +37,7 @@
             </div>
             <div class="col-12 col-lg-3">
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
-                    <p class="fs-5 fw-bold">Total Visitors</p>
+                    <p class="fs-5 fw-bold">Total Visitors - Logic Checked</p>
                     @php
                         $allVisitors = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
                     @endphp
