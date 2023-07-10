@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Analytics;
-use Period;
+use Spatie\Analytics\Period;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Page;
 use App\Models\Settings;
