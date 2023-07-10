@@ -41,7 +41,7 @@
                     @php
                         $allVisitors = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
                     @endphp
-                    <p class="fs-3 fw-bold">{{ $totalVisitors }}</p>
+                    <p class="fs-3 fw-bold">{{ $allVisitors }}</p>ss
                     <div class="d-flex">
                         @php
                             $twoWeeks = 0;
