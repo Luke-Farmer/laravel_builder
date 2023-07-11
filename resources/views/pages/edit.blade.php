@@ -55,6 +55,27 @@
                         <label class="mb-2">SEO Meta Description:</label>
                         <input class="edit-page-input p-1" type="text" label="seo_description" name="seo_description" value="{{ $page->seo_description }}">
                     </div>
+                    <div class="col-12 pb-3">
+                        <label class="mb-2">Use Editor:</label>
+                        <select name="use_editor" class="edit-page-input p-1">
+                            <option value="{{ $page->user_editor }}">
+                                @if($page->user_editor == 1)
+                                    Editor
+                                @else
+                                    Raw
+                                @endif
+                            </option>
+                            @if($page->user_editor == 1)
+                                <option value="0">
+                                    Raw
+                                </option>
+                            @else
+                                <option value="1">
+                                    Editor
+                                </option>
+                            @endif
+                        </select>
+                    </div>
                     <div class="col-12">
                         <div class="position-relative" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
                             <textarea class="w-100" id="editor" style="min-height:800px;" label="body" type="text" name="body" spellcheck="false" >{{ $page->html }}</textarea>
