@@ -13,6 +13,7 @@
                 <div class="row g-0">
                     <div class="col-12 d-flex w-100 p-3 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                         <p class="white mb-0">Page Settings</p>
+                        <a href="/admin/" class="" >Edit With Page Builder</a>
                         <input href="{{ route('pages.update', $page->id) }}" class="white plain-button fs-6 px-3 py-0 ms-auto" value="Save" type="submit">
                     </div>
                 </div>
