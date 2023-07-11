@@ -92,7 +92,7 @@ class PageController extends Controller
         $page->seo_description = $request->input('seo_description');
         $page->enabled = $request->input('enabled');
         $page->title = $request->input('title');
-        $page->use_editor = $request->input('use_builder');
+        $page->use_builder = $request->input('use_builder');
         $page->save();
         Session::put('message', 'Page Updated Successfully!');
         return redirect()
