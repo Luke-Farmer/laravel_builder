@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-12">
                         <div class="position-relative" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
-                            <textarea class="w-100" id="editor" style="min-height:800px;" label="body" type="text" name="body" spellcheck="false" >{{ $page->html }}</textarea>
+                            <textarea class="w-100" id="editor" style="min-height:800px;" label="body" type="text" name="body" spellcheck="false" >{{ $page->body }}</textarea>
                         </div>
                     </div>
                 </div>
