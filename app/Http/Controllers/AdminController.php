@@ -27,7 +27,7 @@ class AdminController extends Controller
     public function dashboard() {
         $twoWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(14));
         $fourWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(28));
-
+    dd($twoWeeks);
         $date = Carbon::now();
         $dates[] = array();
         for($i = 0; $i < 14;) {
