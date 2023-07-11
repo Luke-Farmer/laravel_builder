@@ -50,11 +50,10 @@ class AdminController extends Controller
         $graphUsers = array();
         for($i = 0; $i < 13;) {
             $periodDate = Carbon::now()->subDay($i+ 1);
+            $periodEnd = Carbon::now()->subDay($i);
             $graphUsers[$i] = Analytics::fetchUserTypes(Period::create($periodDate, $periodDate));
             $i++;
         }
-        $periodDate = Carbon::now()->subDay(1);
-        dd(Analytics::fetchUserTypes(Period::create($periodDate, $periodDate)));
 
 
 
