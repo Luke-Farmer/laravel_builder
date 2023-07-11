@@ -54,6 +54,7 @@ class AdminController extends Controller
             $graphUsers[$i] = Analytics::fetchUserTypes(Period::create($periodDate, $periodDate));
             $i++;
         }
+        dd($graphUsers);
 
 
 
