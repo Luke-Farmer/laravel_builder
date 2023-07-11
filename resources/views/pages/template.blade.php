@@ -6,7 +6,9 @@
         {!! str_replace(array('[contact_form]', '[latest_portfolios]', '[footer_overlay]', '[portfolios]'), array(view('forms.contact-form'), view('blocks.latest-portfolios'), view('blocks.footer-get-in-touch'), view('blocks.portfolio')) ,$page->body) !!}
     @else
         {!! $page->html !!}
-        {{ $page->css }}
+        <style>
+            {{ $page->css }}
+        </style>
     @endif
 </x-master>
 <style>
