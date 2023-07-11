@@ -58,14 +58,14 @@
                     <div class="col-12 pb-3">
                         <label class="mb-2">Use Editor:</label>
                         <select name="use_builder" class="edit-page-input p-1">
-                            <option value="{{ $page->user_editor }}">
-                                @if($page->user_editor == 1)
+                            <option value="{{ $page->builder }}">
+                                @if($page->user_builder == 1)
                                     Editor
                                 @else
                                     Raw
                                 @endif
                             </option>
-                            @if($page->user_editor == 1)
+                            @if($page->user_builder == 1)
                                 <option value="0">
                                     Raw
                                 </option>
