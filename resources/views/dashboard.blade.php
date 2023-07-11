@@ -182,7 +182,7 @@
                     <p class="white fs-5 mb-0 fw-bold">Oldest Reminders</p>
                 </div>
                 <div class="border-bottom-rounded" style="background: #D9D9D6;">
-                    <?php $list = \App\Models\Todo::orderBy('created_at', 'desc')->take(5); ?>
+                    <?php $list = \App\Models\Todo::orderBy('created_at', 'desc')->take(5)->get(); ?>
                     @foreach($list as $item)
                         <li class="bg-white p-3" style="list-style: none;">
                             <strong>{{ $item->name }} - </strong>{{ $item->body }}
