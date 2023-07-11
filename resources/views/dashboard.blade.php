@@ -150,10 +150,10 @@
                                         tension: 0.25
                                     },
                                     {
-                                        data : [ {{ $graph[13]['activeUsers'] ?? 0 }}, {{ $graph[11]['activeUsers'] ?? 0 }}, {{ $graph[10]['activeUsers'] ?? 0 }},
-                                            {{ $graph[9]['activeUsers'] ?? 0 }}, {{ $graph[8]['activeUsers'] ?? 0 }}, {{ $graph[7]['activeUsers'] ?? 0 }}, {{ $graph[6]['activeUsers'] ?? 0 }},
-                                            {{ $graph[5]['activeUsers'] ?? 0 }}, {{ $graph[4]['activeUsers'] ?? 0 }}, {{ $graph[3]['activeUsers'] ?? 0 }}, {{ $graph[2]['activeUsers'] ?? 0 }},
-                                            {{ $graph[1]['activeUsers'] ?? 0 }}, {{ $graph[0]['activeUsers'] ?? 0 }} ],
+                                        data : [ {{ $graphData[12][0]['activeUsers'] ?? 0 }}, {{ $graphData[11][0]['activeUsers'] ?? 0 }}, {{ $graphData[10][0]['activeUsers'] ?? 0 }},
+                                            {{ $graphData[9][0]['activeUsers'] ?? 0 }}, {{ $graphData[8][0]['activeUsers'] ?? 0 }}, {{ $graphData[7][0]['activeUsers'] ?? 0 }}, {{ $graphData[6][0]['activeUsers'] ?? 0 }},
+                                            {{ $graphData[5][0]['activeUsers'] ?? 0 }}, {{ $graphData[4][0]['activeUsers'] ?? 0 }}, {{ $graphData[3][0]['activeUsers'] ?? 0 }}, {{ $graphData[2][0]['activeUsers'] ?? 0 }},
+                                            {{ $graphData[1][0]['activeUsers'] ?? 0 }}, {{ $graphData[0][0]['activeUsers'] ?? 0 }} ],
                                         label : "Total Visitors",
                                         borderColor : "#460069",
                                         fill : false,
