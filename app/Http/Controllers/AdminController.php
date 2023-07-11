@@ -27,7 +27,7 @@ class AdminController extends Controller
     public function dashboard() {
         $twoWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(14));
         $fourWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(28));
-    dd($twoWeeks);
+
         $date = Carbon::now();
         $dates[] = array();
         for($i = 0; $i < 14;) {
@@ -35,11 +35,16 @@ class AdminController extends Controller
             $i++;
         }
 
-
+        $graphData = array();
+        for($i = 0; $i < 13;) {
+            $periodDate = Carbon::now()->subDay($i);
+            $graphData[$i] = Analytics::fetchVisitorsAndPageViews($periodDate, $periodDate);
+        }
         $startDate = Carbon::now()->subDay(14);
         $endDate = Carbon::now()->subDay(1);
         $graphViews = Analytics::fetchTotalVisitorsAndPageViews(Period::create($startDate, $endDate));
-        dd($graphViews);
+        dd($graphData);
+
 
 
         $usersFour = Analytics::fetchTotalVisitorsAndPageViews(Period::days(28));;
@@ -51,6 +56,7 @@ class AdminController extends Controller
             ->withOldStats($fourWeeks)
             ->withDates($dates)
             ->withGraph($graphViews)
+            ->withGraphData($graphData)
             ->withUsersTwoWeeks($totalUsers)
             ->withUsersFourWeeks($usersFour);
     }
