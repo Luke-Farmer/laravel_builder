@@ -38,7 +38,7 @@ class AdminController extends Controller
         $graphData = array();
         for($i = 0; $i < 13;) {
             $periodDate = Carbon::now()->subDay($i);
-            $graphData[$i] = Analytics::fetchVisitorsAndPageViews($periodDate, $periodDate);
+            $graphData[$i] = Analytics::fetchVisitorsAndPageViews(Period::create($periodDate, $periodDate));
         }
         $startDate = Carbon::now()->subDay(14);
         $endDate = Carbon::now()->subDay(1);
