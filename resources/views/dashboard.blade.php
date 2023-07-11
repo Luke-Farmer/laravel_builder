@@ -136,14 +136,20 @@
                                         tension: 0.25
                                     },
                                     {
-                                        data : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                                        data : [ {{ $graphUsers[12][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[11][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[10][0]['activeUsers'] ?? 0 }},
+                                            {{ $graphUsers[9][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[8][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[7][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[6][0]['activeUsers'] ?? 0 }},
+                                            {{ $graphUsers[5][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[4][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[3][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[2][0]['activeUsers'] ?? 0 }},
+                                            {{ $graphUsers[1][0]['activeUsers'] ?? 0 }}, {{ $graphUsers[0][0]['activeUsers'] ?? 0 }} ],
                                         label : "New Users",
                                         borderColor : "#793900f",
                                         fill : false,
                                         tension: 0.25
                                     },
                                     {
-                                        data : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                                        data : [ {{ $graphUsers[12][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[11][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[10][1]['activeUsers'] ?? 0 }},
+                                            {{ $graphUsers[9][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[8][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[7][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[6][1]['activeUsers'] ?? 0 }},
+                                            {{ $graphUsers[5][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[4][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[3][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[2][1]['activeUsers'] ?? 0 }},
+                                            {{ $graphUsers[1][1]['activeUsers'] ?? 0 }}, {{ $graphUsers[0][1]['activeUsers'] ?? 0 }} ],
                                         label : "Returning Users",
                                         borderColor : "#793900f",
                                         fill : false,
