@@ -39,7 +39,7 @@
                 <div class="d-flex p-3 d-flex flex-column white" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);border-radius:10px;">
                     <p class="fs-5 fw-bold">Total Visitors</p>
                     @php
-                        $allVisitors = $usersTwoWeeks[0]['activeUsers'] + $usersTwoWeeks[1]['activeUsers'];
+                        $allVisitors = $usersTwoWeeks[0]['activeUsers'] ?? 0 + $usersTwoWeeks[1]['activeUsers'] ?? 0;
                     @endphp
                     <p class="fs-3 fw-bold">{{ $allVisitors }}</p>
                     <div class="d-flex">
