@@ -47,7 +47,6 @@
                             $totalWeeksTwo = $usersTwoWeeks[0]['activeUsers'] ?? 0 + $usersTwoWeeks[1]['activeUsers'] ?? 0;
                             $totalWeeksFour = $usersFourWeeks[0]['activeUsers'] ?? 0 + $usersFourWeeks[1]['activeUsers'] ?? 0;
                             $previousWeeks = $totalWeeksTwo - $totalWeeksFour;
-                            dd($previousWeeks);
                             if($totalWeeksFour < 1){
                                 $change = 0;
                             } else {
