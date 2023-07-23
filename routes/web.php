@@ -9,6 +9,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\InstagramAuthController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMessage;
 use App\Models\Page;
@@ -31,14 +32,14 @@ Route::get('/', [PageController::class, 'getIndex']);
 
 Route::post('/contact', [MailController::class, 'contactPost'])->name('contactPost');
 
-Route::resource('/admin/pages', PageController::class);
+Route::resource('/admin/pages', PageController::class)->middleware('auth');
 
-Route::get('/admin/analytics', [AdminController::class, 'analytics']);
+Route::get('/admin/analytics', [AdminController::class, 'analytics'])->middleware('auth');
 
-Route::resource('/admin/settings', SettingsController::class);
+Route::resource('/admin/settings', SettingsController::class)->middleware('auth');
 
 Route::get('/admin/page/create', function() {
-    return view('pages.create');
+    return view('pages.create')->middleware('auth');
 });
 
 Route::get('/admin/coming-soon', function () {
@@ -49,27 +50,34 @@ Route::get('/admin', function () {
     return redirect()->route('dashboard');
 });
 
-Route::get('/admin/media', [MediaController::class, 'index']);
+Route::get('/admin/media', [MediaController::class, 'index'])->middleware('auth');
 Route::post('/admin/media', [MediaController::class, 'uploadImage']);
 
-Route::resource('/admin/navigation', NavigationController::class);
+Route::resource('/admin/navigation', NavigationController::class)->middleware('auth');
 
-Route::resource('/admin/portfolio', PortfolioController::class);
+Route::resource('/admin/portfolio', PortfolioController::class)->middleware('auth');
 
 
 Route::post('/admin/dashboard', [AdminController::class, 'createToDo']);
 
-Route::get('/admin/dashboard', function () {
-    Session::forget('message');
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
-Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->name('users.index');
+Route::get('/admin/users/', [AdminController::class, 'usersIndex'])->middleware('auth')->name('users.index');
 
-Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->name('users.profile');
+Route::get('/admin/instagram/', [AdminController::class, 'instagramIndex'])->middleware('auth');
+
+Route::get('instagram-get-auth', [InstagramAuthController::class, 'show'])->middleware('auth');
+
+Route::get('/admin/profile/', [AdminController::class, 'userProfile'])->middleware('auth')->name('users.profile');
 
 require __DIR__.'/auth.php';
 
-Route::get('/{slug}', [PageController::class, 'getPage']);
+Route::get('/admin/pages/{page}/editor', [PageController::class, 'editor'])->middleware('auth');
+
+Route::get('/{slug}', [PageController::class, 'getPage'])->where('slug', '.*');
+
+
+
+
 
 

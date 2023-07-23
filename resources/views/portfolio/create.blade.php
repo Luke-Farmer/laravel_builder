@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'New Portfolio Item')
     <form class="p-3" action="{{ route('portfolio.store') }}" method="POST" enctype="multipart/form-data">
         @method('POST')
         @csrf
@@ -49,6 +50,10 @@
                     <div class="col-12 pb-3">
                         <label class="mb-2">Excerpt:</label>
                         <input class="edit-page-input p-1" type="text" label="excerpt" name="excerpt" value="">
+                    </div>
+                    <div class="col-12 pb-3">
+                        <label class="mb-2">Category:</label>
+                        <input class="edit-page-input p-1" type="text" label="category" name="category" value="">
                     </div>
                     <div class="col-12 pb-3">
                         <label class="mt-3">Featured Image</label>

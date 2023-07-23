@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'Edit Portfolio Item')
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
@@ -56,6 +57,10 @@
                     <div class="col-12 pb-3">
                         <label class="mb-2">Excerpt:</label>
                         <input class="edit-page-input p-1" type="text" label="excerpt" name="excerpt" value="{{ $portfolio->excerpt }}">
+                    </div>
+                    <div class="col-12 pb-3">
+                        <label class="mb-2">Category:</label>
+                        <input class="edit-page-input p-1" type="text" label="category" name="category" value="{{ $portfolio->category }}">
                     </div>
                     <div class="col-12 pb-3">
                         <label class="mt-3">Featured Image</label>

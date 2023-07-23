@@ -1,12 +1,13 @@
 <x-admin-master>
-    <div class="p-3">
+    @section('title', 'Pages')
+    <div class="p-3 ps-0" style="background: #040D1B;">
         <div class="row g-0">
-            <div class="col-12 d-flex bg-accent-light p-3 w-100">
+            <div class="col-12 d-flex p-3 w-100 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                 <p class="white mb-0">All Pages</p>
-                <p class="ms-auto mb-0"><a class="white main-button px-2 py-1" href="/admin/page/create">New Page</a></p>
+                <p class="ms-auto mb-0"><a class="white fs-6 px-2 py-1 plain-button" href="/admin/page/create">New Page</a></p>
             </div>
         </div>
-        <div class="row g-0 bg-white">
+        <div class="row g-0 border-bottom-radius" style="background: #D9D9D6;">
             <div class="col-12 p-3">
                 <table class="w-100">
                     <thead>
@@ -46,9 +47,9 @@
         </div>
     </div>
     <style>
-        tbody tr:nth-child(even) {
+        /*tbody tr:nth-child(even) {
             background-color: #f8f9fa;
-        }
+        }*/
 
         tbody tr:nth-child(odd) {
             background-color: #e9ecef;

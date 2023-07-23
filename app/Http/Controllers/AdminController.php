@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Analytics;
-use Illuminate\Support\Facades\Redirect;
+use Spatie\Analytics\Facades\Analytics;
 use Spatie\Analytics\Period;
+use Illuminate\Support\Facades\Redirect;
+use Carbon\Carbon;
 use App\Models\Page;
 use App\Models\Settings;
 use App\Models\User;
@@ -17,24 +18,80 @@ use Auth;
 
 class AdminController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function dashboard() {
+        $twoWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(14));
+        $fourWeeks = Analytics::fetchVisitorsAndPageViews(Period::days(28));
+
+        $date = Carbon::now();
+        $dates[] = array();
+        for($i = 0; $i < 14;) {
+            $dates[$i] =  Carbon::now()->subDay($i)->format('d M');
+            $i++;
+        }
+
+        $graphData = array();
+        for($i = 0; $i < 13;) {
+            $periodDate = Carbon::now()->subDay($i+ 1);
+            $periodEnd = Carbon::now()->subDay($i);
+            $graphData[$i] = Analytics::fetchTotalVisitorsAndPageViews(Period::create($periodDate, $periodDate));
+            $i++;
+        }
+        $startDate = Carbon::now()->subDay(14);
+        $endDate = Carbon::now()->subDay(1);
+        $graphViews = Analytics::fetchTotalVisitorsAndPageViews(Period::create($startDate, $endDate));
+
+
+        $graphUsers = array();
+        for($i = 0; $i < 13;) {
+            $periodDate = Carbon::now()->subDay($i+ 1);
+            $periodEnd = Carbon::now()->subDay($i);
+            $graphUsers[$i] = Analytics::fetchUserTypes(Period::create($periodDate, $periodDate));
+            $i++;
+        }
+
+
+
+        $usersFour = Analytics::fetchTotalVisitorsAndPageViews(Period::days(28));;
+        $totalUsers = Analytics::fetchUserTypes(Period::create($startDate, $endDate));
+
+
+        return view('dashboard')
+            ->withStats($twoWeeks)
+            ->withOldStats($fourWeeks)
+            ->withDates($dates)
+            ->withGraph($graphViews)
+            ->withGraphData($graphData)
+            ->withGraphUsers($graphUsers)
+            ->withUsersTwoWeeks($totalUsers)
+            ->withUsersFourWeeks($usersFour);
+    }
+
+
     public function analytics() {
         Session::forget('message');
         $pages = Page::all();
         $urls = array();
         $analyticsData = array();
-        foreach($pages as $page) {
-            $urls[] = $page->slug;
-        }
-        foreach($urls as $url) {
-
-            if($url !== '/') {
-                $slashUrl = '/' . $url;
-                $analyticsData[] = Analytics::getPageStats(Period::days(14), $slashUrl);
-            } else {
-                $analyticsData[] = Analytics::getPageStats(Period::days(14), $url);
-            }
-
-        }
+//        foreach($pages as $page) {
+//            $urls[] = $page->slug;
+//        }
+//        foreach($urls as $url) {
+//
+//            if($url !== '/') {
+//                $slashUrl = '/' . $url;
+//                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+//            } else {
+//                $analyticsData[] = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+//            }
+//
+//        }
+        $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
         return view('analytics.index')->withAnalytics($analyticsData);
     }
 
@@ -69,6 +126,19 @@ class AdminController extends Controller
             return Redirect('/admin/dashboard/');
         }
         return abort(404);
+    }
+
+    public function instagramIndex() {
+        Session::forget('message');
+        $feed = \Dymantic\InstagramFeed\InstagramFeed::for('luke');
+        return view('instagram.index')
+        ->withFeed($feed);
+    }
+
+    public function instagramAuth() {
+        $profile = \Dymantic\InstagramFeed\Profile::where('username', 'luke')->first();
+        return view('instagram.response')
+            ->withAuthurl($profile->getInstagramAuthUrl());
     }
 
 }

@@ -19,7 +19,7 @@
     </tr>
     <tr>
         <td width="600" border="0" style="padding:0 48px 48px 48px; color:#fff; background: #172735; font-family:Arial; font-size:12px; line-height:125%; text-align:center;">
-            <p>leinordesign.com</p>
+            <p>lukefarmer.co.uk</p>
         </td>
     </tr>
 </table>

@@ -13,9 +13,16 @@ use Spatie\Analytics\Period;
 use Redirect;
 use Auth;
 use App\Services\NavigationService;
+use Dotlogics\Grapesjs\App\Traits\EditorTrait;
 
 class PageController extends Controller
 {
+    use EditorTrait;
+
+    public function editor(Request $request, Page $page)
+    {
+        return $this->show_gjs_editor($request, $page);
+    }
 
     public function __construct()
     {
@@ -85,6 +92,7 @@ class PageController extends Controller
         $page->seo_description = $request->input('seo_description');
         $page->enabled = $request->input('enabled');
         $page->title = $request->input('title');
+        $page->use_builder = $request->input('use_builder');
         $page->save();
         Session::put('message', 'Page Updated Successfully!');
         return redirect()
