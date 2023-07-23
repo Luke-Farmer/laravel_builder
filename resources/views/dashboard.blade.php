@@ -46,12 +46,12 @@
                         @php
                             $totalWeeksTwo = $usersTwoWeeks[0]['activeUsers'] ?? 0 + $usersTwoWeeks[1]['activeUsers'] ?? 0;
                             $totalWeeksFour = $usersFourWeeks[0]['activeUsers'] ?? 0 + $usersFourWeeks[1]['activeUsers'] ?? 0;
-                            dd($totalWeeksFour);
                             $previousWeeks = $totalWeeksTwo - $totalWeeksFour;
+                            dd($previousWeeks);
                             if($totalWeeksFour < 1){
                                 $change = 0;
                             } else {
-                                $change = $previousWeeks / ($totalWeeksFour[0]['activeUsers']) * 100;
+                                $change = $previousWeeks / ($totalWeeksFour) * 100;
                             }
                             if($change < 0) {
                                 echo "<i class='fas fa-arrow-down me-2' style='color: #750000;margin-top: 2px;'></i>";
