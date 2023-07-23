@@ -1,7 +1,7 @@
 <x-admin-master>
-    <div class="p-3" style="background: #D9D9D6;">
+    <div class="p-3 ps-0" style="">
         <div class="row g-0">
-            <div class="col-4 d-flex bg-dark-blue p-3">
+            <div class="col-4 d-flex p-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%)">
                 <p class="white mb-0">Home Page - Total Views - Last 14 Days</p>
             </div>
         </div>
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="row g-0">
-            <div class="col-4 d-flex bg-dark-blue p-3">
+            <div class="col-4 d-flex p-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%)">
                 <p class="white mb-0">Home Page - Visitors & Page Views - Last 14 Days</p>
             </div>
         </div>
