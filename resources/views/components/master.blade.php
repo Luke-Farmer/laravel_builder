@@ -137,7 +137,7 @@ $navigation = $navigationService->getNavigation();
                             display: block;
                         }
                     </style>
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         @foreach($navigation as $link)
                             <li class="nav-item">
                                 @if(empty($link['children']))
