@@ -92,14 +92,14 @@ $navigation = $navigationService->getNavigation();
 
             </div>
         </header>
-        <header class="navbar-fixed-top" style="    right: 0;
+        <header class="navbar-fixed-top border-0" style="    right: 0;
     position: fixed;
     width: 349px;
     left: unset;
     background: #f2f2f2;
     backdrop-filter: none;">
-            <div class="navbar-collapse collapse vh-100" id="navbarSupportedContent" style="">
-                <div class="navbar-wrapper d-flex flex-column">
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+                <div class="navbar-wrapper d-flex flex-column vh-100">
                     <div class="d-flex">
                         <a class="navbar-brand me-0 p-4" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75"></a>
                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" style="    filter: brightness(0);
