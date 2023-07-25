@@ -84,7 +84,7 @@ $navigation = $navigationService->getNavigation();
                             </li>
                         </ul>
                         <button class="navbar-toggler collapsed border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-                            <img src="/img/menu_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
+                            <img src="/img/menu_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;filter: brightness(0);">
                         </button>
 
                     </nav>
