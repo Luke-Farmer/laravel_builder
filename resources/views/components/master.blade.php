@@ -102,7 +102,7 @@ $navigation = $navigationService->getNavigation();
                 <div class="navbar-wrapper d-flex flex-column">
                     <div class="d-flex">
                         <a class="navbar-brand me-0 p-4" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75"></a>
-                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" style="top: 33px;
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" style="    filter: brightness(0);
     position: relative;" aria-expanded="false" aria-label="Toggle navigation">
                             <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                         </button>
