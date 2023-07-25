@@ -56,7 +56,7 @@ $navigation = $navigationService->getNavigation();
     <body>
         <header class="navbar-fixed-top">
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light mw-100 px-1">
+                <nav class="navbar navbar-expand-lg navbar-light mw-100 px-1 py-0">
                     <a class="navbar-brand m-0" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive main-logo m-0" style="padding-top: 10px;padding-bottom: 10px; width:250px;"></a>
                     <ul class="social-icons visible-mobile d-none">
                         <li>
