@@ -88,7 +88,7 @@ $navigation = $navigationService->getNavigation();
                 </nav>
             </div>
         </header>
-        <header class="navbar-fixed-top">
+        <header class="navbar-fixed-top" style="top: 15vh;background-color: transparent;backdrop-filter: none;border-bottom: none;">
             <div class="container">
                 <nav>
                     <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
@@ -126,7 +126,7 @@ $navigation = $navigationService->getNavigation();
                                     display: block;
                                 }
                             </style>
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-5" style="background: #003b5c9a;">
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
                                         @if(empty($link['children']))
