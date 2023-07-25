@@ -85,12 +85,6 @@ $navigation = $navigationService->getNavigation();
                     <button class="navbar-toggler collapsed border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <img src="/img/menu_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                     </button>
-                </nav>
-            </div>
-        </header>
-        <header class="navbar-fixed-top" style="top: 15vh;background-color: transparent;backdrop-filter: none;border-bottom: none;">
-            <div class="container">
-                <nav>
                     <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
                         <!--<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
@@ -126,7 +120,7 @@ $navigation = $navigationService->getNavigation();
                                     display: block;
                                 }
                             </style>
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-5" style="background: #003b5c9a;">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 @foreach($navigation as $link)
                                     <li class="nav-item">
                                         @if(empty($link['children']))
