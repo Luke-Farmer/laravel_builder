@@ -99,12 +99,15 @@ $navigation = $navigationService->getNavigation();
     background: #f2f2f2;
     backdrop-filter: none;">
             <div class="navbar-collapse collapse vh-100" id="navbarSupportedContent" style="">
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" style="top: 33px;
+                <div class="navbar-wrapper d-flex">
+                    <div class="d-flex">
+                        <a class="navbar-brand" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75"></a>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" style="top: 33px;
     position: relative;" aria-expanded="false" aria-label="Toggle navigation">
-                    <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
-                </button>
-                <div class="navbar-wrapper d-flex align-items-center">
-                    <a class="navbar-brand" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75 visible-mobile"></a>
+                            <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
+                        </button>
+                    </div>
+
                     <style>
                         @media all and (min-width: 992px) {
                             .navbar .nav-item .menu-level-0{ display: none; }
