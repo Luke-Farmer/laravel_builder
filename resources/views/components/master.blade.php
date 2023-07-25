@@ -83,7 +83,8 @@ $navigation = $navigationService->getNavigation();
                                 </a>
                             </li>
                         </ul>
-                        <button class="navbar-toggler collapsed border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler collapsed border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="top: 33px;
+    position: relative;">
                             <img src="/img/menu_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                         </button>
 
@@ -98,7 +99,7 @@ $navigation = $navigationService->getNavigation();
     left: unset;
     background: #f2f2f2;
     backdrop-filter: none;">
-            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+            <div class="navbar-collapse collapse vh-100" id="navbarSupportedContent" style="">
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                 </button>
