@@ -87,6 +87,8 @@ $navigation = $navigationService->getNavigation();
                     </button>
                 </nav>
             </div>
+        </header>
+        <header class="navbar-fixed-top">
             <div class="container">
                 <nav>
                     <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
