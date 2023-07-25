@@ -89,73 +89,76 @@ $navigation = $navigationService->getNavigation();
 
                     </nav>
                 </div>
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
-                    <!--<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
-                    </button>-->
-                    <div class="navbar-wrapper d-flex align-items-center">
-                        <a class="navbar-brand" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75 visible-mobile"></a>
-                        <style>
-                            @media all and (min-width: 992px) {
-                                .navbar .nav-item .menu-level-0{ display: none; }
-                                .navbar .nav-item:hover .nav-link{   }
-                                .navbar .nav-item:hover .menu-level-0{ display: block; }
-                            }
-                            .nav-item {
-                                margin-right: 1.5rem;
-                            }
-                            .navbar-nav li:last-child {
-                                margin-right: 0px!important;
-                            }
-                            .dropdown-menu li {
-                                position: relative;
-                            }
-                            .dropdown-menu .dropdown-submenu {
-                                display: none;
-                                position: absolute;
-                                left: 100%;
-                                top: -7px;
-                            }
-                            .dropdown-menu .dropdown-submenu-left {
-                                right: 100%;
-                                left: auto;
-                            }
-                            .dropdown-menu > li:hover > .dropdown-submenu {
-                                display: block;
-                            }
-                        </style>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            @foreach($navigation as $link)
-                                <li class="nav-item">
-                                    @if(empty($link['children']))
-                                        @if($link['link'] == 1)
-                                            <a href="{{ $link['url'] }}" class="nav-link">{{ $link['text'] }}</a>
-                                        @else
-                                            <p class="nav-link mb-0">{{ $link['text'] }}</p>
-                                        @endif
+
+            </div>
+        </header>
+        <header class="navbar-fixed-top">
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
+                </button>
+                <div class="navbar-wrapper d-flex align-items-center">
+                    <a class="navbar-brand" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75 visible-mobile"></a>
+                    <style>
+                        @media all and (min-width: 992px) {
+                            .navbar .nav-item .menu-level-0{ display: none; }
+                            .navbar .nav-item:hover .nav-link{   }
+                            .navbar .nav-item:hover .menu-level-0{ display: block; }
+                        }
+                        .nav-item {
+                            margin-right: 1.5rem;
+                        }
+                        .navbar-nav li:last-child {
+                            margin-right: 0px!important;
+                        }
+                        .dropdown-menu li {
+                            position: relative;
+                        }
+                        .dropdown-menu .dropdown-submenu {
+                            display: none;
+                            position: absolute;
+                            left: 100%;
+                            top: -7px;
+                        }
+                        .dropdown-menu .dropdown-submenu-left {
+                            right: 100%;
+                            left: auto;
+                        }
+                        .dropdown-menu > li:hover > .dropdown-submenu {
+                            display: block;
+                        }
+                    </style>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        @foreach($navigation as $link)
+                            <li class="nav-item">
+                                @if(empty($link['children']))
+                                    @if($link['link'] == 1)
+                                        <a href="{{ $link['url'] }}" class="nav-link">{{ $link['text'] }}</a>
                                     @else
-                                        @if($link['link'] == 1)
-                                            <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
-                                        @else
-                                            <p class="nav-link dropdown-toggle mb-0"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</p>
-                                        @endif
+                                        <p class="nav-link mb-0">{{ $link['text'] }}</p>
                                     @endif
-                                    @if(!empty($link['children']))
-                                        <ul class="dropdown-menu menu-level-0 ms-0" aria-labelledby="dropdown-{{ $link['text'] }}">
-                                            @foreach($link['children'] as $child)
-                                                <li class="nav-item">
-                                                    <a href="{{ $child['url'] }}" class="dropdown-item" id="dropdown-{{ $link['text'] }}">{{ $child['text'] }}</a>
-                                                    @if(!empty($child['children']))
-                                                        @include('partials.navigation', ['navigation' => $child['children']])
-                                                    @endif
-                                                </li>
-                                            @endforeach
-                                        </ul>
+                                @else
+                                    @if($link['link'] == 1)
+                                        <a href="{{ $link['url'] }}" class="nav-link dropdown-toggle"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</a>
+                                    @else
+                                        <p class="nav-link dropdown-toggle mb-0"  id="dropdown-{{ $link['text'] }}">{{ $link['text'] }}</p>
                                     @endif
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
+                                @endif
+                                @if(!empty($link['children']))
+                                    <ul class="dropdown-menu menu-level-0 ms-0" aria-labelledby="dropdown-{{ $link['text'] }}">
+                                        @foreach($link['children'] as $child)
+                                            <li class="nav-item">
+                                                <a href="{{ $child['url'] }}" class="dropdown-item" id="dropdown-{{ $link['text'] }}">{{ $child['text'] }}</a>
+                                                @if(!empty($child['children']))
+                                                    @include('partials.navigation', ['navigation' => $child['children']])
+                                                @endif
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </header>
