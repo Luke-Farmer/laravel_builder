@@ -85,10 +85,14 @@ $navigation = $navigationService->getNavigation();
                     <button class="navbar-toggler collapsed border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <img src="/img/menu_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
                     </button>
+                </nav>
+            </div>
+            <div class="container">
+                <nav>
                     <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
-                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <!--<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
-                        </button>
+                        </button>-->
                         <div class="navbar-wrapper d-flex align-items-center">
                             <a class="navbar-brand" href="/"><img src="{{ Settings::where('setting', '=', 'logo')->first()->value }}" alt="Logo" class="img-responsive w-75 visible-mobile"></a>
                             <style>
