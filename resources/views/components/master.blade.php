@@ -92,7 +92,12 @@ $navigation = $navigationService->getNavigation();
 
             </div>
         </header>
-        <header class="navbar-fixed-top">
+        <header class="navbar-fixed-top" style="    right: 0;
+    position: fixed;
+    width: 349px;
+    left: unset;
+    background: #f2f2f2;
+    backdrop-filter: none;">
             <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <img src="/img/x_icon.svg" alt="Menu" class="img-responsive" style="height: 25px;">
