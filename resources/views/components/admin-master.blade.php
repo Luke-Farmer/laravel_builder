@@ -11,6 +11,7 @@ use App\Models\Themes;
         <link rel="stylesheet" href="/codemirror/theme/dracula.css">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="icon" type="image/png" href="/img/favicon.svg"/>
+        <script src="https://kit.fontawesome.com/e44c6e790f.js" crossorigin="anonymous"></script>
     </head>
     <style>
         {{ Themes::where('active', '=', '1')->first()->theme_css }}
@@ -21,7 +22,7 @@ use App\Models\Themes;
                 <div class="col-12 col-lg-2">
                     <x-admin-sidebar></x-admin-sidebar>
                 </div>
-                <div class="col-12 col-lg-10" style="background: #D9D9D6;">
+                <div class="col-12 col-lg-10" style="background: #040D1B;">
                     <x-admin-nav></x-admin-nav>
                     {{ $slot }}
                 </div>

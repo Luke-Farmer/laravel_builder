@@ -1,4 +1,5 @@
 <x-admin-master>
+    @section('title', 'Edit Page')
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
@@ -6,16 +7,17 @@
     @endif
     <div class="row justify-content-center g-0">
         <div class="col-12 col-lg-10">
-            <form class="p-3" action="{{ route('pages.update', $page->id) }}" method="POST"  onsubmit="return getContent()">
+            <form class="p-3 ps-0 mb-0" action="{{ route('pages.update', $page->id) }}" method="POST"  onsubmit="return getContent()">
                 @method('PUT')
                 @csrf
                 <div class="row g-0">
-                    <div class="col-12 d-flex bg-accent-light w-100 p-2">
+                    <div class="col-12 d-flex w-100 p-3 border-top-radius" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);">
                         <p class="white mb-0">Page Settings</p>
-                        <input href="{{ route('pages.update', $page->id) }}" class="white main-button px-3 py-0 ms-auto" value="Save" type="submit">
+                        <a href="/admin/pages/{{ $page->id }}/editor" class="white plain-button fs-6 ms-auto" >Edit With Page Builder</a>
+                        <input href="{{ route('pages.update', $page->id) }}" class="white plain-button fs-6 px-3 py-0 ms-auto" value="Save" type="submit">
                     </div>
                 </div>
-                <div class="row g-0 bg-white p-3">
+                <div class="row g-0 p-3 border-bottom-radius" style="background: #D9D9D6;">
                     <div class="col-12 pb-3">
                         <label class="mb-2">URL:</label>
                         <input class="edit-page-input p-1" type="text" label="slug" name="slug" value="{{ $page->slug }}">
@@ -53,6 +55,27 @@
                         <label class="mb-2">SEO Meta Description:</label>
                         <input class="edit-page-input p-1" type="text" label="seo_description" name="seo_description" value="{{ $page->seo_description }}">
                     </div>
+                    <div class="col-12 pb-3">
+                        <label class="mb-2">Use Editor:</label>
+                        <select name="use_builder" class="edit-page-input p-1">
+                            <option value="{{ $page->use_builder }}">
+                                @if($page->use_builder == 1)
+                                    Editor
+                                @else
+                                    Raw
+                                @endif
+                            </option>
+                            @if($page->use_builder == 1)
+                                <option value="0">
+                                    Raw
+                                </option>
+                            @else
+                                <option value="1">
+                                    Editor
+                                </option>
+                            @endif
+                        </select>
+                    </div>
                     <div class="col-12">
                         <div class="position-relative" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
                             <textarea class="w-100" id="editor" style="min-height:800px;" label="body" type="text" name="body" spellcheck="false" >{{ $page->body }}</textarea>
@@ -62,18 +85,18 @@
             </form>
         </div>
         <div class="col-12 col-lg-2 pt-3 pe-3">
-            <div class="p-3 save-box bg-accent-light">
+            <div class="p-3 save-box" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius:10px;">
                 <p class="mb-0 text-start me-3 fw-bold text-white">URL:<span class="float-end fw-normal">{{ $page->slug }}</span></p>
                 <p class="mb-0 text-start me-3 fw-bold text-white">Updated:<span class="float-end fw-normal">{{ date('j M Y',strtotime($page->updated_at)) }}</span></p>
                 <div class="d-flex">
                     <form class="mb-0 w-100 mt-3" action="{{ route('pages.destroy', $page->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <input class="white main-button w-100 p-0 me-3" value="Delete" type="submit" onclick="var result = confirm('Want to delete?');">
+                        <input class="white plain-button fs-6 p-0 me-3" value="Delete" type="submit" onclick="var result = confirm('Want to delete?');">
                     </form>
                 </div>
             </div>
-            <div class="p-3 save-box bg-accent-light mt-3">
+            <div class="p-3 save-box mt-3" style="background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%); border-radius:10px;">
                 <p class="fw-bold text-white">Shortcodes</p>
                 <p class="mb-0 text-white">[contact_form]</p>
                 <p class="mb-0 text-white">[latest_portfolios]</p>
@@ -152,9 +175,6 @@
     }
 
     /* Paragraphs; First Image */
-    * {
-        font-family: "Fira Code", monospace;
-    }
     p code {
         border-radius: 2px;
         background-color: #eee;

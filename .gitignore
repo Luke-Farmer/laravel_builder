@@ -5,7 +5,6 @@
 /public/img
 /storage/*.key
 /resources/views/overrides/**
-/vendor
 .env
 .env.backup
 .phpunit.result.cache
@@ -16,3 +15,4 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/vendor

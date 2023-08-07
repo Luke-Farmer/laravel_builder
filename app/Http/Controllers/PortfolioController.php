@@ -58,6 +58,7 @@ class PortfolioController extends Controller
         $item->enabled = $request->input('enabled');
         $item->image = $request->input('image');
         $item->is_featured = $request->input('featured');
+        $item->category = $request->input('category');
         $item->save();
         return redirect()->route('portfolio.edit', $item->id)->with('message', 'Portfolio Item Created Successfully!');
     }
@@ -110,6 +111,7 @@ class PortfolioController extends Controller
         $item->title = $request->input('title');
         $item->image = $request->input('image');
         $item->excerpt = $request->input('excerpt');
+        $item->category = $request->input('category');
         $item->save();
         Session::put('message', 'Portfolio Item Updated Successfully!');
         return redirect()
