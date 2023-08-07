@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="row g-0">
-            <div class="col-4 p-3 bg-white"3q>
+            <div class="col-4 p-3 bg-white">
                 <table class="w-100">
                     <thead>
                     <tr>
